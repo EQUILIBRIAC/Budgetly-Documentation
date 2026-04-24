@@ -396,7 +396,7 @@ Este recurso permite evaluar de manera más precisa la apariencia final de la p�
 El mock-up facilita la validación temprana con los interesados (stakeholders), al ofrecer una visión clara y tangible de cómo se presentarán los contenidos, las llamadas a la acción y la navegación en un entorno realista.
 
 <p styles="align: left">
-  <img src="/assets/chapter-04/Landing Page - Budgetly.png" alt="lpw5" width="500">
+  <img src="/assets/chapter-04/Landing Page - HARMONIX.png" alt="lpw5" width="500">
 </p>
 
 
