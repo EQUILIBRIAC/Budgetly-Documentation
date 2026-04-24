@@ -12,8 +12,7 @@ A través de un sistema digital automatizado, claro y accesible, Budgetly foment
 
 **Visión:** Convertirse en la plataforma líder en la gestión financiera compartida en los hogares, reconocida por empoderar a las personas para tomar decisiones económicas justas, responsables y colaborativas.  
 
-**Principios:** Transparencia, justicia y colaboración.  
-
+**Principios:** Transparencia, justicia y colaboración.
 
 ### 1.1.2 Perfiles de integrantes del equipo
 
@@ -25,20 +24,17 @@ A través de un sistema digital automatizado, claro y accesible, Budgetly foment
 |            |                      |                         |
 |            |                      |                         |
 
-
-
 ## 1.2. Solution Profile
 
-**Budgelty**, producto desarrollado por **Equilibria**, es una aplicación digital diseñada para facilitar la distribución equitativa de los gastos del hogar entre sus miembros, considerando los ingresos personales de cada individuo. La plataforma calcula automáticamente el aporte correspondiente de cada integrante, basándose en su situación económica, y garantiza así una distribución justa de los gastos compartidos como alquiler, servicios esenciales y alimentos.  
+**Budgetly**, producto desarrollado por **Equilibria**, es una aplicación digital diseñada para facilitar la distribución equitativa de los gastos del hogar entre sus miembros, considerando los ingresos personales de cada individuo. La plataforma calcula automáticamente el aporte correspondiente de cada integrante, basándose en su situación económica, y garantiza así una distribución justa de los gastos compartidos como alquiler, servicios esenciales y alimentos.  
 
-Los usuarios pueden registrar sus ingresos, conocer cuánto deben contribuir y monitorear sus pagos, mientras que la persona responsable de la gestión del hogar obtiene una visión integral del proceso. Además, Harmonix ofrece monitoreo en tiempo real, informes mensuales claros y alertas de pagos pendientes.  
+Los usuarios pueden registrar sus ingresos, conocer cuánto deben contribuir y monitorear sus pagos, mientras que la persona responsable de la gestión del hogar obtiene una visión integral del proceso. Además, Budgetly ofrece monitoreo en tiempo real, informes mensuales claros y alertas de pagos pendientes.  
 
 Con una interfaz intuitiva y accesible, la aplicación no solo simplifica la gestión de las finanzas, sino que también promueve la transparencia, la confianza y la cooperación entre los integrantes del hogar, reduciendo posibles conflictos y asegurando un manejo económico eficaz y equilibrado.  
 
 ### 1.2.1. Antecedentes y Problemática
 
 La metodología **5W y 2H** es un recurso utilizado para analizar la causa fundamental de un problema, error o discrepancia en los sistemas. Esta metodología, promovida por Toyota, constituye un pilar del Sistema de Producción Toyota (TPS). Según Taichii Ohno, permite comprender con claridad los problemas y facilita la implementación de acciones correctivas o preventivas (Palko et al., 2015). Asimismo, es un enfoque adaptable que puede aplicarse en diversos tipos de organizaciones, convirtiéndose en una herramienta valiosa para la resolución de disputas y la optimización de procesos.  
-
 
 ---
 
@@ -121,8 +117,6 @@ La persona recurrirá al producto ante la necesidad de dividir los gastos del ho
 
 Genera tensiones, discusiones y desequilibrios económicos dentro del hogar, mientras que con el producto se logra transparencia, justicia en las aportaciones y una mejor organización financiera compartida.
 
-
-
 ## 1.2.2 Lean UX Process
 
 El Lean UX se define como un proceso en el que varios colaboradores trabajan juntos de manera continua y repetitiva, centrado en la experimentación y el aprendizaje constante. A diferencia de los métodos convencionales, este enfoque no se centra en la creación de una documentación detallada, sino que enfatiza la elaboración de prototipos y la ejecución de pruebas rápidas. Estas pruebas se realizan con usuarios auténticos y en situaciones específicas, lo que facilita la validación de hipótesis y la realización de cambios en el producto basados en la evidencia recopilada. Su propósito esencial es minimizar el desperdicio de recursos y optimizar la eficiencia en el ciclo de desarrollo, facilitando que los equipos de diseño y desarrollo puedan adaptarse con mayor agilidad a las demandas y expectativas de los usuarios (Gothelf & Seiden, 2013).
@@ -139,7 +133,7 @@ Desde la perspectiva del negocio, esta situación representa una brecha en el me
 Se requiere una mejora que permita gestionar los gastos compartidos del hogar de forma proporcional a los ingresos de cada integrante, con mecanismos que promuevan la transparencia y la comunicación económica. Esta mejora debe ser intuitiva, accesible y adaptable, de manera que incentive la colaboración y la responsabilidad financiera conjunta sin imponer procesos complejos.  
 La solicitud de mejora se enfoca en alcanzar una experiencia más equitativa, donde cada usuario tenga visibilidad sobre las finanzas del grupo y confianza en la distribución automática de los aportes.
 
-La oportunidad radica en un mercado con carencia de herramientas centradas en la equidad doméstica y la planificación financiera colectiva. **Harmonix** busca aprovechar esta brecha al ofrecer un enfoque innovador que combina tecnología, usabilidad y justicia financiera.  
+La oportunidad radica en un mercado con carencia de herramientas centradas en la equidad doméstica y la planificación financiera colectiva. **Budgetly** busca aprovechar esta brecha al ofrecer un enfoque innovador que combina tecnología, usabilidad y justicia financiera.  
 Entre las principales restricciones se encuentran el nivel de alfabetización digital de los usuarios, la confianza en los cálculos automáticos y el acceso limitado a recursos tecnológicos en determinados hogares.
 
 ### 1.2.2.2 Lean UX Assumptions
@@ -164,7 +158,7 @@ Para afrontarlo, se priorizará una interfaz sencilla, explicaciones visuales de
 Integrantes de un mismo hogar (parejas, familias, compañeros de vivienda) que desean administrar las finanzas conjuntas de manera justa, clara y cooperativa.
 
 ¿En qué parte de su vida se integra nuestro producto?  
-En la organización y administración de los gastos mensuales compartidos, particularmente al repartir gastos fundamentales como alquiler, servicios, alimentación o metas comunes. Harmonix se convierte en un recurso habitual para facilitar la toma de decisiones económicas equitativas.
+En la organización y administración de los gastos mensuales compartidos, particularmente al repartir gastos fundamentales como alquiler, servicios, alimentación o metas comunes. Budgetly se convierte en un recurso habitual para facilitar la toma de decisiones económicas equitativas.
 
 ¿Cuáles son los inconvenientes de nuestro producto y de qué manera se pueden solucionar?  
 **Situación:** Ausencia de dedicación o fallos en la anotación de ingresos y gastos.  
@@ -177,7 +171,7 @@ Se utiliza de manera continua y en cooperación:
 - En cualquier momento, para consultar la situación de las finanzas compartidas.
 
 ¿Qué inconvenientes podría tener nuestro producto?  
-Podría existir resistencia al cambio en hogares con rutinas establecidas. Para abordar esto, Harmonix ofrecerá:  
+Podría existir resistencia al cambio en hogares con rutinas establecidas. Para abordar esto, Budgetly ofrecerá:  
 - Migración sencilla de datos anteriores.  
 - Beneficios inmediatos desde el primer uso (claridad, ahorro de tiempo y disminución de discusiones).
 
@@ -190,6 +184,7 @@ Podría existir resistencia al cambio en hogares con rutinas establecidas. Para 
 - Establecimiento de metas de ahorro y objetivos conjuntos  
 - Protección de datos y confidencialidad  
 - Experiencia accesible, cooperativa y práctica
+
 
 ### 1.2.2.3 Lean UX Hypothesis Statements
 
