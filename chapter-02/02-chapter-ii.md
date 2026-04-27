@@ -282,13 +282,13 @@ De esta manera, se presentan a continuación los hallazgos clave que guiarán el
 - Segmento #1: Personas del hogar
 
 <p styles="align: left">
-  <img src="../images/UserP-1-Mejorado.png" width="1100">
+  <img src="/assets/chapter-02/UserP-1-Mejorado.png" width="1100">
 </p>
 
 - Segmento #2: Representante del hogar
 
 <p styles="align: left">
-  <img src="../images/UserP-2-Mejorado.png" width="1100">
+  <img src="/assets/chapter-02/UserP-2-Mejorado.png" width="1100">
 </p>
 
 
@@ -318,13 +318,13 @@ Aquí se presentan los User Journey Mapping para cada user persona. El recorrido
 - Segmento #1: Personas del hogar
 
 <p styles="align: left">
-  <img src="../images/JMP-2-Mejorado.png" width="1100">
+  <img src="/assets/chapter-02/JMP-2-Mejorado.png" width="1100">
 </p>
 
 - Segmento #2: Representante del hogar
 
 <p styles="align: left">
-  <img src="../images/JMP-1-Mejorado.png" width="1100">
+  <img src="/assets/chapter-02/JMP-1-Mejorado.png" width="1100">
 </p>
 
 ### 2.3.4. Empathy Mapping.
@@ -334,13 +334,13 @@ El Empathy Mapping permite comprender a fondo qué piensan, sienten, ven, escuch
 - Segmento #1: Personas del hogar
   
 <p styles="align: left">
-  <img src="../images/Empathy-Map1-Mejorado.png" width="1100">
+  <img src="/assets/chapter-02/Empathy-Map1-Mejorado.png" width="1100">
 </p>
 
 - Segmento #2: Representante del hogar
 
 <p styles="align: left">
-  <img src="../images/Empathy-Map2-Mejorado.png" width="1100">
+  <img src="/assets/chapter-02/Empathy-Map2-Mejorado.png" width="1100">
 </p>
 
 ### 2.3.5. As-is Scenario Mapping.
@@ -353,7 +353,7 @@ Los mapas evidencian procesos manuales, repetitivos y poco transparentes, los cu
 - Segmento #1: Personas del hogar
   
 <p styles="align: left">
-  <img src="../images/ScenarioMp-1-Mejorado.png" width="1100">
+  <img src="/assets/chapter-02/ScenarioMp-1-Mejorado.png" width="1100">
 </p>
 
 **Insight / Oportunidad de Diseño:**  
@@ -365,7 +365,7 @@ Harmonix automatiza los cálculos y brinda visibilidad compartida.
 - Segmento #2: Representante del hogar
 
 <p styles="align: left">
-  <img src="../images/ScenarioMp-2-Mejorado.png" width="1100">
+  <img src="/assets/chapter-02/ScenarioMp-2-Mejorado.png" width="1100">
 </p>
 
 **Insight / Oportunidad de Diseño:**  
