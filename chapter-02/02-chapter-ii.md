@@ -5,22 +5,115 @@
 ### 2.1.1. Análisis competitivo
 Mediante un análisis comparativo, hemos organizado información clave de cada propuesta de valor. Esto nos ayudará a entender mejor en qué se diferencia nuestra solución y compararla con las de nuestros competidores.
 
-| Competitive Analysis Landscape                                                                                                        |  |                                                                                                            |                                                                                                                                                                                                                      |                                                                                                                                                                                                                  |                                                                                                                                                                                                                             |
-|:--------------------------------------------------------------------------------------------------------------------------------------| :---- |------------------------------------------------------------------------------------------------------------|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| ¿Por qué llevar a cabo este análisis?                                                                                                 |  | Competidores Directos                                                                                      |                                                                                                                                                                                                                      |                                                                                                                                                                                                                  |                                                                                                                                                                                                                             |
-| Con el fin de reconocer a los competidores y diseñar estrategias comerciales más sólidas que permitan enfrentarlos de manera efectiva |  | Budgetly                                                                                                    | Goodbudget                                                                                                                                                                                                           | Sesterce                                                                                                                                                                                                         | Honeydue                                                                                                                                                                                                                    |
-|                                                                                                                                       |  | <img src="https://i.imgur.com/CG2Ix22.png"/>                                                                                                 | <img src="https://i.imgur.com/dnGap67.png"/>                                                                                                                                                                         | <img src="https://i.imgur.com/Q5EZ0yw.png"/>                                                                                                                                                                     | <img src="https://i.imgur.com/Diux97n.png"/>                                                                                                                                                                                |
-| Perfil                                                                                                                                | Overview | Aplicación de gestión financiera del hogar. Divide los gastos tomando en cuenta los ingresos.              | App de presupuestos basada en sobres digitales, donde los usuarios asignan manualmente sus ingresos a distintas categorías.                                                                                          | Aplicación para compartir gastos en grupos o parejas sin necesidad de registro                                                                                                                                   | Aplicación móvil que permite vincular cuentas bancarias, categorizar automáticamente los gastos, fijar recordatorios de pagos y tener visibilidad de los saldos de cada persona.                                            |
-|                                                                                                                                       | Ventaja Competitiva | Reparto justo y automatizado según ingresos. Fomenta equidad y transparencia.                              | Fomenta disciplina financiera al obligar a planificar, ofrece colaboración en tiempo real y tiene una versión gratuita muy completa, lo que la hace accesible y educativa                                            | Destaca por su sencillez y anonimato, sin publicidad ni fricciones en el uso. Es rápida para organizar gastos compartidos y muy práctica frente a apps más complejas.                                            | Ofrece transparencia financiera con control de lo que se comparte, y combina sincronización bancaria con comunicación directa                                                                                               |
-| Perfil de Marketing                                                                                                                   | Mercado Objetivo | Familias, parejas y roommates con economías compartidas y distintos niveles de ingreso.                    | Personas que buscan aprender a manejar sus finanzas personales con un método práctico y educativo, principalmente familias y parejas                                                                                 | Grupos pequeños como amigos, compañeros de piso o parejas que necesitan una solución rápida, privada y sin complicaciones para dividir gastos.                                                                   | Parejas jóvenes o adultas que desean transparencia en la gestión del dinero compartido, con enfoque en la confianza y la comunicación.                                                                                      |
-|                                                                                                                                       | Estrategias de marketing | Enfocado en la equidad financiera y automatización. Redes sociales, foros y comunidades financieras.       | Se apoya en la reputación de su sistema de sobres digitales, en reseñas positivas en blogs financieros y en tiendas de apps                                                                                          | Basa su crecimiento en el boca a boca, en su facilidad de uso y en su propuesta de privacidad.                                                                                                                   | Utiliza la gratuidad como gancho principal, promueve la app en medios especializados en finanzas personales y estilo de vida                                                                                                |
-| Perfil de Producto                                                                                                                    | Productos & Servicios | Plataforma para dividir gastos del hogar según ingresos. Incluye reportes, historial, metas y seguimiento. | App de presupuestos con sobres digitales, reportes de gastos y sincronización entre varios dispositivos                                                                                                              | App centrada en el registro y la gestión de gastos compartidos, con funciones como exportación de datos y reportes en gráficos simples.                                                                          | Aplicación móvil que combina vinculación bancaria, categorización automática de gastos, recordatorios y un chat interno para parejas                                                                                        |
-|                                                                                                                                       | Precios & Costos | Freemium: versión gratuita con funciones básicas. Premium: reportes, metas, recordatorios, exportación.    | Freemium: versión gratuita con funciones limitadas. Premium: Sobre ilimitados y opciones avanzadas                                                                                                                   | Ofrece servicio gratuito sin costo alguno                                                                                                                                                                        | Ofrece servicio gratuito sin costo alguno                                                                                                                                                                                   |
-|                                                                                                                                       | Canales de Distribución | App móvil (Google Play y App Store), redes sociales, foros, influencers de finanzas personales.            | Aplicaciones móviles (App Store y Google Play) y su versión web                                                                                                                                                      | Aplicaciones móviles (App Store y Google Play)                                                                                                                                                                   | Aplicaciones móviles (Google Play y App Store), además de difusión en medios digitales y redes sociales                                                                                                                     |
-| Análisis SWOT                                                                                                                         | Fortalezas | Equidad proporcional basada en ingresos. Automatización. Foco en convivencia y economía compartida.        | Facilidad de uso, la sincronización en varios dispositivos y el enfoque educativo que fomenta la disciplina financiera                                                                                               | Facilidad y simplicidad en su uso, privacidad y protección de datos asegurada                                                                                                                                    | Gratuito, vinculación con miles de bancos, categorización automática de gastos e integración de un chat interno                                                                                                             |
-|                                                                                                                                       | Debilidades | Proyecto en etapa inicial. Requiere datos sensibles (ingresos).                                            | Falta de integración bancaria y en que requiere un esfuerzo manual que puede desmotivar a algunos usuarios                                                                                                           | Limitada frente a competidores con opciones más avanzadas                                                                                                                                                        | Se centra exclusivamente en parejas                                                                                                                                                                                         |
-|                                                                                                                                       | Oportunidades | Más hogares con economías compartidas. Creciente interés en equidad y herramientas de finanzas personales. | Posibilidad de ampliar su base de clientes en familias y usuarios que busquen planificación financiera más consciente                                                                                                | Capitalizar la creciente demanda de soluciones rápidas y ligeras para grupos de amigos o compañeros de piso                                                                                                      | Expandirse hacia más mercados y en ofrecer servicios premium con valor añadido                                                                                                                                              |
-|                                                                                                                                       | Amenazas | Competencia consolidada. Preferencia por métodos tradicionales (Excel, notas, billeteras físicas).         | Apps más automatizadas y con mayor integración tecnológica que podrían desplazarla en el mercado.                                                                                                                    | Falta de diferenciación a largo plazo, ya que otros competidores podrían replicar fácilmente su propuesta minimalista.                                                                                           | Fuerte competencia de apps más generales como Splitwise o Goodbudget, que pueden abarcar un público más amplio.                                                                                                             |
+<table border="1">
+<thead>
+<tr>
+<th colspan="6" style="text-align: center;"><b>Competitive Analysis Landscape</b></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2" align="center">¿Por qué llevar a cabo este análisis?</td>
+<td colspan="4" align="center">Con el fin de reconocer a los competidores y diseñar estrategias comerciales más sólidas que permitan enfrentarlos de manera efectiva.</td>
+</tr>
+<tr>
+<th></th>
+<th></th>
+<th><b>Budgetly</b><br><img src="https://i.imgur.com/CG2Ix22.png" alt="Logo Budgetly" height="70" width="120"></th>
+<th><b>Goodbudget</b><br><img src="https://i.imgur.com/dnGap67.png" alt="Logo Goodbudget" height="70" width="120"></th>
+<th><b>Sesterce</b><br><img src="https://i.imgur.com/Q5EZ0yw.png" alt="Logo Sesterce" height="70" width="120"></th>
+<th><b>Honeydue</b><br><img src="https://i.imgur.com/Diux97n.png" alt="Logo Honeydue" height="70" width="120"></th>
+</tr>
+<tr>
+<td><strong>Perfil</strong></td>
+<td>Overview</td>
+<td>Aplicación de gestión financiera del hogar. Divide los gastos tomando en cuenta los ingresos.</td>
+<td>App de presupuestos basada en sobres digitales, donde los usuarios asignan manualmente sus ingresos a distintas categorías.</td>
+<td>Aplicación para compartir gastos en grupos o parejas sin necesidad de registro.</td>
+<td>Aplicación móvil que permite vincular cuentas bancarias, categorizar automáticamente los gastos, fijar recordatorios de pagos y tener visibilidad de los saldos de cada persona.</td>
+</tr>
+<tr>
+<td></td>
+<td><strong>Ventaja competitiva - ¿Qué valor ofrece al cliente?</strong></td>
+<td>Reparto justo y automatizado según ingresos. Fomenta equidad y transparencia.</td>
+<td>Fomenta disciplina financiera al obligar a planificar, ofrece colaboración en tiempo real y tiene una versión gratuita muy completa, lo que la hace accesible y educativa.</td>
+<td>Destaca por su sencillez y anonimato, sin publicidad ni fricciones en el uso. Es rápida para organizar gastos compartidos y práctica frente a apps más complejas.</td>
+<td>Ofrece transparencia financiera con control de lo que se comparte, y combina sincronización bancaria con comunicación directa.</td>
+</tr>
+<tr>
+<td><strong>Perfil de marketing</strong></td>
+<td><strong>Mercado objetivo</strong></td>
+<td>Familias, parejas y roommates con economías compartidas y distintos niveles de ingreso.</td>
+<td>Personas que buscan aprender a manejar sus finanzas personales con un método práctico y educativo, principalmente familias y parejas.</td>
+<td>Grupos pequeños como amigos, compañeros de piso o parejas que necesitan una solución rápida, privada y sin complicaciones para dividir gastos.</td>
+<td>Parejas jóvenes o adultas que desean transparencia en la gestión del dinero compartido, con enfoque en la confianza y la comunicación.</td>
+</tr>
+<tr>
+<td></td>
+<td><strong>Estrategias de marketing</strong></td>
+<td>Enfocado en la equidad financiera y automatización. Redes sociales, foros y comunidades financieras.</td>
+<td>Se apoya en la reputación de su sistema de sobres digitales, en reseñas positivas en blogs financieros y en tiendas de apps.</td>
+<td>Basa su crecimiento en el boca a boca, en su facilidad de uso y en su propuesta de privacidad.</td>
+<td>Utiliza la gratuidad como gancho principal, promueve la app en medios especializados en finanzas personales y estilo de vida.</td>
+</tr>
+<tr>
+<td><strong>Perfil de producto</strong></td>
+<td><strong>Productos &amp; servicios</strong></td>
+<td>Plataforma para dividir gastos del hogar según ingresos. Incluye reportes, historial, metas y seguimiento.</td>
+<td>App de presupuestos con sobres digitales, reportes de gastos y sincronización entre varios dispositivos.</td>
+<td>App centrada en el registro y la gestión de gastos compartidos, con funciones como exportación de datos y reportes en gráficos simples.</td>
+<td>Aplicación móvil que combina vinculación bancaria, categorización automática de gastos, recordatorios y un chat interno para parejas.</td>
+</tr>
+<tr>
+<td></td>
+<td><strong>Precios &amp; costos</strong></td>
+<td>Freemium: versión gratuita con funciones básicas. Premium: reportes, metas, recordatorios, exportación.</td>
+<td>Freemium: versión gratuita con funciones limitadas. Premium: sobres ilimitados y opciones avanzadas.</td>
+<td>Ofrece servicio gratuito sin costo alguno.</td>
+<td>Ofrece servicio gratuito sin costo alguno.</td>
+</tr>
+<tr>
+<td></td>
+<td><strong>Canales de distribución</strong></td>
+<td>App móvil (Google Play y App Store), redes sociales, foros, influencers de finanzas personales.</td>
+<td>Aplicaciones móviles (App Store y Google Play) y su versión web.</td>
+<td>Aplicaciones móviles (App Store y Google Play).</td>
+<td>Aplicaciones móviles (Google Play y App Store), además de difusión en medios digitales y redes sociales.</td>
+</tr>
+<tr>
+<td><strong>Análisis SWOT</strong></td>
+<td><strong>Fortalezas</strong></td>
+<td>Equidad proporcional basada en ingresos. Automatización. Foco en convivencia y economía compartida.</td>
+<td>Facilidad de uso, sincronización en varios dispositivos y enfoque educativo que fomenta la disciplina financiera.</td>
+<td>Facilidad y simplicidad en su uso, privacidad y protección de datos asegurada.</td>
+<td>Gratuito, vinculación con miles de bancos, categorización automática de gastos e integración de un chat interno.</td>
+</tr>
+<tr>
+<td></td>
+<td><strong>Debilidades</strong></td>
+<td>Proyecto en etapa inicial. Requiere datos sensibles (ingresos).</td>
+<td>Falta de integración bancaria y esfuerzo manual que puede desmotivar a algunos usuarios.</td>
+<td>Limitada frente a competidores con opciones más avanzadas.</td>
+<td>Se centra exclusivamente en parejas.</td>
+</tr>
+<tr>
+<td></td>
+<td><strong>Oportunidades</strong></td>
+<td>Más hogares con economías compartidas. Creciente interés en equidad y herramientas de finanzas personales.</td>
+<td>Posibilidad de ampliar su base de clientes en familias y usuarios que busquen planificación financiera más consciente.</td>
+<td>Capitalizar la creciente demanda de soluciones rápidas y ligeras para grupos de amigos o compañeros de piso.</td>
+<td>Expandirse hacia más mercados y ofrecer servicios premium con valor añadido.</td>
+</tr>
+<tr>
+<td></td>
+<td><strong>Amenazas</strong></td>
+<td>Competencia consolidada. Preferencia por métodos tradicionales (Excel, notas, billeteras físicas).</td>
+<td>Apps más automatizadas y con mayor integración tecnológica que podrían desplazarla en el mercado.</td>
+<td>Falta de diferenciación a largo plazo, ya que otros competidores podrían replicar fácilmente su propuesta minimalista.</td>
+<td>Fuerte competencia de apps más generales como Splitwise o Goodbudget, que pueden abarcar un público más amplio.</td>
+</tr>
+</tbody>
+</table>
 ### 2.1.2. Estrategias y tácticas frente a competidores
 La estrategia general de Budgetly debe centrarse en reforzar su propuesta única de valor: la equidad automatizada según ingresos. Esta característica lo distingue de Goodbudget, que es más manual; de Sesterce, que es más limitado; y de Honeydue, que se enfoca solo en parejas. Comunicar de forma clara que Budgetly asegura justicia en los aportes de cada miembro del hogar es la base para competir.
 

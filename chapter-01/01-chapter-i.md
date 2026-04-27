@@ -18,7 +18,7 @@ A través de un sistema digital automatizado, claro y accesible, Budgetly foment
 
 | Integrante | Descripción Personal | Conocimientos Técnicos |
 |------------|----------------------|-------------------------|
-|            |                      |                         |
+| <img src="https://i.imgur.com/Njz7ovQ.jpg" alt="Carlos Guimaraes"/> | Soy Carlos Guimaraes, tengo 19 años y soy estudiante de la carrera de Ingeniería de Software, actualmente cursando el séptimo ciclo. Me considero una persona responsable y puntual, por lo que procuro terminar y presentar mis trabajos dentro de los tiempos establecidos. Me gusta la innovación y la creación de nuevas ideas. Además, busco aportar al grupo de manera proactiva, contribuyendo con ideas que mejoren el trabajo y fomentando un ambiente positivo. | Cuento con sólidos conocimientos en programación, especialmente en lenguajes como C++ y Python. En desarrollo web, tengo experiencia en frontend utilizando Angular, así como en backend con Java (Spring Boot) y Next.js. Asimismo, poseo habilidades en edición de video, lo que me permite complementar proyectos con contenido visual.  |
 |            |                      |                         |
 |            |                      |                         |
 |            |                      |                         |

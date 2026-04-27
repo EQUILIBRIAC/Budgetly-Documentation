@@ -1,76 +1,62 @@
-<a id="caratula"></a>
 
-<div style="max-width: 760px; margin: 0 auto; padding: 1.5rem 1rem 2rem; font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; line-height: 1.5;">
 
-<p align="center" style="margin: 0 0 1.5rem; font-size: 1.75rem; font-weight: 700; letter-spacing: 0.02em;">
-  Project Report
-</p>
+<p align="center">
+  <img src="https://i.imgur.com/i8kTWd9.png" alt="logo_upc">
+</p> 
 
-<p align="center" style="margin: 0 0 1.75rem;">
-  <img src="../assets/chapter-i/UPC_logo.png" alt="Logo UPC" style="max-width: 200px; width: 55%; height: auto; display: inline-block;" />
-</p>
+<br>
 
-<p align="center" style="margin: 0 0 0.35rem; font-size: 1.35rem; font-weight: 700; line-height: 1.35;">
-  Universidad Peruana de Ciencias Aplicadas
-</p>
-<p align="center" style="margin: 0 0 1.25rem; font-size: 1.2rem; font-weight: 600; line-height: 1.35;">
-  Ingeniería de Software
-</p>
 
-<p align="center" style="margin: 0; font-size: 1.05rem; font-weight: 500;">
-  <span style="display: block; margin-bottom: 0.35rem;">Periodo: 2025-20</span>
-  <span style="display: block; margin-bottom: 0.35rem;">1ASI0657 | Fundamentos de Arquitectura de Software</span>
-  <span style="display: block; margin-bottom: 0.35rem;">NRC: 17949</span>
-  <span style="display: block; margin-bottom: 0.35rem;">Sección: SV54</span>
-  <span style="display: block;">Docente: Jorge Luis Delgado Vite</span>
-</p>
+<h3 align="center">"Informe de Trabajo Final"</h3> <br>
 
-<p align="center" style="margin: 1.5rem 0 1.25rem; font-size: 1.2rem; font-weight: 700;">
-  Informe del Trabajo Final
-</p>
+<h3 align="center">1ASI0732 - Diseño de Experimentos de Ingeniería de Software</h3> <br>
 
-<p align="center" style="margin: 0 0 1.75rem; font-size: 1.08rem; font-weight: 600;">
-  <span style="display: block; margin-bottom: 0.3rem;">Startup: GosLogic</span>
-  <span style="display: block;">Producto: Orion</span>
-</p>
+<h3 align="center">Ingeniería de Software - 7mo Ciclo</h3> <br>
 
-<div style="text-align: center; margin-top: 0.5rem;">
-  <p style="margin: 0 0 0.85rem; font-size: 1.1rem; font-weight: 700;">Integrantes</p>
-  <table align="center" style="margin: 0 auto; border-collapse: collapse; font-size: 1rem; min-width: 420px; max-width: 100%; border: 1px solid currentColor;">
+<h3 align="center">Profesor: Juan Carlos Tinoco Licas</h3> <br>
+
+<h3 align="center">Sección: 10253</h3>
+<h3 align="center">Startup: Equilibria</h3>
+<h3 align="center">Producto: Budgetly</h3> <br>
+
+<p align="center"><strong>Integrantes:</strong></p> <br>
+
+<div align="center">
+  <table>
     <thead>
       <tr>
-        <th style="text-align: center; padding: 0.65rem 1rem; font-weight: 700; font-size: 0.95rem; text-transform: uppercase; letter-spacing: 0.04em; border-bottom: 1px solid currentColor;">Miembro</th>
-        <th style="text-align: center; padding: 0.65rem 1rem; font-weight: 700; font-size: 0.95rem; text-transform: uppercase; letter-spacing: 0.04em; border-bottom: 1px solid currentColor;">Código</th>
+        <th>Nombre</th>
+        <th>Código</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td style="text-align: left; padding: 0.6rem 1rem; border-bottom: 1px solid currentColor;">Cossar Sánchez, Eduardo José</td>
-        <td style="text-align: center; padding: 0.6rem 1rem; border-bottom: 1px solid currentColor; font-variant-numeric: tabular-nums;">u202312109</td>
+        <td>Uribe Livia, Renzo Sebastián</td>
+        <td>u202311745</td>
       </tr>
       <tr>
-        <td style="text-align: left; padding: 0.6rem 1rem; border-bottom: 1px solid currentColor;">Gonzales Castillo, Angel Martin</td>
-        <td style="text-align: center; padding: 0.6rem 1rem; border-bottom: 1px solid currentColor; font-variant-numeric: tabular-nums;">u202319724</td>
+        <td>Gonzales Castillo, Angel Martin</td>
+        <td>u202319724</td>
       </tr>
       <tr>
-        <td style="text-align: left; padding: 0.6rem 1rem; border-bottom: 1px solid currentColor;">Iglesias Pérez, Sergio Sebastián</td>
-        <td style="text-align: center; padding: 0.6rem 1rem; border-bottom: 1px solid currentColor; font-variant-numeric: tabular-nums;">u202316118</td>
+        <td>Huamani Cruz, Camila Victoria</td>
+        <td>u202315234</td>
       </tr>
       <tr>
-        <td style="text-align: left; padding: 0.6rem 1rem; border-bottom: 1px solid currentColor;">Mostajo Orosco, Maria Fernanda</td>
-        <td style="text-align: center; padding: 0.6rem 1rem; border-bottom: 1px solid currentColor; font-variant-numeric: tabular-nums;">u202312874</td>
+        <td>Guimaraes Escalante, Carlos Eduardo</td>
+        <td>u202210364</td>
       </tr>
       <tr>
-        <td style="text-align: left; padding: 0.6rem 1rem;">Solano Armas, Angelo Hector</td>
-        <td style="text-align: center; padding: 0.6rem 1rem; font-variant-numeric: tabular-nums;">u20231B775</td>
+        <td>Solano Armas, Angelo Hector</td>
+        <td>u20231B775</td>
       </tr>
     </tbody>
   </table>
 </div>
 
-<p align="center" style="margin: 1.75rem 0 0; font-size: 1.05rem; font-weight: 600;">
-  Septiembre, 2025
-</p>
+
+
+<p align="center"><em>Abril 2026</em></p>
 
 </div>
 
