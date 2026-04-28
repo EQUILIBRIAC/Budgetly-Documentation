@@ -114,6 +114,7 @@ Mediante un análisis comparativo, hemos organizado información clave de cada p
 </tr>
 </tbody>
 </table>
+
 ### 2.1.2. Estrategias y tácticas frente a competidores
 La estrategia general de Budgetly debe centrarse en reforzar su propuesta única de valor: la equidad automatizada según ingresos. Esta característica lo distingue de Goodbudget, que es más manual; de Sesterce, que es más limitado; y de Honeydue, que se enfoca solo en parejas. Comunicar de forma clara que Budgetly asegura justicia en los aportes de cada miembro del hogar es la base para competir.
 
