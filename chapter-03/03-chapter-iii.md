@@ -4,13 +4,13 @@
 - Segmento 1: Miembros del Hogar
 
 <p styles="align: left">
-  <img src="../images/ScenarioMapping2S21.png" width="1100">
+  <img src="/assets/chapter-03/ScenarioMapping2S21.png" width="1100">
 </p>
 
 - Segmento 2: Representante del Hogar
 
 <p styles="align: left">
-  <img src="../images/ScenarioMapping2S22.png" width="1100">
+  <img src="/assets/chapter-03/ScenarioMapping2S22.png" width="1100">
 </p>
 
 ## 3.2. User Stories
@@ -173,14 +173,14 @@
 ### Segmento 1: Miembros del hogar
 
 <p styles="align: left">
-  <img src="../images/ImpactMappingS1.png" width="1100">
+  <img src="/assets/chapter-03/ImpactMappingS1.png" width="1100">
 </p>
 
 
 ### Segmento 2: Representante del hogar
 
 <p styles="align: left">
-  <img src="../images/ImpactMappingS2.png" width="1100">
+  <img src="/assets/chapter-03/ImpactMappingS2.png" width="1100">
 </p>
 
 ## 3.4. Product Backlog
