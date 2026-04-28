@@ -64,13 +64,52 @@
 
 ## Registro de Versiones del Informe
 
-| Versión | Fecha | Autor(es) | Descripción de cambio |
-| --- | --- | --- | --- |
-| 1.0 | 2026-04-20 | Equipo del proyecto | Estructura inicial del informe |
+
+| Versión | Fecha      | Autor            | Descripción de la modificación                                                                |
+| ------- | ---------- | ---------------- | --------------------------------------------------------------------------------------------- |
+| 1.0     | 24-04-2026 | Carlos Guimaraes | Se añadio la sección de Startup Profile para el capítulo 1.                                   |
+| 1.0     | 24-04-2026 | Carlos Guimaraes | Se añadio la sección de Solution Profile para el capítulo 1.                                  |
+| 1.0     | 24-04-2026 | Carlos Guimaraes | Se añadio la sección de Lean UX Process para el capítulo 1.                                   |
+| 1.0     | 24-04-2026 | Carlos Guimaraes | Se añadio la sección de Target Segments para el capítulo 1.                                   |
+| 1.0     | 24-04-2026 | Camila Huamani   | Se añadio la sección de Competidores para el capítulo 2.                                      |
+| 1.0     | 24-04-2026 | Camila Huamani   | Se añadio la sección de Diseño de Entrevistas para el capítulo 2.                             |
+| 1.0     | 24-04-2026 | Camila Huamani   | Se añadio la sección de Registro de Entrevistas para el capítulo 2.                           |
+| 1.0     | 24-04-2026 | Camila Huamani   | Se añadio la sección de Análisis de Entrevistas para el capítulo 2.                           |
+| 1.0     | 24-04-2026 | Camila Huamani   | Se añadio la sección de Needfinding para el capítulo 2.                                       |
+| 1.0     | 24-04-2026 | Angelo Solano    | Se añadio la sección de To-Be Scenario Mapping para el capítulo 3.                            |
+| 1.0     | 24-04-2026 | Angelo Solano    | Se añadio la sección de User Stories para el capítulo 3.                                      |
+| 1.1     | 24-04-2026 | Angelo Solano    | Se modificó la sección de User Stories para el capítulo 3 agregando más historias de usuario. |
+| 1.0     | 22-04-2026 | Angelo Solano    | Se añadio la sección de Impact Mapping para el capítulo 3.                                    |
+| 1.0     | 22-04-2026 | Angelo Solano    | Se añadio la sección de Product Backlog para el capítulo 3.                                   |
+| 1.0     | 22-04-2026 | Martin Gonzales  | Se añadio la sección de Style Guidelines para el capítulo 4.                                  |
+| 1.0     | 22-04-2026 | Martin Gonzales  | Se añadio la sección de Information Architecture para el capítulo 4.                          |
+| 1.0     | 26-04-2026 | Martin Gonzales  | Se añadio la sección de Web Applications Wireframes y Mockups en el capítulo 4.               |
+| 1.0     | 26-04-2026 | Martin Gonzales  | Se añadio la sección de Wireflow Diagrams en el capítulo 4.                                   |
+| 1.0     | 26-04-2026 | Martin Gonzales  | Se añadio la sección de Userflow Diagrams en el capítulo 4.                                   |
+| 1.0     | 24-04-2026 | Renzo Uribe      | Se añadio la sección de Class Diagram en el capítulo 4.                                       |
+| 1.0     | 25-04-2026 | Renzo Uribe      | Se añadio la sección de Database Diagram en el capítulo 4.                                    |
+| 1.0     | 26-04-2026 | Renzo Uribe      | Se añadio la sección de Software Configuration Management en el capítulo 5.                   |
+| 1.0     | 26-04-2026 | Renzo Uribe      | Se añadio la sección de Sprint 1 en el capítulo 5.                                            |
+| 1.0     | 24-04-2026 | Renzo Uribe      | Se añadió la sección de Conclusiones y Recomendaciones.                                       |
+
 
 ## Project Report Collaboration Insights
 
-Sección reservada para evidencias de colaboración del equipo (commits, tableros, acuerdos y flujo de trabajo).
+Respecto del primer avance del informe del proyecto, cada miembro del equipo realizó un aporte en las secciones de este informe. A continuación, se describen los aportes principales realizados por cada integrante:
+
+- **Carlos Guimaraes** se encargó de la elaboración del _Startup Profile_, _Solution Profile_, _Lean UX Process_ y _Target Segments_, definiendo las bases estratégicas y el enfoque del proyecto.
+- **Camila Huamani** desarrolló el análisis del mercado y usuarios mediante las secciones de _Competidores_, _Diseño de Entrevistas_, _Registro de Entrevistas_, _Análisis de Entrevistas_ y _Needfinding_.
+- **Angelo Solano** estructuró la planificación del producto a través de _Impact Mapping_, _Product Backlog_, _To-Be Scenario Mapping_ y _User Stories_, incluyendo su mejora y refinamiento.
+- **Martin Gonzales** trabajó en el diseño de la solución, elaborando _Style Guidelines_, _Information Architecture_, _Wireframes_, _Mockups_, _Wireflow_ y _Userflow Diagrams_.
+- **Renzo Uribe** se enfocó en la parte técnica del sistema, desarrollando _Class Diagram_, _Database Diagram_, así como la gestión del proyecto mediante _Software Configuration Management_ y _Sprint 1_.
+
+Finalmente, este gráfico representa la cantidad de commits realizados por cada miembro del equipo en el repositorio del proyecto. Cada barra representa a un miembro del equipo y la altura de la barra indica el número total de commits realizados por esa persona.
+
+<p align="center">
+  <img src="https://i.imgur.com/gnKYLlk.png" alt="Commits made by the members of the team in the first progress"/>
+</p>
+
+
 
 ## Contenido
 
@@ -185,5 +224,9 @@ Sección reservada para evidencias de colaboración del equipo (commits, tablero
 
 ## Student Outcome
 
-Sección reservada para detallar el logro del Student Outcome correspondiente a la entrega.
+| Criterio Específico                                                                                | Acciones realizadas                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            | Conclusiones                                                                                                                                                                                                                                                                                                                                          |
+| -------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 4.c.1 Reconoce responsabilidad ética y profesional en situaciones de ingeniería de software        | **Carlos Guimaraes**<br><br>TB1: Desarrollé las secciones de *Startup Profile*, *Solution Profile*, *Lean UX Process* y *Target Segments*, asegurando una correcta definición del enfoque del proyecto y alineando la solución con las necesidades del usuario.<br><br>**Camila Huamani**<br><br>TB1: Elaboré las secciones de *Competidores*, *Diseño de Entrevistas*, *Registro de Entrevistas*, *Análisis de Entrevistas* y *Needfinding*, recopilando y analizando información de usuarios de forma responsable.<br><br>**Angelo Solano**<br><br>TB1: Desarrollé *Impact Mapping*, *Product Backlog*, *To-Be Scenario Mapping* y *User Stories*, refinando estas últimas para mejorar su claridad y alineación con los objetivos del proyecto.<br><br>**Martin Gonzales**<br><br>TB1: Elaboré *Style Guidelines*, *Information Architecture*, *Wireframes*, *Mockups*, *Wireflow* y *Userflow Diagrams*, asegurando consistencia en el diseño.<br><br>**Renzo Uribe**<br><br>TB1: Desarrollé *Class Diagram*, *Database Diagram*, *Software Configuration Management* y *Sprint 1*, estableciendo una base técnica sólida. | - El equipo asumió responsabilidades claras en cada área del proyecto, asegurando calidad y coherencia en los entregables.<br><br>- Se evidenció compromiso profesional en la organización, desarrollo y documentación del sistema.<br><br>- Cada integrante contribuyó desde su especialidad, fortaleciendo la construcción integral de la solución. |
+| 4.c.2 Emite juicios informados considerando el impacto de las soluciones de ingeniería de software | **Carlos Guimaraes**<br><br>TB1: Definí los segmentos objetivo y la propuesta de valor considerando necesidades reales del mercado y el impacto de la solución en los usuarios.<br><br>**Camila Huamani**<br><br>TB1: Analicé información de entrevistas y competidores para identificar problemáticas y oportunidades dentro del contexto social y económico.<br><br>**Angelo Solano**<br><br>TB1: Prioricé funcionalidades mediante el *Product Backlog* y las *User Stories*, enfocándome en el valor entregado al usuario.<br><br>**Martin Gonzales**<br><br>TB1: Diseñé interfaces considerando la experiencia del usuario, buscando optimizar la interacción con el sistema.<br><br>**Renzo Uribe**<br><br>TB1: Definí la arquitectura del sistema y su gestión, evaluando su impacto en la escalabilidad y mantenimiento del software.                                                                                                                                                                                                                                                                                  | - Se tomaron decisiones fundamentadas en datos y análisis previos, como entrevistas y evaluación del mercado.<br><br>- El equipo consideró el impacto de la solución en usuarios, usabilidad y viabilidad técnica.<br><br>- Se logró una propuesta alineada tanto a necesidades reales como a criterios técnicos y de desarrollo.                     |
+
 
