@@ -1,3 +1,31 @@
+## 1.1 Startup Profile
+
+### 1.1.1 Descripción de la Startup
+
+**Equilibria** es una empresa emergente del sector tecnológico dedicada a desarrollar soluciones innovadoras para la gestión financiera en entornos de convivencia. Su producto principal, **Budgetly**, está diseñado para facilitar la organización y distribución equitativa de los gastos compartidos del hogar, considerando los ingresos de cada miembro.  
+
+A través de un sistema digital automatizado, claro y accesible, Budgetly fomenta la responsabilidad económica, la comunicación eficaz y la adecuada gestión del presupuesto común, reduciendo conflictos y fortaleciendo una cultura de colaboración dentro del hogar.
+
+**Título:** Budgetly  
+
+**Misión:** Brindar un manejo eficiente de las finanzas compartidas mediante una aplicación digital que distribuye los gastos de forma proporcional a los ingresos de cada integrante, fomentando la equidad, la claridad y una convivencia armoniosa.  
+
+**Visión:** Convertirse en la plataforma líder en la gestión financiera compartida en los hogares, reconocida por empoderar a las personas para tomar decisiones económicas justas, responsables y colaborativas.  
+
+**Principios:** Transparencia, justicia y colaboración.
+
+### 1.1.2 Perfiles de integrantes del equipo
+
+
+| Integrante                                                          | Descripción Personal                                                                                                                                                                                                                                                                                                                                                                                                                                                      | Conocimientos Técnicos                                                                                                                                                                                                                                                                                                                     |
+| ------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| <img src="https://i.imgur.com/Njz7ovQ.jpg" alt="Carlos Guimaraes"/> | Soy Carlos Guimaraes, tengo 19 años y soy estudiante de la carrera de Ingeniería de Software, actualmente cursando el séptimo ciclo. Me considero una persona responsable y puntual, por lo que procuro terminar y presentar mis trabajos dentro de los tiempos establecidos. Me gusta la innovación y la creación de nuevas ideas. Además, busco aportar al grupo de manera proactiva, contribuyendo con ideas que mejoren el trabajo y fomentando un ambiente positivo. | Cuento con sólidos conocimientos en programación, especialmente en lenguajes como C++ y Python. En desarrollo web, tengo experiencia en frontend utilizando Angular, así como en backend con Java (Spring Boot) y Next.js. Asimismo, poseo habilidades en edición de video, lo que me permite complementar proyectos con contenido visual. |
+| <img src="https://i.imgur.com/ddLrH5I.png" alt="Camila Huamani"/>   | Soy Camila Huamani estudiante de Ingeniería de Software de 19 años, actualmente en el séptimo ciclo de la carrera. Me caracterizo por ser constante y comprometida con lo que hago, buscando siempre aprender algo nuevo y asumir retos que me permitan crecer. Disfruto trabajar en equipo, intercambiar ideas y encontrar formas más eficientes de resolver problemas, manteniendo siempre una actitud positiva y colaborativa.                                         | Tengo experiencia en desarrollo de software utilizando lenguajes como Python, C++, C# y Java. He construido aplicaciones backend con Java (Spring Boot) y C# (.NET), y trabajado en frontend con Angular, Vue y JavaScript para crear interfaces dinámicas. Además, manejo bases de datos relacionales y no relacionales.                  |
+| <img src="https://i.imgur.com/dfZFyYP.jpg" alt="Martin Gonzales"/>  | Soy Martin Gonzales, estudiante de la carrera de Ingeniería de Software y actualmente me encuentro en el septimo ciclo. Me caracterizo por mi interés en la programación, la tecnología y el aprendizaje continuo. Tengo una actitud analítica y organizada, lo que me permite desarrollar proyectos académicos y prácticos con dedicación, buscando siempre aplicar los conocimientos adquiridos de manera efectiva.                                                     | Tengo conocimientos en **Python, C++, Java (básico), HTML y CSS (básico)**, además de frameworks como **Angular** y **Vue**. Apoyo al equipo activamente y trato de aprender cosas nuevas y mejorar los conocimientos que ya poseo.                                                                                                         |
+|                                                                     |                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |                                                                                                                                                                                                                                                                                                                                            |
+|                                                                     |                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |                                                                                                                                                                                                                                                                                                                                            |
+|                                                                     |                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |                                                                                                                                                                                                                                                                                                                                            |
+
 ## 1.2. Solution Profile
 
 **Budgetly**, producto desarrollado por **Equilibria**, es una aplicación digital diseñada para facilitar la distribución equitativa de los gastos del hogar entre sus miembros, considerando los ingresos personales de cada individuo. La plataforma calcula automáticamente el aporte correspondiente de cada integrante, basándose en su situación económica, y garantiza así una distribución justa de los gastos compartidos como alquiler, servicios esenciales y alimentos.  
@@ -159,6 +187,7 @@ Podría existir resistencia al cambio en hogares con rutinas establecidas. Para 
 - Protección de datos y confidencialidad  
 - Experiencia accesible, cooperativa y práctica
 
+
 ### 1.2.2.3 Lean UX Hypothesis Statements
 
 **Hipótesis 1 – Distribución equitativa de gastos**  
@@ -180,3 +209,47 @@ Consideramos que introducir metas de ahorro compartidas fomentará la planificac
 ### 1.2.2.4 Lean UX Canvas
 
 <img src="../images/canvax mejorado4.png" alt="Lean UX Canvas" width="100%">
+
+---
+
+## 1.3 Segmentos objetivo
+
+### Segmento objetivo 1: Personas del hogar
+
+**Aspectos demográficos**  
+- Sexo: Masculino y femenino  
+- Edad: 18 – 65 años  
+- Nivel socioeconómico: Clases A, B y C (alta, media-alta y media)  
+- Estado civil: Solteros, casados, convivientes, parejas, compañeros de cuarto
+
+**Aspectos geográficos**  
+- Nacionalidad: Peruana  
+- Zona geográfica: Urbana y suburbana  
+- Departamento: Lima Metropolitana y principales ciudades del país
+
+**Aspectos psicográficos**  
+- Buscan una forma justa y equitativa de compartir gastos del hogar (alquiler, servicios, alimentación, etc.)  
+- Están interesados en herramientas que brinden transparencia y simplicidad en la gestión de las finanzas  
+- Se preocupan por mantener un equilibrio financiero entre los miembros del hogar, asegurando que cada uno aporte de acuerdo a sus ingresos  
+- Tienen un estilo de vida basado en la convivencia y la corresponsabilidad, por lo que valoran soluciones que reduzcan discusiones y simplifiquen la organización de pagos
+
+---
+
+### Segmento objetivo 2: Representante del hogar
+
+**Aspectos demográficos**  
+- Sexo: Masculino y femenino  
+- Edad: 25 – 50 años  
+- Nivel socioeconómico: Clases A, B y C (alta, media-alta y media)  
+- Estado civil: Casados, convivientes, parejas con hijos o personas encargadas de la administración financiera del hogar
+
+**Aspectos geográficos**  
+- Nacionalidad: Peruana  
+- Zona geográfica: Urbana y suburbana  
+- Departamento: Lima Metropolitana y principales ciudades del país
+
+**Aspectos psicográficos**  
+- Son responsables de la planificación y control de los gastos familiares, buscando asegurar la equidad entre los integrantes  
+- Muestran interés en herramientas digitales que permitan monitorear y organizar finanzas de manera práctica  
+- Buscan evitar conflictos financieros dentro del hogar mediante claridad y control en los aportes de cada miembro  
+- Están comprometidos con la eficiencia en la gestión de recursos y valoran soluciones que distribuyan gastos de manera proporcional y transparente
