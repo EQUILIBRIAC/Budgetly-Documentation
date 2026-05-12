@@ -287,45 +287,116 @@ Se integraron funcionalidades como:
 - Registro y gestión de gastos (bills).
 - Creación y seguimiento de contribuciones.
 
-El backend fue desplegado en la nube mediante Render, asegurando su disponibilidad pública.
+El backend fue desplegado en la nube mediante Azure, asegurando su disponibilidad pública.
+
+<p align="center"> <img src="https://i.imgur.com/UxzJwaz.png"> </p>
 
 ### 5.2.6 RESTful API documentation
 
 A continuación, se resumen los principales endpoints implementados en Budgetly:
 
-**Authentication**
+ <br> **Authentication:**
+| **Endpoint**                     | **Acción implementada** | **Método HTTP** | **Parámetros**                    | **Ejemplo Request**                                                | **Ejemplo Response**                                                            |
+| -------------------------------- | ----------------------- | --------------- | --------------------------------- | ------------------------------------------------------------------ | ------------------------------------------------------------------------------- |
+| `/api/v1/authentication/sign-in` | Iniciar sesión          | POST            | body: `{ email, password }`       | `{ "email": "test@gmail.com", "password": "123456" }`              | `{ "token": "jwt_token", "user": { ... } }`                                     |
+| `/api/v1/authentication/sign-up` | Registrar usuario       | POST            | body: `{ name, email, password }` | `{ "name": "Jose", "email": "x@gmail.com", "password": "123456" }` | `{ "id": "uuid", "email": "x@gmail.com", "createdAt": "2025-12-03T00:00:00Z" }` |
 
-- `POST /api/v1/authentication/sign-in` → Inicio de sesión
-- `POST /api/v1/authentication/sign-up` → Registro de usuario
 
-**User**
+ <br> **User:**
+| **Endpoint**                                 | **Acción implementada**                  | **Método HTTP** | **Parámetros**                                               | **Ejemplo Request**                                   | **Ejemplo Response**                                       |
+| -------------------------------------------- | ---------------------------------------- | --------------- | ------------------------------------------------------------ | ----------------------------------------------------- | ---------------------------------------------------------- |
+| `/api/v1/user/user/{id}`                     | Obtener usuario por Id                   | GET             | path: `{ id }`                                               | `GET /api/v1/user/user/1`                             | `{ "id": 1, "name": "Jose", "email": "test@gmail.com" }`   |
+| `/api/v1/user`                               | Listar todos los usuarios                | GET             | —                                                            | `GET /api/v1/user`                                    | `[ { "id": 1, "name": "Jose", "email": "..." }, ... ]`     |
+| `/api/v1/user/householdid/{mainHouseHoldId}` | Obtener usuarios por Household principal | GET             | path: `{ mainHouseHoldId }`                                  | `GET /api/v1/user/householdid/household-123`          | `[ { "id": 1, "mainHouseHoldId": "household-123" }, ... ]` |
+| `/api/v1/user/byemail/{emailAddress}`        | Actualizar usuario por email             | PUT             | path: `{ emailAddress }`, body: parcial `UpdateUserResource` | `PUT /api/v1/user/byemail/test@gmail.com` + body JSON | `{ "id": 1, "email": "test@gmail.com", "updated": true }`  |
+| `/api/v1/user/byemail/{email}`               | Eliminar usuario por email               | DELETE          | path: `{ email }`                                            | `DELETE /api/v1/user/byemail/test@gmail.com`          | `{ "deleted": true }`                                      |
 
-- `GET /api/v1/user` → Obtener usuario autenticado
-- `PUT /api/v1/user/byemail/{email}` → Actualizar usuario
-- `DELETE /api/v1/user/byemail/{email}` → Eliminar usuario
+<br> **User Income:**
+| **Endpoint**                            | **Acción implementada**      | **Método HTTP** | **Parámetros**                                           | **Ejemplo Request**                                                           | **Ejemplo Response**                                                        |
+| --------------------------------------- | ---------------------------- | --------------- | -------------------------------------------------------- | ----------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
+| `/api/v1/user_income`                   | Crear ingreso de usuario     | POST            | body: `{ userId, amount, source, frequency }`            | `{ "userId": 1, "amount": 1500, "source": "Salary", "frequency": "monthly" }` | `{ "id": "income-1", "userId": 1, "amount": 1500 }`                         |
+| `/api/v1/user_income/{id}`              | Obtener ingreso por Id       | GET             | path: `{ id }`                                           | `GET /api/v1/user_income/income-1`                                            | `{ "id": "income-1", "userId": 1, "amount": 1500, "frequency": "monthly" }` |
+| `/api/v1/user_income/byuserid/{userId}` | Obtener ingresos por usuario | GET             | path: `{ userId }`                                       | `GET /api/v1/user_income/byuserid/1`                                          | `[ { "id": "income-1", "userId": 1, "amount": 1500 }, ... ]`                |
+| `/api/v1/user_income/byid/{id}`         | Actualizar ingreso por Id    | PUT             | path: `{ id }`, body: parcial `UpdateUserIncomeResource` | `PUT /api/v1/user_income/byid/income-1` + body JSON                           | `{ "id": "income-1", "updated": true }`                                     |
 
-**Households**
+<br> **Contribution:**
 
-- `POST /api/v1/house_hold` → Crear hogar
-- `GET /api/v1/house_hold/{id}` → Obtener hogar
+| **Endpoint**                                       | **Acción implementada**              | **Método HTTP** | **Parámetros**                                             | **Ejemplo Request**                                                                  | **Ejemplo Response**                                       |
+| -------------------------------------------------- | ------------------------------------ | --------------- | ---------------------------------------------------------- | ------------------------------------------------------------------------------------ | ---------------------------------------------------------- |
+| `/api/v1/contribution`                             | Listar todas las contribuciones      | GET             | —                                                          | `GET /api/v1/contribution`                                                           | `[ { "id": "contrib-1", "amount": 100 }, ... ]`            |
+| `/api/v1/contribution`                             | Crear contribución                   | POST            | body: `{ billId, householdId, amount, description }`       | `{ "billId": "bill-1", "householdId": "hh-1", "amount": 100, "description": "Luz" }` | `{ "id": "contrib-1", "billId": "bill-1", "amount": 100 }` |
+| `/api/v1/contribution/{id}`                        | Obtener contribución por Id          | GET             | path: `{ id }`                                             | `GET /api/v1/contribution/contrib-1`                                                 | `{ "id": "contrib-1", "billId": "bill-1", "amount": 100 }` |
+| `/api/v1/contribution/{id}`                        | Eliminar contribución                | DELETE          | path: `{ id }`                                             | `DELETE /api/v1/contribution/contrib-1`                                              | `{ "deleted": true }`                                      |
+| `/api/v1/contribution/bybillid/{billId}`           | Obtener contribuciones por Bill      | GET             | path: `{ billId }`                                         | `GET /api/v1/contribution/bybillid/bill-1`                                           | `[ { "id": "contrib-1", "billId": "bill-1" }, ... ]`       |
+| `/api/v1/contribution/byhouseholdid/{householdId}` | Obtener contribuciones por Household | GET             | path: `{ householdId }`                                    | `GET /api/v1/contribution/byhouseholdid/hh-1`                                        | `[ { "id": "contrib-1", "householdId": "hh-1" }, ... ]`    |
+| `/api/v1/contribution/byid/{id}`                   | Actualizar contribución por Id       | PUT             | path: `{ id }`, body: parcial `UpdateContributionResource` | `PUT /api/v1/contribution/byid/contrib-1` + body JSON                                | `{ "id": "contrib-1", "updated": true }`                   |
 
-**Bills**
 
-- `GET /api/v1/bills` → Listar gastos
-- `POST /api/v1/bills` → Crear gasto
-- `DELETE /api/v1/bills/{id}` → Eliminar gasto
+ <br> **Bills:**
 
-**Contributions**
+| **Endpoint**                              | **Acción implementada**           | **Método HTTP** | **Parámetros**                                     | **Ejemplo Request**                         | **Ejemplo Response**                                                |
+| ----------------------------------------- | --------------------------------- | --------------- | -------------------------------------------------- | ------------------------------------------- | ------------------------------------------------------------------- |
+| `/api/v1/bills`                           | Listar todas las facturas (bills) | GET             | —                                                  | `GET /api/v1/bills`                         | `[ { "id": "bill-1", "householdId": "hh-1", "amount": 200 }, ... ]` |
+| `/api/v1/bills/byhousehold/{householdId}` | Obtener Bills por Household       | GET             | path: `{ householdId }`                            | `GET /api/v1/bills/byhousehold/hh-1`        | `[ { "id": "bill-1", "householdId": "hh-1" }, ... ]`                |
+| `/api/v1/bills/byid/{id}`                 | Actualizar Bill por Id            | PUT             | path: `{ id }`, body: parcial `UpdateBillResource` | `PUT /api/v1/bills/byid/bill-1` + body JSON | `{ "id": "bill-1", "updated": true }`                               |
+| `/api/v1/bills/{id}`                      | Eliminar Bill                     | DELETE          | path: `{ id }`                                     | `DELETE /api/v1/bills/bill-1`               | `{ "deleted": true }`                                               |
 
-- `POST /api/v1/contribution` → Crear contribución
-- `GET /api/v1/contribution` → Listar contribuciones
 
-**Settings**
+ <br> **HouseHolds:**
 
-- `GET /api/v1/settings` → Obtener configuración
-- `PUT /api/v1/settings/{id}` → Actualizar configuración
+| **Endpoint**              | **Acción implementada**  | **Método HTTP** | **Parámetros**                                            | **Ejemplo Request**                                                                                       | **Ejemplo Response**                                           |
+| ------------------------- | ------------------------ | --------------- | --------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------- |
+| `/api/v1/house_hold/{Id}` | Obtener Household por Id | GET             | path: `{ Id }`                                            | `GET /api/v1/house_hold/hh-1`                                                                             | `{ "id": "hh-1", "name": "Casa Vallejos", "currency": "PEN" }` |
+| `/api/v1/house_hold`      | Crear Household          | POST            | body: `{ name, description, representativeId, currency }` | `{ "name": "Depto amigos", "description": "Depto Miraflores", "representativeId": 1, "currency": "PEN" }` | `{ "id": "hh-1", "name": "Depto amigos" }`                     |
 
-Estos endpoints permiten la comunicación entre el frontend y backend, asegurando la funcionalidad completa del sistema.
+
+
+<br> **HouseHold Member:**
+
+| **Endpoint**                                           | **Acción implementada**        | **Método HTTP** | **Parámetros**                                                | **Ejemplo Request**                                                 | **Ejemplo Response**                                        |
+| ------------------------------------------------------ | ------------------------------ | --------------- | ------------------------------------------------------------- | ------------------------------------------------------------------- | ----------------------------------------------------------- |
+| `/api/v1/household_member`                             | Crear miembro de Household     | POST            | body: `{ householdId, userId, isRepresentative }`             | `{ "householdId": "hh-1", "userId": 1, "isRepresentative": false }` | `{ "id": 10, "householdId": "hh-1", "userId": 1 }`          |
+| `/api/v1/household_member`                             | Listar todos los miembros      | GET             | —                                                             | `GET /api/v1/household_member`                                      | `[ { "id": 10, "householdId": "hh-1", "userId": 1 }, ... ]` |
+| `/api/v1/household_member/{id}`                        | Obtener miembro por Id         | GET             | path: `{ id }`                                                | `GET /api/v1/household_member/10`                                   | `{ "id": 10, "householdId": "hh-1", "userId": 1 }`          |
+| `/api/v1/household_member/{id}`                        | Actualizar miembro por Id      | PUT             | path: `{ id }`, body: parcial `UpdateHouseholdMemberResource` | `PUT /api/v1/household_member/10` + body JSON                       | `{ "id": 10, "updated": true }`                             |
+| `/api/v1/household_member/{id}`                        | Eliminar miembro               | DELETE          | path: `{ id }`                                                | `DELETE /api/v1/household_member/10`                                | `{ "deleted": true }`                                       |
+| `/api/v1/household_member/household/{householdId}`     | Obtener miembros por Household | GET             | path: `{ householdId }`                                       | `GET /api/v1/household_member/household/hh-1`                       | `[ { "id": 10, "householdId": "hh-1" }, ... ]`              |
+| `/api/v1/household_member/user/{userId}`               | Obtener miembros por usuario   | GET             | path: `{ userId }`                                            | `GET /api/v1/household_member/user/1`                               | `[ { "id": 10, "userId": 1, "householdId": "hh-1" }, ... ]` |
+| `/api/v1/household_member/{id}/promote-representative` | Promover a representante       | POST            | path: `{ id }`                                                | `POST /api/v1/household_member/10/promote-representative`           | `{ "id": 10, "isRepresentative": true }`                    |
+| `/api/v1/household_member/{id}/demote-representative`  | Degradar representante         | POST            | path: `{ id }`                                                | `POST /api/v1/household_member/10/demote-representative`            | `{ "id": 10, "isRepresentative": false }`                   |
+
+<br> **Income Allocation:**
+
+| **Endpoint**                                           | **Acción implementada**        | **Método HTTP** | **Parámetros**                                                | **Ejemplo Request**                                                 | **Ejemplo Response**                                        |
+| ------------------------------------------------------ | ------------------------------ | --------------- | ------------------------------------------------------------- | ------------------------------------------------------------------- | ----------------------------------------------------------- |
+| `/api/v1/household_member`                             | Crear miembro de Household     | POST            | body: `{ householdId, userId, isRepresentative }`             | `{ "householdId": "hh-1", "userId": 1, "isRepresentative": false }` | `{ "id": 10, "householdId": "hh-1", "userId": 1 }`          |
+| `/api/v1/household_member`                             | Listar todos los miembros      | GET             | —                                                             | `GET /api/v1/household_member`                                      | `[ { "id": 10, "householdId": "hh-1", "userId": 1 }, ... ]` |
+| `/api/v1/household_member/{id}`                        | Obtener miembro por Id         | GET             | path: `{ id }`                                                | `GET /api/v1/household_member/10`                                   | `{ "id": 10, "householdId": "hh-1", "userId": 1 }`          |
+| `/api/v1/household_member/{id}`                        | Actualizar miembro por Id      | PUT             | path: `{ id }`, body: parcial `UpdateHouseholdMemberResource` | `PUT /api/v1/household_member/10` + body JSON                       | `{ "id": 10, "updated": true }`                             |
+| `/api/v1/household_member/{id}`                        | Eliminar miembro               | DELETE          | path: `{ id }`                                                | `DELETE /api/v1/household_member/10`                                | `{ "deleted": true }`                                       |
+| `/api/v1/household_member/household/{householdId}`     | Obtener miembros por Household | GET             | path: `{ householdId }`                                       | `GET /api/v1/household_member/household/hh-1`                       | `[ { "id": 10, "householdId": "hh-1" }, ... ]`              |
+| `/api/v1/household_member/user/{userId}`               | Obtener miembros por usuario   | GET             | path: `{ userId }`                                            | `GET /api/v1/household_member/user/1`                               | `[ { "id": 10, "userId": 1, "householdId": "hh-1" }, ... ]` |
+| `/api/v1/household_member/{id}/promote-representative` | Promover a representante       | POST            | path: `{ id }`                                                | `POST /api/v1/household_member/10/promote-representative`           | `{ "id": 10, "isRepresentative": true }`                    |
+| `/api/v1/household_member/{id}/demote-representative`  | Degradar representante         | POST            | path: `{ id }`                                                | `POST /api/v1/household_member/10/demote-representative`            | `{ "id": 10, "isRepresentative": false }`                   |
+
+
+ <br> **Settings:**
+
+| **Endpoint**            | **Acción implementada**           | **Método HTTP** | **Parámetros**                                        | **Ejemplo Request**                                                           | **Ejemplo Response**                                                  |
+| ----------------------- | --------------------------------- | --------------- | ----------------------------------------------------- | ----------------------------------------------------------------------------- | --------------------------------------------------------------------- |
+| `/api/v1/settings`      | Obtener configuración por usuario | GET             | header: `Authorization: Bearer token` (user en token) | `GET /api/v1/settings`                                                        | `{ "id": "set-1", "userId": 1, "language": "es", "currency": "PEN" }` |
+| `/api/v1/settings`      | Crear configuración               | POST            | body: `{ userId, language, currency, notifications }` | `{ "userId": 1, "language": "es", "currency": "PEN", "notifications": true }` | `{ "id": "set-1", "userId": 1 }`                                      |
+| `/api/v1/settings/{id}` | Actualizar configuración          | PUT             | path: `{ id }`, body: parcial `UpdateSettingResource` | `PUT /api/v1/settings/set-1` + body JSON                                      | `{ "id": "set-1", "updated": true }`                                  |
+
+<br> **Member Contribution:**
+
+| **Endpoint**                                                    | **Acción implementada**                       | **Método HTTP** | **Parámetros**             | **Ejemplo Request**                                          | **Ejemplo Response**                                                       |
+| --------------------------------------------------------------- | --------------------------------------------- | --------------- | -------------------------- | ------------------------------------------------------------ | -------------------------------------------------------------------------- |
+| `/api/v1/member_contribution`                                   | Listar todas las contribuciones de miembros   | GET             | —                          | `GET /api/v1/member_contribution`                            | `[ { "id": "mc-1", "memberId": 10, "contributionId": "contrib-1" }, ... ]` |
+| `/api/v1/member_contribution/bycontributionid/{contributionId}` | Obtener MemberContribution por ContributionId | GET             | path: `{ contributionId }` | `GET /api/v1/member_contribution/bycontributionid/contrib-1` | `[ { "id": "mc-1", "contributionId": "contrib-1", "memberId": 10 }, ... ]` |
+| `/api/v1/member_contribution/bymemberid/{memberId}`             | Obtener MemberContribution por MemberId       | GET             | path: `{ memberId }`       | `GET /api/v1/member_contribution/bymemberid/10`              | `[ { "id": "mc-1", "memberId": 10, "contributionId": "contrib-1" }, ... ]` |
+| `/api/v1/member_contribution/{id}`                              | Eliminar MemberContribution                   | DELETE          | path: `{ id }`             | `DELETE /api/v1/member_contribution/mc-1`                    | `{ "deleted": true }`                                                      |
+
 
 ### 5.2.7 Team Collaboration Insights
 
