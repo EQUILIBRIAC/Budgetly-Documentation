@@ -1,21 +1,20 @@
-
-
 <p align="center">
   <img src="https://i.imgur.com/i8kTWd9.png" alt="logo_upc">
 </p> 
 
 <br>
 
-
-<h3 align="center">"Informe de Trabajo Final"</h3> <br>
-
-<h3 align="center">1ASI0732 - Diseño de Experimentos de Ingeniería de Software</h3> <br>
+<h3 align="center">Universidad Peruana de Ciencias Aplicadas</h3> <br>
 
 <h3 align="center">Ingeniería de Software - 7mo Ciclo</h3> <br>
 
-<h3 align="center">Profesor: Juan Carlos Tinoco Licas</h3> <br>
+<h3 align="center">1ASI0732 - Diseño de Experimentos de Ingeniería de Software</h3> <br>
 
-<h3 align="center">Sección: 10253</h3>
+
+
+<h3 align="center">Sección: 10253</h3> <br>
+<h3 align="center">Profesor: Juan Carlos Tinoco Licas</h3> <br>
+<h3 align="center">"Informe de Trabajo Final"</h3> <br>
 <h3 align="center">Startup: Equilibria</h3>
 <h3 align="center">Producto: Budgetly</h3> <br>
 
@@ -56,7 +55,7 @@
 
 
 
-<p align="center"><em>Abril 2026</em></p>
+<p align="center"><em>Mayo 2026</em></p>
 
 </div>
 
