@@ -170,40 +170,181 @@ En esta sección, se especifica la configuración para realizar el despliegue de
 
 ## 5.2 Product Implementation & Deployment
 
-Contenido pendiente.
 
 ### 5.2.1 Sprint Backlogs
 
-Contenido pendiente.
+|**User Story Id**|**Title**|**Task Id**|**Task Title**|**Description**|**Estimation (Hours)**|**Assigned To**|**Status (To-do/In-Process/To-Review/Done)**|
+|---|---|---|---|---|---|---|---|
+|US31|Visualizar información general sobre la solución desde la landing page|T1|Información general|Desarrollo de la sección con información introductoria del proyecto|2|Carlos Guimaraes|Done|
+|US32|Conocer las funciones principales del sistema|T1|Funciones principales|Diseño y desarrollo de la sección que explica las funcionalidades clave|2|Camila Huamani|Done|
+|US33|Explorar beneficios del sistema|T1|Beneficios|Desarrollo de la sección que muestre los beneficios de la solución|2|Angelo Solano|Done|
+|US34|Ver ejemplos o simulaciones del funcionamiento|T1|Ejemplos y simulaciones|Implementación de ejemplos visuales del funcionamiento del sistema|3|Martin Gonzales|Done|
+|US35|Acceder fácilmente al registro o login|T1|Botones de acceso|Diseño e implementación de botones visibles para registro y login|1|Renzo Uribe|Done|
+|TS18|Documentar los pasos de despliegue|T1|Documentación de despliegue|Redacción de la guía para desplegar nuevas versiones|2|Carlos Guimaraes|Done|
+|TS19|Habilitar monitoreo básico del sistema|T1|Monitoreo básico|Configuración inicial para logs y monitoreo|3|Camila Huamani|Done|
 
 ### 5.2.2 Implemented Landing Page Evidence
 
-Contenido pendiente.
+Como parte de la revisión del sprint, se presentan las evidencias de ejecución relacionadas con el desarrollo del Landing Page de Budgetly. La implementación se realizó empleando HTML, CSS y JavaScript, asegurando una estructura semántica clara, un diseño visual coherente con las guías de estilo y funcionalidades interactivas que mejoran la experiencia de usuario.
+
+Además de las capturas del código implementado, se incluye un video demostrativo donde se explica y evidencia la navegación lograda durante este sprint, así como el flujo de interacción principal que se validó.
+
+Video del landing page: bit.ly/4nxTsa6  
+
+Link: https://1asi0730-2520-7432-g1-harmonix.github.io/LandingPage/
+
+- Home:<br>
+
+   ![Alt Text](https://i.imgur.com/ZR6EaIy.png)
+<br>
+
+- About Us:<br>
+
+   <p align="center">
+  <img src="https://imgur.com/tdh3OY4.png">
+  </p>
+
+  <br>
+  
+- Services: <br>
+
+  ![Alt Text](https://i.imgur.com/tceyH5o.png)
+  
+  <br>
+- How does it work?: <br>
+
+  ![Alt Text](https://i.imgur.com/jASoXbj.png)
+
+  <br>
+
+- Prices: <br>
+
+  ![Alt Text](https://i.imgur.com/YPBkCel.png)
+
+  <br>
+
+- Contact us: <br>
+
+  ![Alt Text](https://i.imgur.com/7rnTMg8.png)
+
+  <br>
 
 ### 5.2.3 Implemented Frontend-Web Application Evidence
 
-Contenido pendiente.
+Se desarrolló e implementó el **Frontend Web Application de Budgetly**, utilizando Vue.js. Se construyeron las principales vistas del sistema, incluyendo dashboards para los distintos tipos de usuario, gestión de hogares, miembros, gastos y contribuciones.
+
+El sistema fue desplegado públicamente, permitiendo validar su funcionamiento y navegación.
+
+- Link: [https://url-shortener.me/6PAX](https://url-shortener.me/6PAX)
+
+**Evidencias de la interfaz:**
+
+- Representative-Dashboard:
+
+<p align="center"> <img src="https://i.imgur.com/O7CAEZi.png"> </p>
+
+- Representative-Households:
+
+<p align="center"> <img src="https://i.imgur.com/DKj8F74.png"> </p>
+
+- Representative-Members:
+
+<p align="center"> <img src="https://i.imgur.com/yKfqLuo.png"> </p>
+
+- Representative-Expenses:
+
+<p align="center"> <img src="https://i.imgur.com/CJfGSuJ.png"> </p>
+
+- Representative-Contributions:
+
+<p align="center"> <img src="https://i.imgur.com/cLadc0H.png"> </p>
+
+- Representative-Configuration:
+
+<p align="center"> <img src="https://i.imgur.com/0L6H7A2.png"> </p>
+
+- Member-HomeState:
+
+<p align="center"> <img src="https://i.imgur.com/ISCzrHc.png"> </p>
+
+- Member-FindHome:
+
+<p align="center"> <img src="https://i.imgur.com/qEaJzkc.png"> </p>
 
 ### 5.2.4 Acuerdo de Servicio - SaaS
 
 Contenido pendiente.
 
-### 5.2.5 Implemented Native-Mobile Application Evidence
+### 5.2.5 Implemented RESTful API and/or Serverless Backend Evidence
 
-Contenido pendiente.
+Se desarrolló el **Backend de Budgetly**, implementando los principales endpoints REST para la gestión del sistema.
 
-### 5.2.6 Implemented RESTful API and/or Serverless Backend Evidence
+Se integraron funcionalidades como:
 
-Contenido pendiente.
+- Autenticación de usuarios (login y registro con JWT).
+- Gestión de usuarios y perfiles.
+- Administración de hogares.
+- Registro y gestión de gastos (bills).
+- Creación y seguimiento de contribuciones.
 
-### 5.2.7 RESTful API documentation
+El backend fue desplegado en la nube mediante Render, asegurando su disponibilidad pública.
 
-Contenido pendiente.
+### 5.2.6 RESTful API documentation
 
-### 5.2.8 Team Collaboration Insights
+A continuación, se resumen los principales endpoints implementados en Budgetly:
 
-Contenido pendiente.
+**Authentication**
+
+- `POST /api/v1/authentication/sign-in` → Inicio de sesión
+- `POST /api/v1/authentication/sign-up` → Registro de usuario
+
+**User**
+
+- `GET /api/v1/user` → Obtener usuario autenticado
+- `PUT /api/v1/user/byemail/{email}` → Actualizar usuario
+- `DELETE /api/v1/user/byemail/{email}` → Eliminar usuario
+
+**Households**
+
+- `POST /api/v1/house_hold` → Crear hogar
+- `GET /api/v1/house_hold/{id}` → Obtener hogar
+
+**Bills**
+
+- `GET /api/v1/bills` → Listar gastos
+- `POST /api/v1/bills` → Crear gasto
+- `DELETE /api/v1/bills/{id}` → Eliminar gasto
+
+**Contributions**
+
+- `POST /api/v1/contribution` → Crear contribución
+- `GET /api/v1/contribution` → Listar contribuciones
+
+**Settings**
+
+- `GET /api/v1/settings` → Obtener configuración
+- `PUT /api/v1/settings/{id}` → Actualizar configuración
+
+Estos endpoints permiten la comunicación entre el frontend y backend, asegurando la funcionalidad completa del sistema.
+
+### 5.2.7 Team Collaboration Insights
+
+Durante el desarrollo de los sprints, el equipo trabajó de manera colaborativa utilizando GitHub y una estrategia basada en ramas individuales e integración continua.
+
+Aportes principales:
+
+- **Carlos Guimaraes**: Desarrollo de secciones clave del frontend y apoyo en integración.
+- **Camila Huamani**: Implementación de funcionalidades relacionadas a usuarios y configuración.
+- **Angelo Solano**: Desarrollo de lógica de contribuciones y flujo del sistema.
+- **Martin Gonzales**: Implementación de vistas y componentes del frontend.
+- **Renzo Uribe**: Desarrollo del backend y endpoints principales.
+
+Evidencias de colaboración:
+
+<p align="center"> <img src="https://i.imgur.com/gnKYLlk.png"/> </p> <p align="center"> <img src="https://i.imgur.com/jcH0AH7.png"/> </p>
+
+El trabajo en equipo permitió una integración eficiente entre frontend y backend, logrando una versión funcional del sistema.
 
 ## 5.3 Video About-the-Product
 
-Contenido pendiente.
+En el siguiente video se muestra una vista detallada del uso y proposito de la aplicación deasarrollada: https://shorturl.at/1Hyl0
