@@ -74,6 +74,54 @@ A continuación, se detalla el reporte de ejecución de la suite de pruebas de i
 
 <img src="../assets/chapter-06/Integration-Tests-Summary.png" alt="Resumen de Pruebas de Integración" width="600"/>
 
-### 6.1.3. Core Behavior-Driven Development
+### 6.1.3. Core Behavior-Driven Development (BDD)
+
+En esta sección, el equipo aplicó técnicas de **Behavior-Driven Development (BDD)** para validar que el sistema se comporte según las expectativas del usuario final. Se utilizó el lenguaje **Gherkin** para definir escenarios de negocio legibles y **SpecFlow** para automatizar su ejecución.
+
+#### Escenarios de Comportamiento Definidos
+
+Se implementaron escenarios clave que describen flujos críticos de la aplicación desde una perspectiva funcional:
+
+- **Gestión de Hogares (Household Management)**: Validación del flujo de creación de un grupo de gastos compartidos, asegurando la asignación correcta del rol de representante.  
+- **Registro de Usuarios (User Registration)**: Verificación del proceso de alta en la plataforma, asegurando la integridad de los datos de identidad (Email/Password).
+
+#### A. Especificación Gherkin para Household Management
+
+```gherkin
+Feature: Household Management
+  As a software engineering student
+  I want to create a new household in Budgetly
+  So that I can start managing shared expenses with my team
+
+  Scenario: Create a household successfully
+    Given I am a registered user with ID 1
+    When I request to create a household named "Apartamento 402" with a limit of 5 members
+    Then the system should generate the household aggregate successfully
+    And the household name should be "Apartamento 402"
+    And I should be assigned as the representative
+```
+
+#### B. Especificación Gherkin para User Registration
+
+```gherkin
+Feature: User Registration
+  As a new visitor of Budgetly
+  I want to register a new account
+  So that I can start using the platform to split my expenses
+
+  @user_registration
+  Scenario: Successful user registration
+    Given I provide the name "Carlos Perez" and email "carlos@example.com"
+    And I choose a password "Password123!" and the role "Admin"
+    When I submit the registration
+    Then the user should be created with the email "carlos@example.com"
+    And the account should be active by default
+```
+#### Evidencia de Ejecución
+
+Al ejecutar la suite de pruebas, SpecFlow interpreta los archivos .feature y ejecuta los Step Definitions vinculados. La siguiente captura muestra la ejecución exitosa de los 24 tests totales, incluyendo los escenarios de comportamiento (BDD) que aparecen detallados por pasos en la salida de consola:
+
+<img src="../assets/chapter-06/Behavior-Driven-Development.png" alt="Archivos de Pruebas BDD" width="600"/>
+<img src="../assets/chapter-06/BDD-Summary.png" alt="Ejecución de Pruebas BDD" width="600"/>
 
 ### 6.1.4. Core System Tests
