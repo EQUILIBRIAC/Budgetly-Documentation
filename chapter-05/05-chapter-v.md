@@ -273,7 +273,102 @@ El sistema fue desplegado públicamente, permitiendo validar su funcionamiento y
 
 ### 5.2.4 Acuerdo de Servicio - SaaS
 
-Contenido pendiente.
+Esta sección describe el **Acuerdo de Servicio – SaaS (SaaS Agreement)** aplicable a los usuarios de **Budgetly**, estableciendo derechos, obligaciones y restricciones para garantizar el uso transparente y responsable de la plataforma. Su contenido debe publicarse en la landing page dentro de la sección **“Terms and Conditions”**.
+
+#### 5.2.4.1. Información general y aceptación
+
+**Budgetly** es una plataforma digital ofrecida bajo el modelo **Software as a Service (SaaS)**, orientada a la gestión colaborativa de finanzas del hogar mediante registro de usuarios, creación/unión a hogares, registro de gastos y contribuciones.
+
+Al **registrarse, acceder o utilizar** Budgetly, el usuario declara haber leído y aceptado estos Términos y Condiciones. Si el usuario no está de acuerdo, debe abstenerse de usar el servicio.
+
+#### 5.2.4.2. Definiciones
+
+- **Plataforma / Servicio:** Budgetly (Landing Page, Web Application y API asociada).
+- **Proveedor:** Startup **Equilibria** (equipo del proyecto Budgetly).
+- **Usuario:** Persona que crea una cuenta y utiliza la plataforma.
+- **Hogar (Household):** Espacio de colaboración donde se agrupan miembros para administrar gastos y aportes.
+- **Representante:** Usuario que crea y gestiona el Hogar (administración general).
+- **Miembro:** Usuario que se une a un Hogar y participa en la gestión/consulta según permisos.
+
+#### 5.2.4.3. Elegibilidad y registro
+
+- El usuario declara contar con **capacidad legal** para aceptar este acuerdo.
+- El usuario se compromete a proporcionar información **veraz, completa y actualizada** durante el registro y uso del servicio.
+- El usuario es responsable de mantener la **confidencialidad de sus credenciales** (correo/contraseña) y de las actividades realizadas desde su cuenta.
+
+#### 5.2.4.4. Uso del servicio (alcance funcional)
+
+Budgetly permite, entre otras funciones:
+- Registro e inicio de sesión de usuarios.
+- Creación y administración de un Hogar por un Representante.
+- Unión de Miembros a un Hogar (por ejemplo, mediante un identificador/ID).
+- Registro, consulta y seguimiento de gastos del Hogar.
+- Registro y seguimiento de contribuciones/aportes asociados a gastos.
+
+El servicio se ofrece con fines de organización financiera colaborativa y **no constituye asesoría financiera, contable ni legal**.
+
+#### 5.2.4.5. Responsabilidades por rol
+
+**Representante del Hogar**
+- Administrar la configuración del hogar, miembros y registros que correspondan.
+- Promover un uso adecuado de la plataforma dentro del hogar.
+- Verificar que los datos ingresados (gastos, fechas, montos, descripciones) sean correctos.
+
+**Miembro del Hogar**
+- Ingresar información correcta cuando corresponda (por ejemplo, aportes o datos solicitados).
+- Respetar la dinámica del hogar y las decisiones organizativas acordadas con el Representante y otros miembros.
+
+Budgetly es una herramienta de apoyo: los acuerdos internos del hogar respecto a pagos y responsabilidades se definen entre sus integrantes.
+
+#### 5.2.4.6. Conductas prohibidas (restricciones)
+
+Se prohíbe expresamente:
+- Usar la plataforma con fines ilícitos o que vulneren derechos de terceros.
+- Intentar acceder sin autorización a hogares ajenos o información de otros usuarios.
+- Realizar acciones que afecten la disponibilidad o seguridad del servicio (ataques, explotación de vulnerabilidades, automatizaciones abusivas, etc.).
+- Introducir contenido malicioso (malware) o manipular el funcionamiento del sistema.
+- Copiar, modificar, distribuir o realizar ingeniería inversa del servicio, salvo autorización expresa del Proveedor.
+
+El Proveedor podrá **suspender o restringir** cuentas ante indicios razonables de incumplimiento.
+
+#### 5.2.4.7. Datos, privacidad y confidencialidad (visión general)
+
+- Los datos ingresados por el usuario (por ejemplo: gastos, aportes, descripciones) se utilizan para la operación del servicio y la experiencia colaborativa del Hogar.
+- El usuario entiende que los datos del Hogar podrán ser **visibles para los miembros** del mismo Hogar según el rol y el diseño del sistema.
+- Se recomienda no ingresar información altamente sensible innecesaria (por ejemplo, contraseñas, datos de tarjetas, etc.).
+
+*(Nota: Para cumplimiento normativo completo, debe complementarse con una “Privacy Policy” publicada en el website.)*
+
+#### 5.2.4.8. Disponibilidad del servicio y cambios
+
+- El servicio puede presentar interrupciones por mantenimiento, actualizaciones o fallos de infraestructura de terceros (por ejemplo, proveedor cloud).
+- El Proveedor puede realizar cambios en la plataforma (mejoras, correcciones, ajustes de interfaz), procurando mantener la continuidad del servicio.
+
+#### 5.2.4.9. Propiedad intelectual
+
+Budgetly, su interfaz, documentación y componentes asociados son propiedad del Proveedor o se utilizan bajo licencias correspondientes. El usuario recibe un derecho de uso **limitado, no exclusivo y revocable** para utilizar la plataforma conforme a este acuerdo.
+
+#### 5.2.4.10. Limitación de responsabilidad
+
+En la máxima medida permitida por la legislación aplicable:
+- Budgetly se ofrece **“tal cual”** y **según disponibilidad**.
+- El Proveedor no se responsabiliza por decisiones financieras tomadas únicamente en base a la información mostrada si los datos ingresados por los usuarios son erróneos o incompletos.
+- El Proveedor no será responsable por daños indirectos, pérdida de datos, pérdida de oportunidades o conflictos entre miembros del hogar derivados del uso de la plataforma.
+
+#### 5.2.4.11. Terminación o suspensión de la cuenta
+
+El usuario puede dejar de usar el servicio en cualquier momento. El Proveedor podrá suspender o limitar el acceso si:
+- Se incumplen estos términos,
+- Se detecta un riesgo de seguridad,
+- Se realizan actividades prohibidas o que afecten al servicio o a terceros.
+
+#### 5.2.4.12. Ley aplicable y jurisdicción (Perú)
+
+Este Acuerdo se rige por las leyes de la **República del Perú**. Cualquier controversia será sometida a los jueces y tribunales competentes del Perú, según corresponda.
+
+#### 5.2.4.13. Canal de contacto
+
+Para consultas, soporte o reportes relacionados al servicio, se habilitará un canal de contacto visible en el website (por ejemplo, formulario “Contact us” o correo oficial del equipo).
 
 ### 5.2.5 Implemented RESTful API and/or Serverless Backend Evidence
 
