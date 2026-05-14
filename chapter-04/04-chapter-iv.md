@@ -118,6 +118,10 @@ Este equilibrio entre funcionalidad y diseño moderno garantiza una interfaz efi
   <img src="/assets/chapter-04/web_style2.png" alt="imagen2" width="500">
 </p>
 
+### 4.1.3. iOS Mobile Style Guidelines.
+
+### 4.1.4. Android Mobile Style Guidelines.
+
 ## 4.2. Information Architecture.
 ### 4.2.1. Organization Systems  
 
@@ -399,23 +403,32 @@ El mock-up facilita la validación temprana con los interesados (stakeholders), 
   <img src="/assets/chapter-04/Landing Page - HARMONIX.png" alt="lpw5" width="500">
 </p>
 
+## 4.4 Mobile Applications UX/UI Design
+### 4.4.1 Mobile Applications Wireframes
 
-## 4.4. Web Applications UX/UI Design.
+### 4.4.2 Mobile Applications Wireflow Diagrams
+
+### 4.4.3 Mobile Applications Mock-ups
+
+### 4.4.4 Mobile Applications User Flow Diagrams
+
+
+## 4.6. Web Applications UX/UI Design.
 En este apartado se define la propuesta de diseño UX/UI para Budgetly, enfocada en brindar una experiencia simple, intuitiva y transparente en la gestión de gastos compartidos. El diseño prioriza la facilidad de uso para los distintos perfiles de usuario (miembros y representantes del hogar), asegurando accesibilidad desde dispositivos móviles y navegadores web. Se emplean principios de usabilidad, consistencia visual y jerarquía de la información, con el objetivo de reducir fricciones en el registro de datos, visualización de aportes y seguimiento de pagos, fortaleciendo la confianza y satisfacción de los usuarios.
 
-### 4.4.1. Web Applications Wireframes.
+### 4.6.1. Web Applications Wireframes.
 
 <p styles="align: left">
   <img src="/assets/chapter-04/WAW.png" alt="WAW" width="500">
 </p>
 
-### 4.4.2. Web Applications Wireflow Diagrams.
+### 4.6.2. Web Applications Wireflow Diagrams.
 
 <p styles="align: left">
   <img src="/assets/chapter-04/WAWD.png" alt="WAWD" width="500">
 </p>
 
-### 4.4.2. Web Applications Mock-ups.
+### 4.6.2. Web Applications Mock-ups.
 
 <p styles="align: left">
   <img src="/assets/chapter-04/mockupweb1.png" alt="wam" width="500">
@@ -429,7 +442,7 @@ En este apartado se define la propuesta de diseño UX/UI para Budgetly, enfocada
   <img src="/assets/chapter-04/mockup3.png" alt="wam" width="500">
 </p>
 
-### 4.4.3. Web Applications User Flow Diagrams.
+### 4.6.3. Web Applications User Flow Diagrams.
 A continuación, se presenta el User Flow Diagram, diseñado a partir de los objetivos principales de los usuarios. El flujo refleja cada meta funcional dentro de la aplicación y los distintos recorridos que pueden seguir para alcanzarla. Para una mejor comprensión, se incluyen mockups de alta fidelidad que ilustran visualmente cada paso, facilitando la validación de la experiencia y la coherencia del diseño.
 
 <p styles="align: left">
@@ -449,7 +462,7 @@ A continuación, se presenta el User Flow Diagram, diseñado a partir de los obj
 </p>
 
 
-## 4.5. Web Applications Prototyping.
+## 4.7. Web Applications Prototyping.
 
 Se desarrolló un **prototipo interactivo** orientado a la **navegación web**, con el objetivo de evaluar y optimizar la accesibilidad y la experiencia de usuario antes del lanzamiento final.  
 Este prototipo simula de manera realista el recorrido dentro de la aplicación, permitiendo a los usuarios explorar secciones y flujos tal como lo harían en la versión definitiva.  
@@ -464,39 +477,39 @@ Gracias a sus **maquetas de alta fidelidad**, el prototipo facilita la validaci�
 **Link al prototipo:** https://www.figma.com/proto/toqBUIAgoZAPRnVn9sTZuE/App-web?node-id=61-17&p=f&t=LoFwY085Rxt0LqeQ-1&scaling=min-zoom&content-scaling=fixed&page-id=33%3A9&starting-point-node-id=61%3A17&show-proto-sidebar=1
 
 
-## 4.6. Domain-Driven Software Architecture.
+## 4.8. Domain-Driven Software Architecture.
 
 La arquitectura de Budgetly se plantea bajo el enfoque de Domain-Driven Design (DDD), lo que permite alinear el desarrollo técnico con el modelo de negocio y las reglas que rigen la distribución de gastos en el hogar. El sistema se organiza en dominios principales como la gestión de usuarios (registro, autenticación y roles), gestión de ingresos y aportes (cálculo proporcional y validación de pagos), gestión de notificaciones (recordatorios automáticos y alertas) y reportes (visualización de saldos y exportación de datos).
 
 Este enfoque modular asegura que cada componente evolucione de forma independiente, manteniendo la coherencia del dominio central y garantizando la escalabilidad de la plataforma.
 
-### 4.6.1. Software Architecture Context Diagram.
+### 4.8.1. Software Architecture Context Diagram.
 
 <p styles="align: left">
   <img src="/assets/chapter-04/Diagram-Context.png" alt="dc" width="500">
 </p>
 
-### 4.6.2. Software Architecture Container Diagrams.
+### 4.8.2. Software Architecture Container Diagrams.
 
 <p styles="align: left">
   <img src="/assets/chapter-04/Diagram-Containers.png" alt="dcnrs" width="500">
 </p>
 
-### 4.6.3. Software Architecture Components Diagrams.
+### 4.8.3. Software Architecture Components Diagrams.
 
 <p styles="align: left">
   <img src="/assets/chapter-04/Diagram-API_Components_BoundedContexts.png" alt="dcpts" width="500">
 </p>
 
 
-## 4.7. Software Object-Oriented Design.
-### 4.7.1. Class Diagrams.
+## 4.9. Software Object-Oriented Design.
+### 4.9.1. Class Diagrams.
 
 <p styles="align: left">
   <img src="/assets/chapter-04/Class-Diagram.png" alt="dcpts" width="500">
 </p>
 
-### 4.7.2. Class Dictionary.
+### 4.9.2. Class Dictionary.
 #### [IAM Bounded Context]
 
 **Class: User**  
@@ -678,7 +691,7 @@ Este enfoque modular asegura que cada componente evolucione de forma independien
 - `CARD` — Tarjeta.  
 
 
-## 4.8. Database Design.
+## 4.10. Database Design.
 #### Descripción General
 La base de datos de Budgetly ha sido diseñada bajo un enfoque relacional, orientado a la gestión financiera colaborativa dentro del hogar. Su estructura busca garantizar integridad referencial, equidad en la distribución de gastos y transparencia entre los miembros. Soporta funcionalidades clave como el cálculo proporcional de contribuciones, seguimiento de pagos, notificaciones automáticas, metas financieras compartidas, entre otras.
 
