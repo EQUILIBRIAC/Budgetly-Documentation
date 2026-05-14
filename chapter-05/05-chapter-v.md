@@ -47,6 +47,7 @@ A continuación, se adjuntan los enlaces para acceder a los repositorios donde s
 * **Landing Page: https://github.com/EQUILIBRIAC/Budgetly-LandingPage**
 * **Front End: https://github.com/EQUILIBRIAC/Budgetly-FrontEnd**
 * **Back End: https://github.com/EQUILIBRIAC/Budgetly-BackEnd**
+* **Mobile App: https://github.com/EQUILIBRIAC/Budgetly-MobileApp**
 
 **5.1.2.2. GitFlow**
 
@@ -191,7 +192,7 @@ Además de las capturas del código implementado, se incluye un video demostrati
 
 Video del landing page: bit.ly/4nxTsa6  
 
-Link: https://1asi0730-2520-7432-g1-harmonix.github.io/LandingPage/
+Link: https://equilibriac.github.io/Budgetly-LandingPage/
 
 - Home:<br>
 
@@ -235,7 +236,7 @@ Se desarrolló e implementó el **Frontend Web Application de Budgetly**, utiliz
 
 El sistema fue desplegado públicamente, permitiendo validar su funcionamiento y navegación.
 
-- Link: [https://url-shortener.me/6PAX](https://url-shortener.me/6PAX)
+- Link: https://budgetly-exp-app.web.app/
 
 **Evidencias de la interfaz:**
 
@@ -370,7 +371,57 @@ Este Acuerdo se rige por las leyes de la **República del Perú**. Cualquier con
 
 Para consultas, soporte o reportes relacionados al servicio, se habilitará un canal de contacto visible en el website (por ejemplo, formulario “Contact us” o correo oficial del equipo).
 
-### 5.2.5 Implemented RESTful API and/or Serverless Backend Evidence
+### 5.2.5 Implemented Native-Mobile Application Evidence
+
+Se desarrolló e implementó el **Native-Mobile Application de Budgetly**, utilizando Dart Fluttter Se construyeron las principales vistas del sistema, incluyendo dashboards para los distintos tipos de usuario, gestión de hogares, miembros, gastos y contribuciones.
+
+El sistema fue desplegado públicamente, permitiendo validar su funcionamiento y navegación.
+
+- Link: 
+
+**Evidencias de la interfaz:**
+
+- Register:
+
+<p align="center"> <img src="https://i.imgur.com/KWYGdoj.png"> </p>
+
+- Login:
+
+<p align="center"> <img src="https://i.imgur.com/quzs3bc.png"> </p>
+                     
+- Representative-Dashboard:
+
+<p align="center"> <img src="https://i.imgur.com/rpN70L3.png"> </p>
+
+- Representative-Households:
+
+<p align="center"> <img src="https://i.imgur.com/iIHCVUN.png"> </p>
+
+- Representative-Members:
+
+<p align="center"> <img src="https://i.imgur.com/ut59ZMU.png"> </p>
+
+- Representative-Contributions:
+
+<p align="center"> <img src="https://i.imgur.com/1rP9rZU.png"> </p>
+
+- Member-Dashboard:
+
+<p align="center"> <img src="https://i.imgur.com/ZFJ9aGL.png"> </p>
+
+- Member-Contributions:
+
+<p align="center"> <img src="https://i.imgur.com/llqYwAq.png"> </p>
+
+- Member-FindHome:
+
+<p align="center"> <img src="https://i.imgur.com/IjxMqij.png"> </p>
+
+- Member-Setting:
+
+<p align="center"> <img src="https://i.imgur.com/5Eie57Q.png"> </p>
+
+### 5.2.6 Implemented RESTful API and/or Serverless Backend Evidence
 
 Se desarrolló el **Backend de Budgetly**, implementando los principales endpoints REST para la gestión del sistema.
 
@@ -382,11 +433,12 @@ Se integraron funcionalidades como:
 - Registro y gestión de gastos (bills).
 - Creación y seguimiento de contribuciones.
 
-El backend fue desplegado en la nube mediante Azure, asegurando su disponibilidad pública.
+El backend fue desplegado en la nube mediante Azure, asegurando su disponibilidad pública: https://budgetly-api-dev-dxcfedfvdxeebad5.chilecentral-01.azurewebsites.net/swagger/index.html
+
 
 <p align="center"> <img src="https://i.imgur.com/UxzJwaz.png"> </p>
 
-### 5.2.6 RESTful API documentation
+### 5.2.7 RESTful API documentation
 
 A continuación, se resumen los principales endpoints implementados en Budgetly:
 
@@ -493,7 +545,7 @@ A continuación, se resumen los principales endpoints implementados en Budgetly:
 | `/api/v1/member_contribution/{id}`                              | Eliminar MemberContribution                   | DELETE          | path: `{ id }`             | `DELETE /api/v1/member_contribution/mc-1`                    | `{ "deleted": true }`                                                      |
 
 
-### 5.2.7 Team Collaboration Insights
+### 5.2.8 Team Collaboration Insights
 
 Durante el desarrollo de los sprints, el equipo trabajó de manera colaborativa utilizando GitHub y una estrategia basada en ramas individuales e integración continua.
 
