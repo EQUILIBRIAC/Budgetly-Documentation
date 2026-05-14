@@ -125,3 +125,85 @@ Al ejecutar la suite de pruebas, SpecFlow interpreta los archivos .feature y eje
 <img src="../assets/chapter-06/BDD-Summary.png" alt="Ejecución de Pruebas BDD" width="600"/>
 
 ### 6.1.4. Core System Tests
+
+Las pruebas de sistema representan el nivel más alto de validación, donde se verifica que el ecosistema completo (Frontend, Backend y Base de Datos) interactúe correctamente bajo condiciones de uso real. Se enfocan en flujos críticos de usuario  tanto en la plataforma Web (Angular) como en la aplicación móvil (Flutter).
+
+#### Estrategia de Pruebas (E2E)
+
+Se han seleccionado los flujos con mayor impacto en la experiencia del usuario para garantizar la estabilidad del sistema:
+
+| Escenario de Sistema            | Entorno        | Descripción de la Prueba |
+|--------------------------------|---------------|--------------------------|
+| Flujo de Gasto Completo        | Web / Móvil   | Registro de un gasto → Cálculo de deuda → Actualización de balance en tiempo real. |
+| Persistencia Multi-plataforma  | Web → Móvil   | Crear un hogar en la Web y verificar su disponibilidad inmediata en la App móvil vía API. |
+| Sincronización de Invitaciones | Móvil         | Recepción de notificación → Aceptación de invitación → Acceso al dashboard del hogar. |
+
+#### Herramientas Utilizadas
+
+- **Selenium / Cypress (Web)**: Para automatizar la navegación en el navegador y validar la respuesta de la interfaz Angular.  
+- **Postman Collection**: Para validar que las APIs de Budgetly responden con tiempos de latencia menores a 200 ms en condiciones de carga normal.
+
+#### Evidencia de Ejecución
+
+Las pruebas confirmaron que la comunicación entre el frontend y el backend es fluida a través de los servicios REST. Se validó que los estados de carga y las validaciones de formulario funcionan correctamente en ambos entornos, garantizando una experiencia de usuario consistente y sin interrupciones.
+
+Script en Selenium para validar flujo de inicio de sesión:
+```csharp
+using OpenQA.Selenium;
+using OpenQA.Selenium.Chrome;
+using OpenQA.Selenium.Support.UI;
+using FluentAssertions;
+using Xunit;
+
+namespace com.split.backend.Tests.SystemTests
+{
+    public class LoginSystemTests : IDisposable
+    {
+        private readonly IWebDriver _driver;
+        private readonly string _baseUrl = "https://budgetly-exp-app.web.app";
+
+        public LoginSystemTests()
+        {
+            var options = new ChromeOptions();
+            options.AddArgument("--disable-blink-features=AutomationControlled");
+            _driver = new ChromeDriver(options);
+            _driver.Manage().Window.Maximize();
+        }
+
+        [Fact]
+        public void WebApp_Production_UserCanLoginSuccessfully()
+        {
+            _driver.Navigate().GoToUrl($"{_baseUrl}/login");
+
+            var wait = new WebDriverWait(_driver, TimeSpan.FromSeconds(20));
+
+            var emailInput = wait.Until(d => d.FindElement(By.CssSelector("input[type='email']")));
+            emailInput.Clear();
+            emailInput.SendKeys("usuarionuevo@yopmail.com");
+
+            var passwordInput = wait.Until(d => d.FindElement(By.CssSelector("input[type='password']")));
+            passwordInput.Clear();
+            passwordInput.SendKeys("12345678");
+
+
+            var loginButton = wait.Until(d => d.FindElement(By.XPath("//button[contains(., 'Sign In')]")));
+
+            ((IJavaScriptExecutor)_driver).ExecuteScript("arguments[0].scrollIntoView(true);", loginButton);
+
+            loginButton.Click();
+
+            wait.Until(d => d.Url.Contains("/dashboard") || d.Url.Contains("/home"));
+
+            _driver.Url.Should().ContainAny("/dashboard", "/home");
+
+            Thread.Sleep(10000);
+        }
+
+        public void Dispose()
+        {
+            _driver.Quit();
+            _driver.Dispose();
+        }
+    }
+}
+```
