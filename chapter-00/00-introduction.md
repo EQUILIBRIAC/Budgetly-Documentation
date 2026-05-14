@@ -104,7 +104,6 @@
 | 2.0     | 14-05-2026 | Carlos Guimares  | Se añadio la sección Core System Tests para el capitulo 6                                     |
 | 2.0     | 14-05-2026 | Angelo Solando   | Se añadio la sección  Implemented Native-Mobile Application Evidence para el capitulo 5       |
 
- Implemented Native-Mobile Application Evidence
 
 ## Project Report Collaboration Insights
 
