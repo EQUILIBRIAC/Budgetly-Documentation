@@ -120,8 +120,127 @@ Este equilibrio entre funcionalidad y diseño moderno garantiza una interfaz efi
 
 ### 4.1.3. iOS Mobile Style Guidelines.
 
+En iOS, Budgetly busca ofrecer una experiencia **limpia, fluida y accesible**, alineada con patrones nativos del sistema para reducir fricción cognitiva. Se mantiene la identidad visual definida en las *General Style Guidelines*, adaptándola al ecosistema iOS.
+
+#### Diseño general (Look & Feel)
+
+- **Estilo:** minimalista y funcional, con jerarquía visual clara.
+- **Estructura:** uso de secciones tipo “cards” para agrupar información (Aportes, Gastos, Balance).
+- **Navegación primaria:** **Tab Bar** con accesos directos a vistas frecuentes (p. ej., Dashboard, Gastos, Aportes, Hogar/Perfil).
+- **Navegación secundaria:** uso de `NavigationBar` con títulos breves y acciones relevantes en la zona superior.
+
+#### Tipografía
+
+Para mantener coherencia con la identidad de marca, se recomienda el uso de **Roboto** también en iOS.  
+No obstante, si se desea priorizar la consistencia del sistema, es válido utilizar **SF Pro** en componentes estrictamente nativos (listas, ajustes) y reservar Roboto para pantallas de marca o encabezados.
+
+**Escalas sugeridas (compatibles con accesibilidad / Dynamic Type):**
+- **Large Title:** 34pt  
+- **Title:** 28pt / 22pt  
+- **Body:** 17pt  
+- **Caption:** 12–13pt  
+
+#### Color y contraste
+
+- Se recomienda soporte para **Light Mode** y **Dark Mode**.
+- Los colores se aplican mediante roles (tokens) para mantener consistencia:
+  - **Background (Base):** `#F2E8DF`
+  - **Primary (acciones principales):** `#265954`
+  - **Secondary (superficies/contención):** `#B0B9CD`
+  - **Highlight/Apoyo:** `#F2D57E`
+  - **Texto/contraste:** `#012E40` (y acentos `#81BDE1` según contexto)
+
+Se debe asegurar un contraste adecuado para texto y botones, favoreciendo la legibilidad.
+
+#### Componentes UI
+
+- **Botón primario:** sólido, con bordes redondeados (radio 12–16), estados *enabled/disabled* claros.
+- **Campos de texto:** estilo limpio con etiquetas visibles; iconografía opcional como apoyo.
+- **Cards:** padding interno 16 y separación consistente entre módulos.
+- **Listas:** estilo agrupado para ajustes, miembros e historial.
+
+#### Iconografía
+
+Se mantiene el uso de **Bootstrap Icons** para consistencia con el ecosistema del proyecto, respetando:
+- tamaño uniforme (20–24),
+- color coherente con el estado (primario, neutro),
+- acompañamiento con texto en navegación.
+
+#### Microinteracciones y feedback
+
+- Feedback visual inmediato en acciones clave (registrar aporte, agregar gasto, crear hogar).
+- Indicadores de carga claros (spinner/skeleton) evitando pantallas vacías.
+- Mensajes de error breves y accionables (p. ej., “Reintentar”, “Editar”).
+
+#### Accesibilidad
+
+- Targets táctiles mínimos de **44x44 pt**.
+- Soporte de escalado de texto.
+- Evitar depender únicamente del color para estados (pendiente/pagado/excedente).
+
 ### 4.1.4. Android Mobile Style Guidelines.
 
+En Android, Budgetly se alinea con principios de **Material Design**, manteniendo su identidad visual mediante tokens de color, tipografía y consistencia de componentes. El enfoque prioriza claridad, escalabilidad y eficiencia de uso.
+
+#### Diseño general (Look & Feel)
+
+- **Estilo:** Material minimalista, con superficies claras (cards/sheets) y jerarquía por elevación/espaciado.
+- **Navegación primaria:** **Bottom Navigation** para secciones principales.
+- **Acción principal:** uso moderado de **FAB** solo cuando exista una acción dominante (p. ej., “Agregar gasto” o “Registrar aporte”).
+
+#### Tipografía
+
+Se mantiene **Roboto** como tipografía principal en Android, consistente con la guía general y el estándar del sistema.
+
+**Jerarquía sugerida:**
+- **Header/Display:** 28–32sp  
+- **Title:** 20–22sp  
+- **Body:** 16sp  
+- **Caption/Label:** 12–14sp  
+
+#### Colores (Material / Material 3)
+
+Los colores de marca se asignan a roles del sistema:
+
+- **Primary:** `#265954`
+- **Secondary:** `#B0B9CD`
+- **Tertiary/Highlight:** `#F2D57E`
+- **Background:** `#F2E8DF`
+- **Texto/contraste:** `#012E40` (y acentos `#81BDE1` según modo)
+
+Se recomienda soporte para **Dark Mode** manteniendo contraste suficiente y consistencia con estados interactivos.
+
+#### Componentes UI
+
+- **Botones:**
+  - primario: `FilledButton`
+  - secundario: `OutlinedButton`
+  - terciario: `TextButton`
+- **Inputs:** `OutlinedTextField`
+- **Cards:** baja elevación y padding 16.
+- **Chips:** para filtros y estados (Pendiente, Pagado, Excedente) y categorías (Alimentos, Servicios, Otros).
+- **Snackbars:** confirmaciones rápidas (“Aporte registrado”).
+
+#### Espaciado
+
+Se aplica un sistema basado en 8dp:
+
+- padding general: **16dp**
+- separación entre elementos: **8dp / 12dp**
+- márgenes entre cards/sections: **12–16dp**
+- targets táctiles mínimos: **48dp**
+
+#### Estados y feedback
+
+- Indicadores de carga (progress/skeleton) en listas e historiales.
+- Errores de formularios con mensajes debajo del campo.
+- Diálogos de confirmación solo para acciones destructivas (eliminar gasto, salir del hogar).
+
+#### Accesibilidad
+
+- Contraste suficiente.
+- Compatibilidad con tamaños de fuente del sistema.
+- Controles táctiles con mínimo 48dp y etiquetas claras.
 ## 4.2. Information Architecture.
 ### 4.2.1. Organization Systems  
 
