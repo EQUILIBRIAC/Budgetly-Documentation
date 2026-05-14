@@ -525,11 +525,34 @@ El mock-up facilita la validación temprana con los interesados (stakeholders), 
 ## 4.4 Mobile Applications UX/UI Design
 ### 4.4.1 Mobile Applications Wireframes
 
+<p styles="align: left">
+  <img src="https://i.imgur.com/ay0Dz1d.jpeg" alt="wam" width="500">
+</p>
+
+<p styles="align: left">
+  <img src="https://i.imgur.com/yFStq2F.jpeg" alt="wam" width="500">
+</p>
+
+
 ### 4.4.2 Mobile Applications Wireflow Diagrams
+
+A continuación, se presenta el WireFlow Diagram, diseñado a partir de los objetivos principales de los usuarios. El flujo refleja cada meta funcional dentro de la aplicación y los distintos recorridos que pueden seguir para alcanzarla.
+
 
 ### 4.4.3 Mobile Applications Mock-ups
 
+<p styles="align: left">
+  <img src="https://i.imgur.com/TknMWxu.jpeg" alt="wam" width="500">
+</p>
+
+<p styles="align: left">
+  <img src="https://i.imgur.com/qsnazLV.jpeg" alt="wam" width="500">
+</p>
+
+
 ### 4.4.4 Mobile Applications User Flow Diagrams
+
+A continuación, se presenta el User Flow Diagram, diseñado a partir de los objetivos principales de los usuarios. El flujo refleja cada meta funcional dentro de la aplicación y los distintos recorridos que pueden seguir para alcanzarla. Para una mejor comprensión, se incluyen mockups de alta fidelidad que ilustran visualmente cada paso, facilitando la validación de la experiencia y la coherencia del diseño.
 
 
 ## 4.6. Web Applications UX/UI Design.
