@@ -90,6 +90,19 @@
 | 1.0     | 26-04-2026 | Renzo Uribe      | Se añadio la sección de Software Configuration Management en el capítulo 5.                   |
 | 1.0     | 26-04-2026 | Renzo Uribe      | Se añadio la sección de Sprint 1 en el capítulo 5.                                            |
 | 1.0     | 24-04-2026 | Renzo Uribe      | Se añadió la sección de Conclusiones y Recomendaciones.                                       |
+| 2.0     | 11-05-2026 | Camila Huamani   | Se mejoro la sección de Sprint Backlogs                                                       |
+| 2.0     | 12-05-2026 | Renzo Uribe      | Se añadio la sección Continuous Integration para el capitulo 7                                |
+| 2.0     | 12-05-2026 | Renzo Uribe      | Se añadio la sección Continuous Delivery para el capitulo 7                                   |
+| 2.0     | 12-05-2026 | Renzo Uribe      | Se añadio la sección Continuous Deployment para el capitulo 7                                 |
+| 2.0     | 13-05-2026 | Martin Gonzales  | Se añadio la sección Acuerdo de Servicio SaaS para el capitulo 5                              |
+| 2.0     | 13-05-2026 | Martin Gonzales  | Se añadio la sección Mobile style guidelines for iOS and Android para el capitulo 4           |
+| 2.0     | 13-05-2026 | Martin Gonzales  | Se añadio la sección Mobile applications wireframes and mockups para el capitulo 4            |
+| 2.0     | 13-05-2026 | Martin Gonzales  | Se añadio la sección Mobile WireFlow and User Flow Diagrams para el capitulo 4                |
+| 2.0     | 14-05-2026 | Carlos Guimares  | Se añadio la sección Core Entities Unit Tests para el capitulo 6                              |
+| 2.0     | 14-05-2026 | Carlos Guimares  | Se añadio la sección Core Intergration Tests para el capitulo 6                               |
+| 2.0     | 14-05-2026 | Carlos Guimares  | Se añadio la sección Core Behavior-Driven Development para el capitulo 6                      |
+| 2.0     | 14-05-2026 | Carlos Guimares  | Se añadio la sección Core System Tests para el capitulo 6                                     |
+
 
 
 ## Project Report Collaboration Insights
