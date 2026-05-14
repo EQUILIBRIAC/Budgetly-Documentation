@@ -121,7 +121,7 @@ Feature: User Registration
 
 Al ejecutar la suite de pruebas, SpecFlow interpreta los archivos .feature y ejecuta los Step Definitions vinculados. La siguiente captura muestra la ejecución exitosa de los 24 tests totales, incluyendo los escenarios de comportamiento (BDD) que aparecen detallados por pasos en la salida de consola:
 
-<img src="../assets/chapter-06/Behavior-Driven-Development.png" alt="Archivos de Pruebas BDD" width="600"/>
+<img src="../assets/chapter-06/Behavior-Driven-Development-Files.png" alt="Archivos de Pruebas BDD" width="600"/>
 <img src="../assets/chapter-06/BDD-Summary.png" alt="Ejecución de Pruebas BDD" width="600"/>
 
 ### 6.1.4. Core System Tests
