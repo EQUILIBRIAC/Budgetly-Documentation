@@ -375,10 +375,6 @@ Para consultas, soporte o reportes relacionados al servicio, se habilitará un c
 
 Se desarrolló e implementó el **Native-Mobile Application de Budgetly**, utilizando Dart Fluttter Se construyeron las principales vistas del sistema, incluyendo dashboards para los distintos tipos de usuario, gestión de hogares, miembros, gastos y contribuciones.
 
-El sistema fue desplegado públicamente, permitiendo validar su funcionamiento y navegación.
-
-- Link: 
-
 **Evidencias de la interfaz:**
 
 - Register:
