@@ -594,9 +594,6 @@ Gracias a sus **maquetas de alta fidelidad**, el prototipo facilita la validaci√
   <img src="https://i.imgur.com/xlaG02H.png" alt="goal4" width="250">
 </p>
 
-
-**Link al prototipo:** https://www.figma.com/proto/toqBUIAgoZAPRnVn9sTZuE/App-web?node-id=61-17&p=f&t=LoFwY085Rxt0LqeQ-1&scaling=min-zoom&content-scaling=fixed&page-id=33%3A9&starting-point-node-id=61%3A17&show-proto-sidebar=1
-
 ### 4.5.2 iOS Mobile Applications Prototyping
 
 Se desarroll√≥ un **prototipo interactivo** orientado a la **navegaci√≥n movil** para iOS, con el objetivo de evaluar y optimizar la accesibilidad y la experiencia de usuario antes del lanzamiento final.  
@@ -608,8 +605,6 @@ Gracias a sus **maquetas de alta fidelidad**, el prototipo facilita la validaci√
 <p align=center>
   <img src="https://i.imgur.com/MxbOV2b.png" alt="goal4" width="250">
 </p>
-
-**Link al prototipo:** https://www.figma.com/proto/toqBUIAgoZAPRnVn9sTZuE/App-web?node-id=61-17&p=f&t=LoFwY085Rxt0LqeQ-1&scaling=min-zoom&content-scaling=fixed&page-id=33%3A9&starting-point-node-id=61%3A17&show-proto-sidebar=1
 
 
 ## 4.6. Web Applications UX/UI Design.
