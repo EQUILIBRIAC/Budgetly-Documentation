@@ -578,6 +578,39 @@ A continuación, se presenta el User Flow Diagram, diseñado a partir de los obj
   <img src="https://i.imgur.com/CJggARe.png" alt="goal3" width="500">
 </p>
 
+## 4.5 Mobile Applications Prototyping
+
+En esta sección, se evidencian pruebas de uso de los prototipos de las aplicaciones para cada entorno: Android y iOS. En cada sección, se adjunta un video donde se usan los prototipos. Además, en cada video, las interacciones con el prototipo se basan en los User Flows descritos previamente.
+
+### 4.5.1 Android Mobile Applications Prototyping
+
+Se desarrolló un **prototipo interactivo** orientado a la **navegación movil** para android, con el objetivo de evaluar y optimizar la accesibilidad y la experiencia de usuario antes del lanzamiento final.  
+Este prototipo simula de manera realista el recorrido dentro de la aplicación, permitiendo a los usuarios explorar secciones y flujos tal como lo harían en la versión definitiva.  
+
+El diseño se basó en una **arquitectura clara**, una **jerarquía visual coherente** y en **principios de diseño inclusivo**, asegurando una navegación intuitiva y accesible para todo tipo de usuarios.  
+Gracias a sus **maquetas de alta fidelidad**, el prototipo facilita la validación de decisiones de diseño, la detección temprana de fricciones y la garantía de una experiencia de uso consistente y satisfactoria.  
+
+<p align=center>
+  <img src="https://i.imgur.com/xlaG02H.png" alt="goal4" width="250">
+</p>
+
+
+**Link al prototipo:** https://www.figma.com/proto/toqBUIAgoZAPRnVn9sTZuE/App-web?node-id=61-17&p=f&t=LoFwY085Rxt0LqeQ-1&scaling=min-zoom&content-scaling=fixed&page-id=33%3A9&starting-point-node-id=61%3A17&show-proto-sidebar=1
+
+### 4.5.2 iOS Mobile Applications Prototyping
+
+Se desarrolló un **prototipo interactivo** orientado a la **navegación movil** para iOS, con el objetivo de evaluar y optimizar la accesibilidad y la experiencia de usuario antes del lanzamiento final.  
+Este prototipo simula de manera realista el recorrido dentro de la aplicación, permitiendo a los usuarios explorar secciones y flujos tal como lo harían en la versión definitiva.  
+
+El diseño se basó en una **arquitectura clara**, una **jerarquía visual coherente** y en **principios de diseño inclusivo**, asegurando una navegación intuitiva y accesible para todo tipo de usuarios.  
+Gracias a sus **maquetas de alta fidelidad**, el prototipo facilita la validación de decisiones de diseño, la detección temprana de fricciones y la garantía de una experiencia de uso consistente y satisfactoria.  
+
+<p align=center>
+  <img src="https://i.imgur.com/MxbOV2b.png" alt="goal4" width="250">
+</p>
+
+**Link al prototipo:** https://www.figma.com/proto/toqBUIAgoZAPRnVn9sTZuE/App-web?node-id=61-17&p=f&t=LoFwY085Rxt0LqeQ-1&scaling=min-zoom&content-scaling=fixed&page-id=33%3A9&starting-point-node-id=61%3A17&show-proto-sidebar=1
+
 
 ## 4.6. Web Applications UX/UI Design.
 En este apartado se define la propuesta de diseño UX/UI para Budgetly, enfocada en brindar una experiencia simple, intuitiva y transparente en la gestión de gastos compartidos. El diseño prioriza la facilidad de uso para los distintos perfiles de usuario (miembros y representantes del hogar), asegurando accesibilidad desde dispositivos móviles y navegadores web. Se emplean principios de usabilidad, consistencia visual y jerarquía de la información, con el objetivo de reducir fricciones en el registro de datos, visualización de aportes y seguimiento de pagos, fortaleciendo la confianza y satisfacción de los usuarios.
@@ -636,8 +669,8 @@ Este prototipo simula de manera realista el recorrido dentro de la aplicación, 
 El diseño se basó en una **arquitectura clara**, una **jerarquía visual coherente** y en **principios de diseño inclusivo**, asegurando una navegación intuitiva y accesible para todo tipo de usuarios.  
 Gracias a sus **maquetas de alta fidelidad**, el prototipo facilita la validación de decisiones de diseño, la detección temprana de fricciones y la garantía de una experiencia de uso consistente y satisfactoria.  
 
-<p styles="align: left">
-  <img src="../images/prototipo.png" alt="goal4" width="500">
+<p align=center>
+  <img src="https://i.imgur.com/FtRMUfO.png" alt="goal4" width="500">
 </p>
 
 **Link al prototipo:** https://www.figma.com/proto/toqBUIAgoZAPRnVn9sTZuE/App-web?node-id=61-17&p=f&t=LoFwY085Rxt0LqeQ-1&scaling=min-zoom&content-scaling=fixed&page-id=33%3A9&starting-point-node-id=61%3A17&show-proto-sidebar=1
