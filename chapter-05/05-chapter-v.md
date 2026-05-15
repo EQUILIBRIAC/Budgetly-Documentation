@@ -47,6 +47,7 @@ A continuación, se adjuntan los enlaces para acceder a los repositorios donde s
 * **Landing Page: https://github.com/EQUILIBRIAC/Budgetly-LandingPage**
 * **Front End: https://github.com/EQUILIBRIAC/Budgetly-FrontEnd**
 * **Back End: https://github.com/EQUILIBRIAC/Budgetly-BackEnd**
+* **Mobile App: https://github.com/EQUILIBRIAC/Budgetly-MobileApp**
 
 **5.1.2.2. GitFlow**
 
@@ -170,40 +171,398 @@ En esta sección, se especifica la configuración para realizar el despliegue de
 
 ## 5.2 Product Implementation & Deployment
 
-Contenido pendiente.
 
 ### 5.2.1 Sprint Backlogs
 
-Contenido pendiente.
+|**User Story Id**|**Title**|**Task Id**|**Task Title**|**Description**|**Estimation (Hours)**|**Assigned To**|**Status (To-do/In-Process/To-Review/Done)**|
+|---|---|---|---|---|---|---|---|
+|US31|Visualizar información general sobre la solución desde la landing page|T1|Información general|Desarrollo de la sección con información introductoria del proyecto|2|Carlos Guimaraes|Done|
+|US32|Conocer las funciones principales del sistema|T1|Funciones principales|Diseño y desarrollo de la sección que explica las funcionalidades clave|2|Camila Huamani|Done|
+|US33|Explorar beneficios del sistema|T1|Beneficios|Desarrollo de la sección que muestre los beneficios de la solución|2|Angelo Solano|Done|
+|US34|Ver ejemplos o simulaciones del funcionamiento|T1|Ejemplos y simulaciones|Implementación de ejemplos visuales del funcionamiento del sistema|3|Martin Gonzales|Done|
+|US35|Acceder fácilmente al registro o login|T1|Botones de acceso|Diseño e implementación de botones visibles para registro y login|1|Renzo Uribe|Done|
+|TS18|Documentar los pasos de despliegue|T1|Documentación de despliegue|Redacción de la guía para desplegar nuevas versiones|2|Carlos Guimaraes|Done|
+|TS19|Habilitar monitoreo básico del sistema|T1|Monitoreo básico|Configuración inicial para logs y monitoreo|3|Camila Huamani|Done|
 
 ### 5.2.2 Implemented Landing Page Evidence
 
-Contenido pendiente.
+Como parte de la revisión del sprint, se presentan las evidencias de ejecución relacionadas con el desarrollo del Landing Page de Budgetly. La implementación se realizó empleando HTML, CSS y JavaScript, asegurando una estructura semántica clara, un diseño visual coherente con las guías de estilo y funcionalidades interactivas que mejoran la experiencia de usuario.
+
+Además de las capturas del código implementado, se incluye un video demostrativo donde se explica y evidencia la navegación lograda durante este sprint, así como el flujo de interacción principal que se validó.
+
+Video del landing page: bit.ly/4nxTsa6  
+
+Link: https://equilibriac.github.io/Budgetly-LandingPage/
+
+- Home:<br>
+
+   ![Alt Text](https://i.imgur.com/ZR6EaIy.png)
+<br>
+
+- About Us:<br>
+
+   <p align="center">
+  <img src="https://imgur.com/tdh3OY4.png">
+  </p>
+
+  <br>
+  
+- Services: <br>
+
+  ![Alt Text](https://i.imgur.com/tceyH5o.png)
+  
+  <br>
+- How does it work?: <br>
+
+  ![Alt Text](https://i.imgur.com/jASoXbj.png)
+
+  <br>
+
+- Prices: <br>
+
+  ![Alt Text](https://i.imgur.com/YPBkCel.png)
+
+  <br>
+
+- Contact us: <br>
+
+  ![Alt Text](https://i.imgur.com/7rnTMg8.png)
+
+  <br>
 
 ### 5.2.3 Implemented Frontend-Web Application Evidence
 
-Contenido pendiente.
+Se desarrolló e implementó el **Frontend Web Application de Budgetly**, utilizando Vue.js. Se construyeron las principales vistas del sistema, incluyendo dashboards para los distintos tipos de usuario, gestión de hogares, miembros, gastos y contribuciones.
+
+El sistema fue desplegado públicamente, permitiendo validar su funcionamiento y navegación.
+
+- Link: https://budgetly-exp-app.web.app/
+
+**Evidencias de la interfaz:**
+
+- Representative-Dashboard:
+
+<p align="center"> <img src="https://i.imgur.com/O7CAEZi.png"> </p>
+
+- Representative-Households:
+
+<p align="center"> <img src="https://i.imgur.com/DKj8F74.png"> </p>
+
+- Representative-Members:
+
+<p align="center"> <img src="https://i.imgur.com/yKfqLuo.png"> </p>
+
+- Representative-Expenses:
+
+<p align="center"> <img src="https://i.imgur.com/CJfGSuJ.png"> </p>
+
+- Representative-Contributions:
+
+<p align="center"> <img src="https://i.imgur.com/cLadc0H.png"> </p>
+
+- Representative-Configuration:
+
+<p align="center"> <img src="https://i.imgur.com/0L6H7A2.png"> </p>
+
+- Member-HomeState:
+
+<p align="center"> <img src="https://i.imgur.com/ISCzrHc.png"> </p>
+
+- Member-FindHome:
+
+<p align="center"> <img src="https://i.imgur.com/qEaJzkc.png"> </p>
 
 ### 5.2.4 Acuerdo de Servicio - SaaS
 
-Contenido pendiente.
+Esta sección describe el **Acuerdo de Servicio – SaaS (SaaS Agreement)** aplicable a los usuarios de **Budgetly**, estableciendo derechos, obligaciones y restricciones para garantizar el uso transparente y responsable de la plataforma. Su contenido debe publicarse en la landing page dentro de la sección **“Terms and Conditions”**.
+
+#### 5.2.4.1. Información general y aceptación
+
+**Budgetly** es una plataforma digital ofrecida bajo el modelo **Software as a Service (SaaS)**, orientada a la gestión colaborativa de finanzas del hogar mediante registro de usuarios, creación/unión a hogares, registro de gastos y contribuciones.
+
+Al **registrarse, acceder o utilizar** Budgetly, el usuario declara haber leído y aceptado estos Términos y Condiciones. Si el usuario no está de acuerdo, debe abstenerse de usar el servicio.
+
+#### 5.2.4.2. Definiciones
+
+- **Plataforma / Servicio:** Budgetly (Landing Page, Web Application y API asociada).
+- **Proveedor:** Startup **Equilibria** (equipo del proyecto Budgetly).
+- **Usuario:** Persona que crea una cuenta y utiliza la plataforma.
+- **Hogar (Household):** Espacio de colaboración donde se agrupan miembros para administrar gastos y aportes.
+- **Representante:** Usuario que crea y gestiona el Hogar (administración general).
+- **Miembro:** Usuario que se une a un Hogar y participa en la gestión/consulta según permisos.
+
+#### 5.2.4.3. Elegibilidad y registro
+
+- El usuario declara contar con **capacidad legal** para aceptar este acuerdo.
+- El usuario se compromete a proporcionar información **veraz, completa y actualizada** durante el registro y uso del servicio.
+- El usuario es responsable de mantener la **confidencialidad de sus credenciales** (correo/contraseña) y de las actividades realizadas desde su cuenta.
+
+#### 5.2.4.4. Uso del servicio (alcance funcional)
+
+Budgetly permite, entre otras funciones:
+- Registro e inicio de sesión de usuarios.
+- Creación y administración de un Hogar por un Representante.
+- Unión de Miembros a un Hogar (por ejemplo, mediante un identificador/ID).
+- Registro, consulta y seguimiento de gastos del Hogar.
+- Registro y seguimiento de contribuciones/aportes asociados a gastos.
+
+El servicio se ofrece con fines de organización financiera colaborativa y **no constituye asesoría financiera, contable ni legal**.
+
+#### 5.2.4.5. Responsabilidades por rol
+
+**Representante del Hogar**
+- Administrar la configuración del hogar, miembros y registros que correspondan.
+- Promover un uso adecuado de la plataforma dentro del hogar.
+- Verificar que los datos ingresados (gastos, fechas, montos, descripciones) sean correctos.
+
+**Miembro del Hogar**
+- Ingresar información correcta cuando corresponda (por ejemplo, aportes o datos solicitados).
+- Respetar la dinámica del hogar y las decisiones organizativas acordadas con el Representante y otros miembros.
+
+Budgetly es una herramienta de apoyo: los acuerdos internos del hogar respecto a pagos y responsabilidades se definen entre sus integrantes.
+
+#### 5.2.4.6. Conductas prohibidas (restricciones)
+
+Se prohíbe expresamente:
+- Usar la plataforma con fines ilícitos o que vulneren derechos de terceros.
+- Intentar acceder sin autorización a hogares ajenos o información de otros usuarios.
+- Realizar acciones que afecten la disponibilidad o seguridad del servicio (ataques, explotación de vulnerabilidades, automatizaciones abusivas, etc.).
+- Introducir contenido malicioso (malware) o manipular el funcionamiento del sistema.
+- Copiar, modificar, distribuir o realizar ingeniería inversa del servicio, salvo autorización expresa del Proveedor.
+
+El Proveedor podrá **suspender o restringir** cuentas ante indicios razonables de incumplimiento.
+
+#### 5.2.4.7. Datos, privacidad y confidencialidad (visión general)
+
+- Los datos ingresados por el usuario (por ejemplo: gastos, aportes, descripciones) se utilizan para la operación del servicio y la experiencia colaborativa del Hogar.
+- El usuario entiende que los datos del Hogar podrán ser **visibles para los miembros** del mismo Hogar según el rol y el diseño del sistema.
+- Se recomienda no ingresar información altamente sensible innecesaria (por ejemplo, contraseñas, datos de tarjetas, etc.).
+
+*(Nota: Para cumplimiento normativo completo, debe complementarse con una “Privacy Policy” publicada en el website.)*
+
+#### 5.2.4.8. Disponibilidad del servicio y cambios
+
+- El servicio puede presentar interrupciones por mantenimiento, actualizaciones o fallos de infraestructura de terceros (por ejemplo, proveedor cloud).
+- El Proveedor puede realizar cambios en la plataforma (mejoras, correcciones, ajustes de interfaz), procurando mantener la continuidad del servicio.
+
+#### 5.2.4.9. Propiedad intelectual
+
+Budgetly, su interfaz, documentación y componentes asociados son propiedad del Proveedor o se utilizan bajo licencias correspondientes. El usuario recibe un derecho de uso **limitado, no exclusivo y revocable** para utilizar la plataforma conforme a este acuerdo.
+
+#### 5.2.4.10. Limitación de responsabilidad
+
+En la máxima medida permitida por la legislación aplicable:
+- Budgetly se ofrece **“tal cual”** y **según disponibilidad**.
+- El Proveedor no se responsabiliza por decisiones financieras tomadas únicamente en base a la información mostrada si los datos ingresados por los usuarios son erróneos o incompletos.
+- El Proveedor no será responsable por daños indirectos, pérdida de datos, pérdida de oportunidades o conflictos entre miembros del hogar derivados del uso de la plataforma.
+
+#### 5.2.4.11. Terminación o suspensión de la cuenta
+
+El usuario puede dejar de usar el servicio en cualquier momento. El Proveedor podrá suspender o limitar el acceso si:
+- Se incumplen estos términos,
+- Se detecta un riesgo de seguridad,
+- Se realizan actividades prohibidas o que afecten al servicio o a terceros.
+
+#### 5.2.4.12. Ley aplicable y jurisdicción (Perú)
+
+Este Acuerdo se rige por las leyes de la **República del Perú**. Cualquier controversia será sometida a los jueces y tribunales competentes del Perú, según corresponda.
+
+#### 5.2.4.13. Canal de contacto
+
+Para consultas, soporte o reportes relacionados al servicio, se habilitará un canal de contacto visible en el website (por ejemplo, formulario “Contact us” o correo oficial del equipo).
 
 ### 5.2.5 Implemented Native-Mobile Application Evidence
 
-Contenido pendiente.
+Se desarrolló e implementó el **Native-Mobile Application de Budgetly**, utilizando Dart Fluttter Se construyeron las principales vistas del sistema, incluyendo dashboards para los distintos tipos de usuario, gestión de hogares, miembros, gastos y contribuciones.
+
+El sistema fue desplegado públicamente, permitiendo validar su funcionamiento y navegación.
+
+- Link: 
+
+**Evidencias de la interfaz:**
+
+- Register:
+
+<p align="center"> <img src="https://i.imgur.com/KWYGdoj.png"> </p>
+
+- Login:
+
+<p align="center"> <img src="https://i.imgur.com/quzs3bc.png"> </p>
+                     
+- Representative-Dashboard:
+
+<p align="center"> <img src="https://i.imgur.com/rpN70L3.png"> </p>
+
+- Representative-Households:
+
+<p align="center"> <img src="https://i.imgur.com/iIHCVUN.png"> </p>
+
+- Representative-Members:
+
+<p align="center"> <img src="https://i.imgur.com/ut59ZMU.png"> </p>
+
+- Representative-Contributions:
+
+<p align="center"> <img src="https://i.imgur.com/1rP9rZU.png"> </p>
+
+- Member-Dashboard:
+
+<p align="center"> <img src="https://i.imgur.com/ZFJ9aGL.png"> </p>
+
+- Member-Contributions:
+
+<p align="center"> <img src="https://i.imgur.com/llqYwAq.png"> </p>
+
+- Member-FindHome:
+
+<p align="center"> <img src="https://i.imgur.com/IjxMqij.png"> </p>
+
+- Member-Setting:
+
+<p align="center"> <img src="https://i.imgur.com/5Eie57Q.png"> </p>
 
 ### 5.2.6 Implemented RESTful API and/or Serverless Backend Evidence
 
-Contenido pendiente.
+Se desarrolló el **Backend de Budgetly**, implementando los principales endpoints REST para la gestión del sistema.
+
+Se integraron funcionalidades como:
+
+- Autenticación de usuarios (login y registro con JWT).
+- Gestión de usuarios y perfiles.
+- Administración de hogares.
+- Registro y gestión de gastos (bills).
+- Creación y seguimiento de contribuciones.
+
+El backend fue desplegado en la nube mediante Azure, asegurando su disponibilidad pública: https://budgetly-api-dev-dxcfedfvdxeebad5.chilecentral-01.azurewebsites.net/swagger/index.html
+
+
+<p align="center"> <img src="https://i.imgur.com/UxzJwaz.png"> </p>
 
 ### 5.2.7 RESTful API documentation
 
-Contenido pendiente.
+A continuación, se resumen los principales endpoints implementados en Budgetly:
+
+ <br> **Authentication:**
+| **Endpoint**                     | **Acción implementada** | **Método HTTP** | **Parámetros**                    | **Ejemplo Request**                                                | **Ejemplo Response**                                                            |
+| -------------------------------- | ----------------------- | --------------- | --------------------------------- | ------------------------------------------------------------------ | ------------------------------------------------------------------------------- |
+| `/api/v1/authentication/sign-in` | Iniciar sesión          | POST            | body: `{ email, password }`       | `{ "email": "test@gmail.com", "password": "123456" }`              | `{ "token": "jwt_token", "user": { ... } }`                                     |
+| `/api/v1/authentication/sign-up` | Registrar usuario       | POST            | body: `{ name, email, password }` | `{ "name": "Jose", "email": "x@gmail.com", "password": "123456" }` | `{ "id": "uuid", "email": "x@gmail.com", "createdAt": "2025-12-03T00:00:00Z" }` |
+
+
+ <br> **User:**
+| **Endpoint**                                 | **Acción implementada**                  | **Método HTTP** | **Parámetros**                                               | **Ejemplo Request**                                   | **Ejemplo Response**                                       |
+| -------------------------------------------- | ---------------------------------------- | --------------- | ------------------------------------------------------------ | ----------------------------------------------------- | ---------------------------------------------------------- |
+| `/api/v1/user/user/{id}`                     | Obtener usuario por Id                   | GET             | path: `{ id }`                                               | `GET /api/v1/user/user/1`                             | `{ "id": 1, "name": "Jose", "email": "test@gmail.com" }`   |
+| `/api/v1/user`                               | Listar todos los usuarios                | GET             | —                                                            | `GET /api/v1/user`                                    | `[ { "id": 1, "name": "Jose", "email": "..." }, ... ]`     |
+| `/api/v1/user/householdid/{mainHouseHoldId}` | Obtener usuarios por Household principal | GET             | path: `{ mainHouseHoldId }`                                  | `GET /api/v1/user/householdid/household-123`          | `[ { "id": 1, "mainHouseHoldId": "household-123" }, ... ]` |
+| `/api/v1/user/byemail/{emailAddress}`        | Actualizar usuario por email             | PUT             | path: `{ emailAddress }`, body: parcial `UpdateUserResource` | `PUT /api/v1/user/byemail/test@gmail.com` + body JSON | `{ "id": 1, "email": "test@gmail.com", "updated": true }`  |
+| `/api/v1/user/byemail/{email}`               | Eliminar usuario por email               | DELETE          | path: `{ email }`                                            | `DELETE /api/v1/user/byemail/test@gmail.com`          | `{ "deleted": true }`                                      |
+
+<br> **User Income:**
+| **Endpoint**                            | **Acción implementada**      | **Método HTTP** | **Parámetros**                                           | **Ejemplo Request**                                                           | **Ejemplo Response**                                                        |
+| --------------------------------------- | ---------------------------- | --------------- | -------------------------------------------------------- | ----------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
+| `/api/v1/user_income`                   | Crear ingreso de usuario     | POST            | body: `{ userId, amount, source, frequency }`            | `{ "userId": 1, "amount": 1500, "source": "Salary", "frequency": "monthly" }` | `{ "id": "income-1", "userId": 1, "amount": 1500 }`                         |
+| `/api/v1/user_income/{id}`              | Obtener ingreso por Id       | GET             | path: `{ id }`                                           | `GET /api/v1/user_income/income-1`                                            | `{ "id": "income-1", "userId": 1, "amount": 1500, "frequency": "monthly" }` |
+| `/api/v1/user_income/byuserid/{userId}` | Obtener ingresos por usuario | GET             | path: `{ userId }`                                       | `GET /api/v1/user_income/byuserid/1`                                          | `[ { "id": "income-1", "userId": 1, "amount": 1500 }, ... ]`                |
+| `/api/v1/user_income/byid/{id}`         | Actualizar ingreso por Id    | PUT             | path: `{ id }`, body: parcial `UpdateUserIncomeResource` | `PUT /api/v1/user_income/byid/income-1` + body JSON                           | `{ "id": "income-1", "updated": true }`                                     |
+
+<br> **Contribution:**
+
+| **Endpoint**                                       | **Acción implementada**              | **Método HTTP** | **Parámetros**                                             | **Ejemplo Request**                                                                  | **Ejemplo Response**                                       |
+| -------------------------------------------------- | ------------------------------------ | --------------- | ---------------------------------------------------------- | ------------------------------------------------------------------------------------ | ---------------------------------------------------------- |
+| `/api/v1/contribution`                             | Listar todas las contribuciones      | GET             | —                                                          | `GET /api/v1/contribution`                                                           | `[ { "id": "contrib-1", "amount": 100 }, ... ]`            |
+| `/api/v1/contribution`                             | Crear contribución                   | POST            | body: `{ billId, householdId, amount, description }`       | `{ "billId": "bill-1", "householdId": "hh-1", "amount": 100, "description": "Luz" }` | `{ "id": "contrib-1", "billId": "bill-1", "amount": 100 }` |
+| `/api/v1/contribution/{id}`                        | Obtener contribución por Id          | GET             | path: `{ id }`                                             | `GET /api/v1/contribution/contrib-1`                                                 | `{ "id": "contrib-1", "billId": "bill-1", "amount": 100 }` |
+| `/api/v1/contribution/{id}`                        | Eliminar contribución                | DELETE          | path: `{ id }`                                             | `DELETE /api/v1/contribution/contrib-1`                                              | `{ "deleted": true }`                                      |
+| `/api/v1/contribution/bybillid/{billId}`           | Obtener contribuciones por Bill      | GET             | path: `{ billId }`                                         | `GET /api/v1/contribution/bybillid/bill-1`                                           | `[ { "id": "contrib-1", "billId": "bill-1" }, ... ]`       |
+| `/api/v1/contribution/byhouseholdid/{householdId}` | Obtener contribuciones por Household | GET             | path: `{ householdId }`                                    | `GET /api/v1/contribution/byhouseholdid/hh-1`                                        | `[ { "id": "contrib-1", "householdId": "hh-1" }, ... ]`    |
+| `/api/v1/contribution/byid/{id}`                   | Actualizar contribución por Id       | PUT             | path: `{ id }`, body: parcial `UpdateContributionResource` | `PUT /api/v1/contribution/byid/contrib-1` + body JSON                                | `{ "id": "contrib-1", "updated": true }`                   |
+
+
+ <br> **Bills:**
+
+| **Endpoint**                              | **Acción implementada**           | **Método HTTP** | **Parámetros**                                     | **Ejemplo Request**                         | **Ejemplo Response**                                                |
+| ----------------------------------------- | --------------------------------- | --------------- | -------------------------------------------------- | ------------------------------------------- | ------------------------------------------------------------------- |
+| `/api/v1/bills`                           | Listar todas las facturas (bills) | GET             | —                                                  | `GET /api/v1/bills`                         | `[ { "id": "bill-1", "householdId": "hh-1", "amount": 200 }, ... ]` |
+| `/api/v1/bills/byhousehold/{householdId}` | Obtener Bills por Household       | GET             | path: `{ householdId }`                            | `GET /api/v1/bills/byhousehold/hh-1`        | `[ { "id": "bill-1", "householdId": "hh-1" }, ... ]`                |
+| `/api/v1/bills/byid/{id}`                 | Actualizar Bill por Id            | PUT             | path: `{ id }`, body: parcial `UpdateBillResource` | `PUT /api/v1/bills/byid/bill-1` + body JSON | `{ "id": "bill-1", "updated": true }`                               |
+| `/api/v1/bills/{id}`                      | Eliminar Bill                     | DELETE          | path: `{ id }`                                     | `DELETE /api/v1/bills/bill-1`               | `{ "deleted": true }`                                               |
+
+
+ <br> **HouseHolds:**
+
+| **Endpoint**              | **Acción implementada**  | **Método HTTP** | **Parámetros**                                            | **Ejemplo Request**                                                                                       | **Ejemplo Response**                                           |
+| ------------------------- | ------------------------ | --------------- | --------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------- |
+| `/api/v1/house_hold/{Id}` | Obtener Household por Id | GET             | path: `{ Id }`                                            | `GET /api/v1/house_hold/hh-1`                                                                             | `{ "id": "hh-1", "name": "Casa Vallejos", "currency": "PEN" }` |
+| `/api/v1/house_hold`      | Crear Household          | POST            | body: `{ name, description, representativeId, currency }` | `{ "name": "Depto amigos", "description": "Depto Miraflores", "representativeId": 1, "currency": "PEN" }` | `{ "id": "hh-1", "name": "Depto amigos" }`                     |
+
+
+
+<br> **HouseHold Member:**
+
+| **Endpoint**                                           | **Acción implementada**        | **Método HTTP** | **Parámetros**                                                | **Ejemplo Request**                                                 | **Ejemplo Response**                                        |
+| ------------------------------------------------------ | ------------------------------ | --------------- | ------------------------------------------------------------- | ------------------------------------------------------------------- | ----------------------------------------------------------- |
+| `/api/v1/household_member`                             | Crear miembro de Household     | POST            | body: `{ householdId, userId, isRepresentative }`             | `{ "householdId": "hh-1", "userId": 1, "isRepresentative": false }` | `{ "id": 10, "householdId": "hh-1", "userId": 1 }`          |
+| `/api/v1/household_member`                             | Listar todos los miembros      | GET             | —                                                             | `GET /api/v1/household_member`                                      | `[ { "id": 10, "householdId": "hh-1", "userId": 1 }, ... ]` |
+| `/api/v1/household_member/{id}`                        | Obtener miembro por Id         | GET             | path: `{ id }`                                                | `GET /api/v1/household_member/10`                                   | `{ "id": 10, "householdId": "hh-1", "userId": 1 }`          |
+| `/api/v1/household_member/{id}`                        | Actualizar miembro por Id      | PUT             | path: `{ id }`, body: parcial `UpdateHouseholdMemberResource` | `PUT /api/v1/household_member/10` + body JSON                       | `{ "id": 10, "updated": true }`                             |
+| `/api/v1/household_member/{id}`                        | Eliminar miembro               | DELETE          | path: `{ id }`                                                | `DELETE /api/v1/household_member/10`                                | `{ "deleted": true }`                                       |
+| `/api/v1/household_member/household/{householdId}`     | Obtener miembros por Household | GET             | path: `{ householdId }`                                       | `GET /api/v1/household_member/household/hh-1`                       | `[ { "id": 10, "householdId": "hh-1" }, ... ]`              |
+| `/api/v1/household_member/user/{userId}`               | Obtener miembros por usuario   | GET             | path: `{ userId }`                                            | `GET /api/v1/household_member/user/1`                               | `[ { "id": 10, "userId": 1, "householdId": "hh-1" }, ... ]` |
+| `/api/v1/household_member/{id}/promote-representative` | Promover a representante       | POST            | path: `{ id }`                                                | `POST /api/v1/household_member/10/promote-representative`           | `{ "id": 10, "isRepresentative": true }`                    |
+| `/api/v1/household_member/{id}/demote-representative`  | Degradar representante         | POST            | path: `{ id }`                                                | `POST /api/v1/household_member/10/demote-representative`            | `{ "id": 10, "isRepresentative": false }`                   |
+
+<br> **Income Allocation:**
+
+| **Endpoint**                                           | **Acción implementada**        | **Método HTTP** | **Parámetros**                                                | **Ejemplo Request**                                                 | **Ejemplo Response**                                        |
+| ------------------------------------------------------ | ------------------------------ | --------------- | ------------------------------------------------------------- | ------------------------------------------------------------------- | ----------------------------------------------------------- |
+| `/api/v1/household_member`                             | Crear miembro de Household     | POST            | body: `{ householdId, userId, isRepresentative }`             | `{ "householdId": "hh-1", "userId": 1, "isRepresentative": false }` | `{ "id": 10, "householdId": "hh-1", "userId": 1 }`          |
+| `/api/v1/household_member`                             | Listar todos los miembros      | GET             | —                                                             | `GET /api/v1/household_member`                                      | `[ { "id": 10, "householdId": "hh-1", "userId": 1 }, ... ]` |
+| `/api/v1/household_member/{id}`                        | Obtener miembro por Id         | GET             | path: `{ id }`                                                | `GET /api/v1/household_member/10`                                   | `{ "id": 10, "householdId": "hh-1", "userId": 1 }`          |
+| `/api/v1/household_member/{id}`                        | Actualizar miembro por Id      | PUT             | path: `{ id }`, body: parcial `UpdateHouseholdMemberResource` | `PUT /api/v1/household_member/10` + body JSON                       | `{ "id": 10, "updated": true }`                             |
+| `/api/v1/household_member/{id}`                        | Eliminar miembro               | DELETE          | path: `{ id }`                                                | `DELETE /api/v1/household_member/10`                                | `{ "deleted": true }`                                       |
+| `/api/v1/household_member/household/{householdId}`     | Obtener miembros por Household | GET             | path: `{ householdId }`                                       | `GET /api/v1/household_member/household/hh-1`                       | `[ { "id": 10, "householdId": "hh-1" }, ... ]`              |
+| `/api/v1/household_member/user/{userId}`               | Obtener miembros por usuario   | GET             | path: `{ userId }`                                            | `GET /api/v1/household_member/user/1`                               | `[ { "id": 10, "userId": 1, "householdId": "hh-1" }, ... ]` |
+| `/api/v1/household_member/{id}/promote-representative` | Promover a representante       | POST            | path: `{ id }`                                                | `POST /api/v1/household_member/10/promote-representative`           | `{ "id": 10, "isRepresentative": true }`                    |
+| `/api/v1/household_member/{id}/demote-representative`  | Degradar representante         | POST            | path: `{ id }`                                                | `POST /api/v1/household_member/10/demote-representative`            | `{ "id": 10, "isRepresentative": false }`                   |
+
+
+ <br> **Settings:**
+
+| **Endpoint**            | **Acción implementada**           | **Método HTTP** | **Parámetros**                                        | **Ejemplo Request**                                                           | **Ejemplo Response**                                                  |
+| ----------------------- | --------------------------------- | --------------- | ----------------------------------------------------- | ----------------------------------------------------------------------------- | --------------------------------------------------------------------- |
+| `/api/v1/settings`      | Obtener configuración por usuario | GET             | header: `Authorization: Bearer token` (user en token) | `GET /api/v1/settings`                                                        | `{ "id": "set-1", "userId": 1, "language": "es", "currency": "PEN" }` |
+| `/api/v1/settings`      | Crear configuración               | POST            | body: `{ userId, language, currency, notifications }` | `{ "userId": 1, "language": "es", "currency": "PEN", "notifications": true }` | `{ "id": "set-1", "userId": 1 }`                                      |
+| `/api/v1/settings/{id}` | Actualizar configuración          | PUT             | path: `{ id }`, body: parcial `UpdateSettingResource` | `PUT /api/v1/settings/set-1` + body JSON                                      | `{ "id": "set-1", "updated": true }`                                  |
+
+<br> **Member Contribution:**
+
+| **Endpoint**                                                    | **Acción implementada**                       | **Método HTTP** | **Parámetros**             | **Ejemplo Request**                                          | **Ejemplo Response**                                                       |
+| --------------------------------------------------------------- | --------------------------------------------- | --------------- | -------------------------- | ------------------------------------------------------------ | -------------------------------------------------------------------------- |
+| `/api/v1/member_contribution`                                   | Listar todas las contribuciones de miembros   | GET             | —                          | `GET /api/v1/member_contribution`                            | `[ { "id": "mc-1", "memberId": 10, "contributionId": "contrib-1" }, ... ]` |
+| `/api/v1/member_contribution/bycontributionid/{contributionId}` | Obtener MemberContribution por ContributionId | GET             | path: `{ contributionId }` | `GET /api/v1/member_contribution/bycontributionid/contrib-1` | `[ { "id": "mc-1", "contributionId": "contrib-1", "memberId": 10 }, ... ]` |
+| `/api/v1/member_contribution/bymemberid/{memberId}`             | Obtener MemberContribution por MemberId       | GET             | path: `{ memberId }`       | `GET /api/v1/member_contribution/bymemberid/10`              | `[ { "id": "mc-1", "memberId": 10, "contributionId": "contrib-1" }, ... ]` |
+| `/api/v1/member_contribution/{id}`                              | Eliminar MemberContribution                   | DELETE          | path: `{ id }`             | `DELETE /api/v1/member_contribution/mc-1`                    | `{ "deleted": true }`                                                      |
+
 
 ### 5.2.8 Team Collaboration Insights
 
-Contenido pendiente.
+Durante el desarrollo de los sprints, el equipo trabajó de manera colaborativa utilizando GitHub y una estrategia basada en ramas individuales e integración continua.
+
+Aportes principales:
+
+- **Carlos Guimaraes**: Desarrollo de secciones clave del frontend y apoyo en integración.
+- **Camila Huamani**: Implementación de funcionalidades relacionadas a usuarios y configuración.
+- **Angelo Solano**: Desarrollo de lógica de contribuciones y flujo del sistema.
+- **Martin Gonzales**: Implementación de vistas y componentes del frontend.
+- **Renzo Uribe**: Desarrollo del backend y endpoints principales.
+
+Evidencias de colaboración:
+
+<p align="center"> <img src="https://i.imgur.com/gnKYLlk.png"/> </p> <p align="center"> <img src="https://i.imgur.com/jcH0AH7.png"/> </p>
+
+El trabajo en equipo permitió una integración eficiente entre frontend y backend, logrando una versión funcional del sistema.
 
 ## 5.3 Video About-the-Product
 
-Contenido pendiente.
+En el siguiente video se muestra una vista detallada del uso y proposito de la aplicación deasarrollada: https://shorturl.at/1Hyl0

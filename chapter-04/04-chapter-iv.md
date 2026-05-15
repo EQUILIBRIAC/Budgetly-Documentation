@@ -118,6 +118,129 @@ Este equilibrio entre funcionalidad y diseño moderno garantiza una interfaz efi
   <img src="/assets/chapter-04/web_style2.png" alt="imagen2" width="500">
 </p>
 
+### 4.1.3. iOS Mobile Style Guidelines.
+
+En iOS, Budgetly busca ofrecer una experiencia **limpia, fluida y accesible**, alineada con patrones nativos del sistema para reducir fricción cognitiva. Se mantiene la identidad visual definida en las *General Style Guidelines*, adaptándola al ecosistema iOS.
+
+#### Diseño general (Look & Feel)
+
+- **Estilo:** minimalista y funcional, con jerarquía visual clara.
+- **Estructura:** uso de secciones tipo “cards” para agrupar información (Aportes, Gastos, Balance).
+- **Navegación primaria:** **Tab Bar** con accesos directos a vistas frecuentes (p. ej., Dashboard, Gastos, Aportes, Hogar/Perfil).
+- **Navegación secundaria:** uso de `NavigationBar` con títulos breves y acciones relevantes en la zona superior.
+
+#### Tipografía
+
+Para mantener coherencia con la identidad de marca, se recomienda el uso de **Roboto** también en iOS.  
+No obstante, si se desea priorizar la consistencia del sistema, es válido utilizar **SF Pro** en componentes estrictamente nativos (listas, ajustes) y reservar Roboto para pantallas de marca o encabezados.
+
+**Escalas sugeridas (compatibles con accesibilidad / Dynamic Type):**
+- **Large Title:** 34pt  
+- **Title:** 28pt / 22pt  
+- **Body:** 17pt  
+- **Caption:** 12–13pt  
+
+#### Color y contraste
+
+- Se recomienda soporte para **Light Mode** y **Dark Mode**.
+- Los colores se aplican mediante roles (tokens) para mantener consistencia:
+  - **Background (Base):** `#F2E8DF`
+  - **Primary (acciones principales):** `#265954`
+  - **Secondary (superficies/contención):** `#B0B9CD`
+  - **Highlight/Apoyo:** `#F2D57E`
+  - **Texto/contraste:** `#012E40` (y acentos `#81BDE1` según contexto)
+
+Se debe asegurar un contraste adecuado para texto y botones, favoreciendo la legibilidad.
+
+#### Componentes UI
+
+- **Botón primario:** sólido, con bordes redondeados (radio 12–16), estados *enabled/disabled* claros.
+- **Campos de texto:** estilo limpio con etiquetas visibles; iconografía opcional como apoyo.
+- **Cards:** padding interno 16 y separación consistente entre módulos.
+- **Listas:** estilo agrupado para ajustes, miembros e historial.
+
+#### Iconografía
+
+Se mantiene el uso de **Bootstrap Icons** para consistencia con el ecosistema del proyecto, respetando:
+- tamaño uniforme (20–24),
+- color coherente con el estado (primario, neutro),
+- acompañamiento con texto en navegación.
+
+#### Microinteracciones y feedback
+
+- Feedback visual inmediato en acciones clave (registrar aporte, agregar gasto, crear hogar).
+- Indicadores de carga claros (spinner/skeleton) evitando pantallas vacías.
+- Mensajes de error breves y accionables (p. ej., “Reintentar”, “Editar”).
+
+#### Accesibilidad
+
+- Targets táctiles mínimos de **44x44 pt**.
+- Soporte de escalado de texto.
+- Evitar depender únicamente del color para estados (pendiente/pagado/excedente).
+
+### 4.1.4. Android Mobile Style Guidelines.
+
+En Android, Budgetly se alinea con principios de **Material Design**, manteniendo su identidad visual mediante tokens de color, tipografía y consistencia de componentes. El enfoque prioriza claridad, escalabilidad y eficiencia de uso.
+
+#### Diseño general (Look & Feel)
+
+- **Estilo:** Material minimalista, con superficies claras (cards/sheets) y jerarquía por elevación/espaciado.
+- **Navegación primaria:** **Bottom Navigation** para secciones principales.
+- **Acción principal:** uso moderado de **FAB** solo cuando exista una acción dominante (p. ej., “Agregar gasto” o “Registrar aporte”).
+
+#### Tipografía
+
+Se mantiene **Roboto** como tipografía principal en Android, consistente con la guía general y el estándar del sistema.
+
+**Jerarquía sugerida:**
+- **Header/Display:** 28–32sp  
+- **Title:** 20–22sp  
+- **Body:** 16sp  
+- **Caption/Label:** 12–14sp  
+
+#### Colores (Material / Material 3)
+
+Los colores de marca se asignan a roles del sistema:
+
+- **Primary:** `#265954`
+- **Secondary:** `#B0B9CD`
+- **Tertiary/Highlight:** `#F2D57E`
+- **Background:** `#F2E8DF`
+- **Texto/contraste:** `#012E40` (y acentos `#81BDE1` según modo)
+
+Se recomienda soporte para **Dark Mode** manteniendo contraste suficiente y consistencia con estados interactivos.
+
+#### Componentes UI
+
+- **Botones:**
+  - primario: `FilledButton`
+  - secundario: `OutlinedButton`
+  - terciario: `TextButton`
+- **Inputs:** `OutlinedTextField`
+- **Cards:** baja elevación y padding 16.
+- **Chips:** para filtros y estados (Pendiente, Pagado, Excedente) y categorías (Alimentos, Servicios, Otros).
+- **Snackbars:** confirmaciones rápidas (“Aporte registrado”).
+
+#### Espaciado
+
+Se aplica un sistema basado en 8dp:
+
+- padding general: **16dp**
+- separación entre elementos: **8dp / 12dp**
+- márgenes entre cards/sections: **12–16dp**
+- targets táctiles mínimos: **48dp**
+
+#### Estados y feedback
+
+- Indicadores de carga (progress/skeleton) en listas e historiales.
+- Errores de formularios con mensajes debajo del campo.
+- Diálogos de confirmación solo para acciones destructivas (eliminar gasto, salir del hogar).
+
+#### Accesibilidad
+
+- Contraste suficiente.
+- Compatibilidad con tamaños de fuente del sistema.
+- Controles táctiles con mínimo 48dp y etiquetas claras.
 ## 4.2. Information Architecture.
 ### 4.2.1. Organization Systems  
 
@@ -399,23 +522,107 @@ El mock-up facilita la validación temprana con los interesados (stakeholders), 
   <img src="/assets/chapter-04/Landing Page - HARMONIX.png" alt="lpw5" width="500">
 </p>
 
+## 4.4 Mobile Applications UX/UI Design
+### 4.4.1 Mobile Applications Wireframes
 
-## 4.4. Web Applications UX/UI Design.
+<p styles="align: left">
+  <img src="https://i.imgur.com/ay0Dz1d.jpeg" alt="wam" width="500">
+</p>
+
+<p styles="align: left">
+  <img src="https://i.imgur.com/yFStq2F.jpeg" alt="wam" width="500">
+</p>
+
+
+### 4.4.2 Mobile Applications Wireflow Diagrams
+
+A continuación, se presenta el WireFlow Diagram, diseñado a partir de los objetivos principales de los usuarios. El flujo refleja cada meta funcional dentro de la aplicación y los distintos recorridos que pueden seguir para alcanzarla.
+
+<p styles="align: left">
+  <img src="https://i.imgur.com/WM54nwT.png" alt="goal1" width="500">
+</p>
+
+<p styles="align: left">
+  <img src="https://i.imgur.com/rQaZRmq.png" alt="goal2" width="500">
+</p>
+
+<p styles="align: left">
+  <img src="https://i.imgur.com/EZkzFmF.png" alt="goal3" width="500">
+</p>
+
+
+### 4.4.3 Mobile Applications Mock-ups
+
+<p styles="align: left">
+  <img src="https://i.imgur.com/TknMWxu.jpeg" alt="wam" width="500">
+</p>
+
+<p styles="align: left">
+  <img src="https://i.imgur.com/qsnazLV.jpeg" alt="wam" width="500">
+</p>
+
+
+### 4.4.4 Mobile Applications User Flow Diagrams
+
+A continuación, se presenta el User Flow Diagram, diseñado a partir de los objetivos principales de los usuarios. El flujo refleja cada meta funcional dentro de la aplicación y los distintos recorridos que pueden seguir para alcanzarla. Para una mejor comprensión, se incluyen mockups de alta fidelidad que ilustran visualmente cada paso, facilitando la validación de la experiencia y la coherencia del diseño.
+
+<p styles="align: left">
+  <img src="https://i.imgur.com/0ergwq1.png" alt="goal1" width="500">
+</p>
+
+<p styles="align: left">
+  <img src="https://i.imgur.com/f1WObIK.png" alt="goal2" width="500">
+</p>
+
+<p styles="align: left">
+  <img src="https://i.imgur.com/CJggARe.png" alt="goal3" width="500">
+</p>
+
+## 4.5 Mobile Applications Prototyping
+
+En esta sección, se evidencian pruebas de uso de los prototipos de las aplicaciones para cada entorno: Android y iOS. En cada sección, se adjunta un video donde se usan los prototipos. Además, en cada video, las interacciones con el prototipo se basan en los User Flows descritos previamente.
+
+### 4.5.1 Android Mobile Applications Prototyping
+
+Se desarrolló un **prototipo interactivo** orientado a la **navegación movil** para android, con el objetivo de evaluar y optimizar la accesibilidad y la experiencia de usuario antes del lanzamiento final.  
+Este prototipo simula de manera realista el recorrido dentro de la aplicación, permitiendo a los usuarios explorar secciones y flujos tal como lo harían en la versión definitiva.  
+
+El diseño se basó en una **arquitectura clara**, una **jerarquía visual coherente** y en **principios de diseño inclusivo**, asegurando una navegación intuitiva y accesible para todo tipo de usuarios.  
+Gracias a sus **maquetas de alta fidelidad**, el prototipo facilita la validación de decisiones de diseño, la detección temprana de fricciones y la garantía de una experiencia de uso consistente y satisfactoria.  
+
+<p align=center>
+  <img src="https://i.imgur.com/xlaG02H.png" alt="goal4" width="250">
+</p>
+
+### 4.5.2 iOS Mobile Applications Prototyping
+
+Se desarrolló un **prototipo interactivo** orientado a la **navegación movil** para iOS, con el objetivo de evaluar y optimizar la accesibilidad y la experiencia de usuario antes del lanzamiento final.  
+Este prototipo simula de manera realista el recorrido dentro de la aplicación, permitiendo a los usuarios explorar secciones y flujos tal como lo harían en la versión definitiva.  
+
+El diseño se basó en una **arquitectura clara**, una **jerarquía visual coherente** y en **principios de diseño inclusivo**, asegurando una navegación intuitiva y accesible para todo tipo de usuarios.  
+Gracias a sus **maquetas de alta fidelidad**, el prototipo facilita la validación de decisiones de diseño, la detección temprana de fricciones y la garantía de una experiencia de uso consistente y satisfactoria.  
+
+<p align=center>
+  <img src="https://i.imgur.com/MxbOV2b.png" alt="goal4" width="250">
+</p>
+
+
+## 4.6. Web Applications UX/UI Design.
 En este apartado se define la propuesta de diseño UX/UI para Budgetly, enfocada en brindar una experiencia simple, intuitiva y transparente en la gestión de gastos compartidos. El diseño prioriza la facilidad de uso para los distintos perfiles de usuario (miembros y representantes del hogar), asegurando accesibilidad desde dispositivos móviles y navegadores web. Se emplean principios de usabilidad, consistencia visual y jerarquía de la información, con el objetivo de reducir fricciones en el registro de datos, visualización de aportes y seguimiento de pagos, fortaleciendo la confianza y satisfacción de los usuarios.
 
-### 4.4.1. Web Applications Wireframes.
+### 4.6.1. Web Applications Wireframes.
 
 <p styles="align: left">
   <img src="/assets/chapter-04/WAW.png" alt="WAW" width="500">
 </p>
 
-### 4.4.2. Web Applications Wireflow Diagrams.
+### 4.6.2. Web Applications Wireflow Diagrams.
 
 <p styles="align: left">
   <img src="/assets/chapter-04/WAWD.png" alt="WAWD" width="500">
 </p>
 
-### 4.4.2. Web Applications Mock-ups.
+### 4.6.2. Web Applications Mock-ups.
 
 <p styles="align: left">
   <img src="/assets/chapter-04/mockupweb1.png" alt="wam" width="500">
@@ -429,7 +636,7 @@ En este apartado se define la propuesta de diseño UX/UI para Budgetly, enfocada
   <img src="/assets/chapter-04/mockup3.png" alt="wam" width="500">
 </p>
 
-### 4.4.3. Web Applications User Flow Diagrams.
+### 4.6.3. Web Applications User Flow Diagrams.
 A continuación, se presenta el User Flow Diagram, diseñado a partir de los objetivos principales de los usuarios. El flujo refleja cada meta funcional dentro de la aplicación y los distintos recorridos que pueden seguir para alcanzarla. Para una mejor comprensión, se incluyen mockups de alta fidelidad que ilustran visualmente cada paso, facilitando la validación de la experiencia y la coherencia del diseño.
 
 <p styles="align: left">
@@ -449,7 +656,7 @@ A continuación, se presenta el User Flow Diagram, diseñado a partir de los obj
 </p>
 
 
-## 4.5. Web Applications Prototyping.
+## 4.7. Web Applications Prototyping.
 
 Se desarrolló un **prototipo interactivo** orientado a la **navegación web**, con el objetivo de evaluar y optimizar la accesibilidad y la experiencia de usuario antes del lanzamiento final.  
 Este prototipo simula de manera realista el recorrido dentro de la aplicación, permitiendo a los usuarios explorar secciones y flujos tal como lo harían en la versión definitiva.  
@@ -457,46 +664,46 @@ Este prototipo simula de manera realista el recorrido dentro de la aplicación, 
 El diseño se basó en una **arquitectura clara**, una **jerarquía visual coherente** y en **principios de diseño inclusivo**, asegurando una navegación intuitiva y accesible para todo tipo de usuarios.  
 Gracias a sus **maquetas de alta fidelidad**, el prototipo facilita la validación de decisiones de diseño, la detección temprana de fricciones y la garantía de una experiencia de uso consistente y satisfactoria.  
 
-<p styles="align: left">
-  <img src="../images/prototipo.png" alt="goal4" width="500">
+<p align=center>
+  <img src="https://i.imgur.com/FtRMUfO.png" alt="goal4" width="500">
 </p>
 
 **Link al prototipo:** https://www.figma.com/proto/toqBUIAgoZAPRnVn9sTZuE/App-web?node-id=61-17&p=f&t=LoFwY085Rxt0LqeQ-1&scaling=min-zoom&content-scaling=fixed&page-id=33%3A9&starting-point-node-id=61%3A17&show-proto-sidebar=1
 
 
-## 4.6. Domain-Driven Software Architecture.
+## 4.8. Domain-Driven Software Architecture.
 
 La arquitectura de Budgetly se plantea bajo el enfoque de Domain-Driven Design (DDD), lo que permite alinear el desarrollo técnico con el modelo de negocio y las reglas que rigen la distribución de gastos en el hogar. El sistema se organiza en dominios principales como la gestión de usuarios (registro, autenticación y roles), gestión de ingresos y aportes (cálculo proporcional y validación de pagos), gestión de notificaciones (recordatorios automáticos y alertas) y reportes (visualización de saldos y exportación de datos).
 
 Este enfoque modular asegura que cada componente evolucione de forma independiente, manteniendo la coherencia del dominio central y garantizando la escalabilidad de la plataforma.
 
-### 4.6.1. Software Architecture Context Diagram.
+### 4.8.1. Software Architecture Context Diagram.
 
 <p styles="align: left">
   <img src="/assets/chapter-04/Diagram-Context.png" alt="dc" width="500">
 </p>
 
-### 4.6.2. Software Architecture Container Diagrams.
+### 4.8.2. Software Architecture Container Diagrams.
 
 <p styles="align: left">
   <img src="/assets/chapter-04/Diagram-Containers.png" alt="dcnrs" width="500">
 </p>
 
-### 4.6.3. Software Architecture Components Diagrams.
+### 4.8.3. Software Architecture Components Diagrams.
 
 <p styles="align: left">
   <img src="/assets/chapter-04/Diagram-API_Components_BoundedContexts.png" alt="dcpts" width="500">
 </p>
 
 
-## 4.7. Software Object-Oriented Design.
-### 4.7.1. Class Diagrams.
+## 4.9. Software Object-Oriented Design.
+### 4.9.1. Class Diagrams.
 
 <p styles="align: left">
   <img src="/assets/chapter-04/Class-Diagram.png" alt="dcpts" width="500">
 </p>
 
-### 4.7.2. Class Dictionary.
+### 4.9.2. Class Dictionary.
 #### [IAM Bounded Context]
 
 **Class: User**  
@@ -678,7 +885,7 @@ Este enfoque modular asegura que cada componente evolucione de forma independien
 - `CARD` — Tarjeta.  
 
 
-## 4.8. Database Design.
+## 4.10. Database Design.
 #### Descripción General
 La base de datos de Budgetly ha sido diseñada bajo un enfoque relacional, orientado a la gestión financiera colaborativa dentro del hogar. Su estructura busca garantizar integridad referencial, equidad en la distribución de gastos y transparencia entre los miembros. Soporta funcionalidades clave como el cálculo proporcional de contribuciones, seguimiento de pagos, notificaciones automáticas, metas financieras compartidas, entre otras.
 
