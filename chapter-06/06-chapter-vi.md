@@ -421,6 +421,16 @@ https://github.com/EQUILIBRIAC
 
 ### 6.4.2.2. Cronograma de auditoría recibida.
 
+En esta sección, se cronometran las principales actividades realizadas por el grupo “UI-Topic” para el desarrollo de la auditoría hacia el trabajo del grupo “Equilbria”.
+
+| Actividad de auditoría realizada | Fecha/Hora        | Realizado por            |
+|----------------------------------|-------------------|--------------------------|
+| Solicitud de información al grupo auditado        | 08/06/2026 3:00pm | Fernando Sanchez |
+| Envío de información solicitada por parte del grupo auditado a nuestro grupo para el desarrollo de la auditoría  | 09/06/2026 9:30pm   | Fernando Sanchez |
+| Ejecución de la auditoría | 10/06/2026 4:40pm         | Camila Huamani<br>Martin Gonzales<br>Angelo Solano<br>Carlos Guimare<br>Renzo Uribe |
+| Elaboración del informe de la auditoría | 12/06/2026 3:30pm         | Camila Huamani<br>Martin Gonzales<br>Angelo Solano<br>Carlos Guimare<br>Renzo Uribe |
+| Finalización y envío del informe de auditoría | 14/06/2026 11:00am         | Camila Huamani |
+
 ### 6.4.2.3. Contenido de auditoría recibida.
 
 #### TAREAS A EVALUAR
