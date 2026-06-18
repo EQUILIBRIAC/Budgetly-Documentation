@@ -408,9 +408,194 @@ Los errores serán puntuados tomando en cuenta la siguiente escala de severidad
 
 ### 6.4.2.1. Información del grupo auditor
 
+Nuestro grupo llamado “Equilibria” recibió un informe de auditoría de parte del grupo “UI=Topic”. A continuación, se adjunta la lista de integrantes del grupo auditado.
+
+- Gonzales Castillo, Angel Martin (u202319724)
+- Solano Armas, Angelo Hector (u20231B775) 
+- Huamani Cruz, Camila Victoria (u202315234)
+- Guimaraes Escalante, Carlos Eduardo (u202210364)
+- Uribe Livia, Renzo Sebastián (u202311745)
+
+Inmediatamente, se adjunta el enlace de acceso a la organizacion del grupo que desarrollo “BudGetly”:
+https://github.com/EQUILIBRIAC
+
 ### 6.4.2.2. Cronograma de auditoría recibida.
 
 ### 6.4.2.3. Contenido de auditoría recibida.
+
+#### TAREAS A EVALUAR
+
+El alcance de esta evaluación incluye la revisión de la usabilidad de las siguientes tareas:
+
+1. Inicio de sesión con correo y contraseña
+2. Registro de una cuenta nueva (rol Representante o Miembro)
+3. Creación y administración de un hogar (Household)
+4. Invitación y gestión de miembros del hogar
+5. Registro y gestión de gastos / facturas (Bills)
+6. Asignación de ingresos y contribuciones proporcionales por hogar
+7. Configuración de la cuenta (idioma, modo oscuro, notificaciones)
+8. Visualización del perfil de usuario
+9. Vista de miembro: seguimiento de "Mis aportes" y "Estado del hogar"
+
+No están incluidas en esta versión de la evaluación las siguientes tareas:
+
+1. Flujo completo de pago / suscripción al plan Premium
+2. Recuperación de contraseña olvidada
+3. Aplicación móvil (no se evidenció su existencia)
+4. Pruebas de carga, seguridad o rendimiento sobre la API
+
+---
+
+#### ESCALA DE SEVERIDAD
+
+Los errores serán puntuados tomando en cuenta la siguiente escala de severidad:
+
+| Nivel | Descripción |
+|---|---|
+| 1 | Problema superficial: puede ser fácilmente superado por el usuario o ocurre con muy poca frecuencia. No necesita ser arreglado a no ser que exista disponibilidad de tiempo. |
+| 2 | Problema menor: puede ocurrir un poco más frecuentemente o es un poco más difícil de superar para el usuario. Se le debería asignar una prioridad baja resolverlo de cara al siguiente release. |
+| 3 | Problema mayor: ocurre frecuentemente o los usuarios no son capaces de resolverlos. Es importante que sean corregidos y se les debe asignar una prioridad alta. |
+| 4 | Problema muy grave: un error de gran impacto que impide al usuario continuar con el uso de la herramienta. Es imperativo que sea corregido antes del lanzamiento. |
+
+---
+
+#### TABLA RESUMEN
+
+| # | Problema | Severidad | Heurística/Principio violado(o) |
+|---|---|---|---|
+| 1 | Inconsistencia de idioma entre pantallas de la plataforma | 2 | Usability: Consistency and standards |
+| 2 | Inconsistencia de marca (logo "Budgetly" vs "MyApp") | 2 | Usability: Consistency and standards |
+| 3 | Bajo contraste en el texto "Forgot Password?" | 1 | Accessibility: Legibility and contrast |
+| 4 | Botón de notificaciones no funcional en la sección Members | 2 | Visibility: Visibility of system status |
+| 5 | Claves de traducción sin resolver visibles en la interfaz | 3 | Usability: Aesthetic and minimalist design |
+| 6 | Miembros invitados se muestran sin nombre visible | 2 | Usability: Recognition over recall |
+| 7 | Falta de validación al crear un Household | 2 | Usability: Error prevention |
+| 8 | Mensaje de error genérico al eliminar un household | 2 | Visibility: Visibility of system status |
+
+---
+
+#### RECOMENDACIONES
+
+### Problema n°1: Inconsistencia de idioma entre pantallas de la plataforma
+
+**Severidad:** 2
+**Heurística violada:** Usability: Consistency and standards
+
+**Problema:**
+El login y el dashboard ("Welcome Back!", "Sign In", "Welcome", "Total Members") están en inglés, mientras que el landing page y ciertos mensajes del propio dashboard ("¡Bienvenido!", "Se ha creado el ID de su hogar...") están en español. El usuario no tiene certeza de en qué idioma está operando la plataforma en cada momento.
+
+![prob 1](https://i.imgur.com/AJFEnvD.png)
+
+**Recomendación:**
+Definir un idioma por defecto consistente en toda la aplicación y asegurar que el selector de idioma (visto en Configuración) traduzca el 100% de las pantallas, incluidos modales y mensajes del sistema, no solo las etiquetas estáticas.
+
+---
+
+### Problema n°2: Inconsistencia de marca (logo "Budgetly" vs "MyApp")
+
+**Severidad:** 2
+**Heurística violada:** Usability: Consistency and standards
+
+**Problema:**
+En la pantalla de inicio de sesión el logo y nombre mostrado es "Budgetly", pero en la pantalla de registro ("Create Account") el mismo elemento muestra el texto "MyApp". Esto genera dudas sobre si se trata de la misma plataforma.
+
+![prob 2a](https://i.imgur.com/mQWP3qR.png)
+
+![prob 2b](https://i.imgur.com/ADgUyfJ.png)
+
+
+**Recomendación:**
+Unificar el nombre e identidad visual de la marca en todas las pantallas de autenticación y del producto.
+
+---
+
+### Problema n°3: Bajo contraste en el texto "Forgot Password?"
+
+**Severidad:** 1
+**Heurística violada:** Accessibility: Legibility and contrast
+
+**Problema:**
+El enlace "Forgot Password?" en la pantalla de login se muestra en un tono dorado/amarillo claro sobre fondo blanco, dificultando su lectura, en especial para personas con baja visión.
+
+![prob 3](https://i.imgur.com/BikGNRV.png)
+
+**Recomendación:**
+Aumentar el contraste del texto utilizando un tono más oscuro o agregando subrayado, siguiendo las pautas WCAG de accesibilidad.
+
+---
+
+### Problema n°4: Botón de notificaciones no funcional en la sección Members
+
+**Severidad:** 2
+**Heurística violada:** Visibility: Visibility of system status
+
+**Problema:**
+El ícono de campana de notificaciones ubicado en la cabecera de "Household Members" no responde al hacer clic, dejando al usuario sin acceso a las alertas relacionadas con los miembros del hogar.
+
+![Prob 4](https://imgur.com/XWZ3qGX.png)
+
+**Recomendación:**
+Revisar el binding del componente de notificaciones en esta vista y agregar feedback visual (loading, badge, dropdown) al interactuar con él.
+
+---
+
+### Problema n°5: Claves de traducción sin resolver visibles en la interfaz
+
+**Severidad:** 3
+**Heurística violada:** Usability: Aesthetic and minimalist design
+
+**Problema:**
+En la pantalla "Household Members" aparece literalmente el texto "representativeMembers.header.householdSelector" en lugar de una etiqueta legible, evidenciando una clave de internacionalización (i18n) sin traducir. Esto se repite de forma consistente en varias capturas, afectando la percepción de calidad del producto.
+
+![prob 5](https://imgur.com/zYpGHze.png)
+
+**Recomendación:**
+Revisar los archivos de traducción (i18n) para asegurar que todas las claves usadas en el código tengan su valor correspondiente cargado antes de pasar a producción.
+
+---
+
+### Problema n°6: Miembros invitados se muestran sin nombre visible
+
+**Severidad:** 2
+**Heurística violada:** Usability: Recognition over recall
+
+**Problema:**
+En la tabla de "Household Members", los miembros con estado "Pending" se listan con la columna "Name" vacía (solo se muestra un ícono circular sin iniciales ni texto), impidiendo identificar a quién corresponde cada invitación.
+
+![prob 6](https://imgur.com/zYpGHze.png)
+
+**Recomendación:**
+Mostrar al menos el correo electrónico o nombre proporcionado en la invitación mientras el estado sea "Pending", en lugar de dejar el campo vacío.
+
+---
+
+### Problema n°7: Falta de validación al crear un Household
+
+**Severidad:** 2
+**Heurística violada:** Usability: Error prevention
+
+**Problema:**
+El sistema permitió crear un hogar con nombre "xdddd", descripción "1231321xdd%#@%" y 500 miembros, sin ninguna validación de formato ni límites razonables.
+
+![prob 7](https://imgur.com/dexdzMW.png)
+
+**Recomendación:**
+Implementar validaciones de formato y rangos razonables (ej. máximo de miembros, caracteres permitidos en nombre/descripción) tanto en frontend como en backend.
+
+---
+
+### Problema n°8: Mensaje de error genérico al eliminar un household
+
+**Severidad:** 2
+**Heurística violada:** Visibility: Visibility of system status
+
+**Problema:**
+Al intentar eliminar un hogar, el sistema muestra únicamente "Error: Could not delete the household", sin indicar la causa real (por ejemplo, si tiene miembros o gastos asociados) ni una acción sugerida para resolverlo.
+
+![prob 8](https://imgur.com/dexdzMW.png)
+
+**Recomendación:**
+Especificar la causa del error (ej. "No se puede eliminar: el hogar tiene miembros activos") y sugerir el paso a seguir para resolverlo.
 
 ### 6.4.2.4. Resumen de modificaciones para subsanar hallazgo
 
