@@ -232,9 +232,177 @@ namespace com.split.backend.Tests.SystemTests
 
 ### 6.4.1.1. Información del grupo auditado.
 
+El grupo al que se le realizó la auditoría recibe el nombre de “UI-Topic” y el producto que desarrollaron se llama “Restock”. A continuación, se adjunta la lista de integrantes del grupo auditado.
+
+- Guerra Perez, Jose Jahaziel (u202319831)
+- Shapiama Rivera, Gabriela Nicole (u202319448) 
+- Castro Alejos, Julio (u202021885)
+- Sanchez Guevara, Ivan Fernando (u202218181)
+- Chavez Uribe, Ario Joel (u202213468)
+
+Inmediatamente, se adjunta el enlace de acceso a la organizacion del grupo que desarrollo “Restock”:
+https://github.com/ui-topic-diseno-de-experimentos-10253
+
 ### 6.4.1.2. Cronograma de auditoría realizada.
 
+En esta sección, se cronometran las principales actividades realizadas para el desarrollo de la auditoría hacia el trabajo del grupo “Restock”.
+
+| Actividad de auditoría realizada | Fecha/Hora        | Realizado por            |
+|----------------------------------|-------------------|--------------------------|
+| Solicitud de información al grupo auditado        | 12/06/2026 12:20pm | Camila Huamani |
+| Envío de información solicitada por parte del grupo auditado a nuestro grupo para el desarrollo de la auditoría  | 12/06/2026 8:20pm   | Camila Huamani |
+| Ejecución de la auditoría | 14/06/2026 10:00pm         | Camila Huamani<br>Martin Gonzales<br>Angelo Solano<br>Carlos Guimare<br>Renzo Uribe |
+| Elaboración del informe de la auditoría | 14/06/2026 11:30pm         | Camila Huamani<br>Martin Gonzales<br>Angelo Solano<br>Carlos Guimare<br>Renzo Uribe |
+| Finalización y envío del informe de auditoría | 15/06/2026 1:00pm         | Camila Huamani |
+
 ### 6.4.1.3. Contenido de auditoría realizada.
+
+#### **TAREAS A EVALUAR:**
+
+El alcance de esta evaluación incluye la revisión de la usabilidad de las siguientes tareas:
+
+1. Registro de un usuario nuevo  
+2. Inicio de sesión de un usuario  
+3. Acceder a las distintas secciones de la aplicación  
+4. Interfaz de la aplicación web  
+5. Interfaz de la aplicación móvil  
+6. Claridad de la navegación  
+7. Realizar pedidos  
+8. Creación de insumos  
+9. Añadir al inventario  
+10. Gestionar pedidos  
+11. Gestionar recetas  
+    
+
+No están incluidas en esta versión de la evaluación las siguientes tareas:
+
+1. Seleccionar una suscripción  
+2. Selección de idiomas  
+3. Gestión del perfil de usuario 
+
+### **ESCALA DE SEVERIDAD:**
+
+Los errores serán puntuados tomando en cuenta la siguiente escala de severidad
+
+| *Nivel* | *Descripción* |
+| :---- | :---- |
+| *1* | *Problema superficial: puede ser fácilmente superado por el usuario o ocurre con muy poca frecuencia. No necesita ser arreglado a no ser que exista disponibilidad de tiempo.* |
+| *2* | *Problema menor: puede ocurrir un poco más frecuentemente o es un poco más difícil de superar para el usuario. Se le debería asignar una prioridad baja. Resolverlo de cara al siguiente reléase* |
+| *3* | *Problema mayor: ocurre frecuentemente o los usuarios no son capaces de resolverlos. Es importante que sean corregidos y se les debe asignar una prioridad alta.* |
+| *4* | *Problema muy grave: un error de gran impacto que impide al usuario continuar con el uso de la herramienta. Es imperativo que sea corregido antes del lanzamiento.* |
+
+### **TABLA RESUMEN:**
+
+| *\#* | *Problema* | *Escala de severidad* | *Heurística/Principio violada(o)* |
+| :---: | ----- | :---: | ----- |
+| 1 | En la sección de ventas, el texto "REGISTERED SALES NOT DISCOUNTED IN INVENTORY" resulta ambiguo y difícil de interpretar. | 3 | Information Architecture: Is it clear? |
+| 2 | En la sección de notificaciones de los dos usuarios, no se muestra información o texto referencial cuando no se cuenta con alguna notificación | 2 | Information Architecture: Is it communicative? |
+| 3 | En general la imagen superior ocupa demasiado espacio, esto provoca que la información importante sea empujada hacia abajo. | 3 | Usability: Diseño estético y minimalista |
+| 4 | Tanto en las secciones de registro y login de la app web, no se especifican otras opciones disponibles de ingresar a la aplicación (Google, Facebook, etc). | 1 | Usability: Visibilidad del estado del sistema |
+| 5 | En la sección de inventario de la app móvil, presenta dos acciones principales: Supply y New batch. Sin embargo, la diferencia entre ambas no resulta evidente para usuarios nuevos.  | 3 | Usability: Relación entre el sistema y mundo real |
+| 6 | En la sección de inventario de la app móvil, presenta grandes áreas vacías entre las secciones Supply Catalog e Inventory (Batches).  | 2 | Information Architecture: Is it useful? |
+| 7 | En la sección de órdenes de la app móvil, los filtros de estado y precio permanecen visibles incluso cuando no existen pedidos registrados  | 1 | Usability: Diseño estético y minimalista |
+
+
+### **DESCRIPCIÓN DE PROBLEMAS:**
+
+### **Problema 01:** 
+
+**Heurística violada:** Visibilidad del estado del sistema  
+**Severidad:** 1/4 \- Problema superficial  
+**Problema Explicado:** En las pantallas de inicio de sesión y registro se muestra el texto "Or sign in with", sugiriendo la existencia de métodos alternativos de autenticación. Sin embargo, no se presentan opciones adicionales como Google o Facebook, lo que puede generar confusión y expectativas incorrectas en los usuarios.  
+
+<img src="https://i.imgur.com/dtDCz1i.png" alt="Imagen 1" width="800"/>   
+
+**Recomendaciones:**
+
+* Eliminar el texto si no existen métodos alternativos de autenticación.  
+* Agregar los botones correspondientes si la funcionalidad está prevista.
+
+
+### **Problema 02:** 
+
+**Heurística violada:** Es Comunicativo  
+**Severidad:** 2/4 \- Problema menor  
+**Problema Explicado:** Cuando el usuario no tiene notificaciones disponibles, la sección permanece vacía sin mostrar ningún mensaje informativo. Esto puede hacer que el usuario dude si realmente no existen notificaciones o si ocurrió un error al cargar la información.  
+
+<img src="https://i.imgur.com/2109J1T.png" alt="Imagen 2" width="800"/> 
+
+
+**Recomendación:**
+
+* Mostrar un mensaje como: "No tienes notificaciones pendientes".  
+* Incorporar un ícono o ilustración que refuerce visualmente el estado vacío. 
+
+
+### **Problema 03:** 
+
+**Heurística violada:** Diseño estético y minimalista  
+**Severidad:** 3/4 \- Problema grave  
+**Problema Explicado:** La imagen ubicada en la parte superior de las pantallas consume una cantidad considerable del espacio visible. Como consecuencia, la información y las acciones más relevantes del sistema quedan desplazadas hacia abajo, obligando al usuario a desplazarse para acceder a ellas.  
+
+<img src="https://i.imgur.com/bs7mWnF.png" alt="Imagen 3" width="800"/> 
+
+**Recomendación:** 
+
+* Reducir la altura de la imagen para priorizar el contenido funcional.   
+* Reemplazar la imagen por información relevante del negocio o indicadores clave. 
+
+
+### **Problema 04:** 
+
+**Heurística violada:** Es Claro  
+**Severidad:** 3/4 \- Problema grave  
+**Problema Explicado:** En la sección de ventas se muestra el texto "REGISTERED SALES NOT DISCOUNTED IN INVENTORY" para identificar un conjunto de registros. Sin embargo, la redacción resulta poco clara y puede generar confusión sobre su significado, ya que el término discounted suele asociarse a descuentos de precio y no a la deducción de insumos del inventario. Esto obliga al usuario a interpretar el mensaje antes de comprender la función de la sección.  
+
+<img src="https://i.imgur.com/f75s5S9.png" alt="Imagen 4" width="800"/> 
+
+**Recomendación:**
+
+* Utilizar una redacción más simple y descriptiva, por ejemplo: "Sales Pending Inventory Update" o "Sales Awaiting Stock Deduction".  
+* Incluir una breve descripción o ayuda contextual que explique el estado de estas ventas y su relación con el inventario.
+
+
+### **Problema 05:** 
+
+**Heurística violada:** Relación entre el sistema y mundo real  
+**Severidad:** 3/4 \- Problema mayor  
+**Problema Explicado:** La pantalla presenta dos acciones principales: Supply y New batch. Sin embargo, la diferencia entre ambas no resulta evidente para usuarios nuevos, ya que los términos no explican claramente qué elemento se está creando ni cómo se relacionan entre sí dentro del inventario.  
+
+<img src="https://i.imgur.com/QdrAfeJ.png" alt="Imagen 5" width="400"/> 
+
+**Recomendación**
+
+* Incorporar una breve explicación contextual de cada acción.   
+* Utilizar nombres más descriptivos, por ejemplo *"Create Supply"* y *"Register Batch"*. 
+
+
+### **Problema 06:** 
+
+**Heurística violada:** Es Útil  
+**Severidad:** 2/4 \- Problema superficial  
+**Problema Explicado:** La pantalla presenta grandes áreas vacías entre las secciones Supply Catalog e Inventory (Batches). Cuando no existen registros, el espacio disponible no se aprovecha para informar al usuario sobre el estado actual del inventario ni para orientarlo sobre las acciones que puede realizar. Esto genera una sensación de aplicación incompleta y dificulta comprender qué debe hacerse a continuación. 
+
+<img src="https://i.imgur.com/jogwokj.png" alt="Imagen 6" width="400"/> 
+
+**Recomendación:** 
+
+* Mostrar mensajes de estado vacío como *"No supplies registered"* o *"No inventory batches available"*.   
+* Utilizar parte del espacio para proporcionar instrucciones o accesos directos a las acciones principales.
+
+ 
+### **Problema 07:** 
+
+**Heurística violada:** Diseño estético y minimalista  
+**Severidad:** 1/4 \- Problema superficial  
+**Problema Explicado:** Los filtros de estado y precio permanecen visibles incluso cuando no existen pedidos registrados. Esto puede generar una experiencia poco eficiente, ya que el usuario puede interpretar que existen datos para filtrar cuando la lista se encuentra vacía.   
+
+<img src="https://i.imgur.com/z1UWQsE.png" alt="Imagen 7" width="400"/> 
+
+**Recomendación:**
+
+* Mostrar los filtros únicamente cuando haya registros disponibles.   
+* Ocultar o deshabilitar los filtros cuando no existan pedidos. 
 
 ## 6.4.2 Auditoría recibida.
 
