@@ -210,13 +210,174 @@ namespace com.split.backend.Tests.SystemTests
 
 ## 6.2. Static testing & Verification
 
+El static testing comprende el conjunto de actividades de verificación que se realizan sin ejecutar el código fuente. A diferencia de las pruebas dinámicas descritas en la sección 6.1, su objetivo es detectar defectos, deudas técnicas y vulnerabilidades de forma temprana, analizando directamente el código, su estructura y el cumplimiento de las convenciones definidas por el equipo.
+
+Para los productos en Budgetly se aplicaron dos enfoques complementarios de verificación estática:
+
+- **Static Code Analysis :** ejecución de analizadores y linters sobre cada repositorio (RESTful API en ASP.NET Core / C#, Frontend Web en Vue / JavaScript, aplicación móvil en Flutter / Dart y el Landing Page en HTML/CSS/JavaScript), para validar el cumplimiento de convenciones de codificación y medir la calidad y seguridad del código.
+- **Reviews:** revisión manual del código por pares mediante Pull Requests en GitHub, integrada al flujo de trabajo GitFlow.
+
 ## 6.2.1. Static Code Analysis
+
+El análisis estático de código se ejecutó por cada producto de software utilizando la herramienta adecuada para el lenguaje correspondiente. La siguiente tabla resume las herramientas empleadas:
+
+| Producto | Lenguaje / Framework | Herramienta de análisis estático |
+|----------|----------------------|----------------------------------|
+| RESTful API (Backend) | C# / ASP.NET Core 9 | Analizadores Roslyn (.NET SDK) + SonarQube |
+| Frontend Web Application | JavaScript / Vue 3 | ESLint + SonarQube |
+| Native Mobile Application | Dart / Flutter | `flutter analyze` (`flutter_lints`) |
+| Landing Page | HTML5 / CSS3 / JavaScript | W3C Validator + ESLint |
 
 ### 6.2.1.1. Coding standard & Code conventions
 
-### 6.2.1.2. Code Quality & Code Security.
+En esta sección se verifica que el código de cada producto cumpla con los estándares de codificación y convenciones de nomenclatura definidos por el equipo. Tal como se establece en la sección 5.1.3 (*Source Code Style Guide & Conventions*), toda la nomenclatura se redacta en inglés y se adoptan las guías de estilo estándar de cada lenguaje.
 
-## 6.2.2 Static Code Analysis
+| Lenguaje / Tecnología | Convención adoptada | Mecanismo de verificación |
+|-----------------------|---------------------|---------------------------|
+| C# (Backend) | *Microsoft C# Coding Conventions* y *ASP.NET Core Coding Guidelines*. `Nullable` e `ImplicitUsings` habilitados; rutas REST en *kebab-case* y *lowercase*. | Analizadores Roslyn del SDK de .NET 9 |
+| JavaScript / Vue (Frontend) | *Vue Style Guide* (Priority A/B), *Google JavaScript Style Guide* y *MDN JavaScript Guidelines*. Componentes en *PascalCase*, organización por *bounded context* (domain / application / infrastructure / presentation). | ESLint |
+| Dart / Flutter (Mobile) | *Effective Dart* mediante el paquete `flutter_lints`, configurado en `analysis_options.yaml`. | `flutter analyze` |
+| HTML / CSS (Landing Page) | *HTML Style Guide and Coding Conventions* (W3C) y *Google HTML/CSS Style Guide*. | W3C Markup Validation Service |
+| Gherkin (`.feature`) | *Gherkin Conventions for Readable Specifications* (estructura Given–When–Then). | SpecFlow |
+
+Adicionalmente, el control de versiones aplica Conventional Commits, Semantic Versioning y GitFlow, lo que garantiza consistencia en los mensajes de *commit* y en la nomenclatura de *branches* a lo largo de todo el ciclo de vida.
+
+Para verificar el cumplimiento de las convenciones en la API REST se ejecutó el verificador de estilo oficial de .NET (`dotnet format`) en modo de solo verificación (`--verify-no-changes`). El analizador procesó **280 archivos** del proyecto `com.split.backend` y determinó que **0 archivos requerían cambios de formato** (`Formatted 0 of 280 files`), confirmando que el código fuente del backend cumple íntegramente con las convenciones de codificación de C# establecidas.
+
+```
+dotnet format com.split.backend/com.split.backend.csproj --verify-no-changes
+...
+Formatted 0 of 280 files.
+Format complete in 6824ms.
+```
+
+Para el Frontend Web se configuró **ESLint** con los conjuntos de reglas recomendados de JavaScript (`@eslint/js`) y de Vue (`eslint-plugin-vue`). El análisis sobre el directorio `src/` identificó **1207 observaciones (59 errores y 1148 advertencias)**, en su mayoría relacionadas con convenciones de estilo de Vue —orden de atributos (`vue/attributes-order`), uso de guiones en atributos (`vue/attribute-hyphenation`) y distribución de atributos por línea (`vue/max-attributes-per-line`)—, de las cuales **951 son corregibles automáticamente** mediante la opción `--fix`. Estas observaciones constituyen la línea base de convenciones del Frontend y se atienden de forma incremental en cada Pull Request.
+
+```
+npm run lint
+...
+✖ 1207 problems (59 errors, 1148 warnings)
+  0 errors and 951 warnings potentially fixable with the `--fix` option.
+```
+
+Evidencia:
+
+A continuación se muestra la ejecución de dotnet format sobre el proyecto del backend, donde se confirma que los 280 archivos analizados cumplen con las convenciones de C# y ninguno requirió cambios de formato.
+
+<p align="center">
+  <img src="../assets/chapter-06/Dotnet-format.png" alt="Verificación de convenciones del backend con dotnet format" width="600"/>
+</p>
+
+A continuación se muestra el reporte de ESLint sobre el Frontend Web, donde se listan las observaciones de convenciones de estilo de Vue y JavaScript detectadas en el directorio src.
+
+<p align="center">
+  <img src="../assets/chapter-06/Eslint-report.png" alt="Reporte de ESLint del Frontend Web" width="600"/>
+</p>
+
+### 6.2.1.2. Code Quality & Code Security
+
+En esta sección se evalúa la calidad del código (complejidad, duplicación, mantenibilidad y confiabilidad) y se identifican vulnerabilidades de seguridad (credenciales expuestas, configuraciones inseguras, validación insuficiente de datos), conforme a lo solicitado en el enunciado.
+
+#### A. Code Quality
+
+Para la API REST se ejecutó el análisis estático integrado de los analizadores Roslyn del SDK de .NET 9. La compilación del proyecto `com.split.backend` finalizó con **0 errores y 22 advertencias**, todas relacionadas con la *nullability* de tipos de referencia. Su distribución es la siguiente:
+
+| Código | Regla del analizador | Descripción | Ocurrencias |
+|--------|----------------------|-------------|:-----------:|
+| CS8622 | *Nullability of reference types in delegate* | Desajuste de *nullability* al pasar *assemblers* (`ToResourceFromEntity`) como delegados en los controladores (Bills, Contributions, MemberContributions, IncomeAllocation). | 10 |
+| CS8618 | *Non-nullable property must contain a non-null value* | Propiedades no anulables sin inicializar en el constructor (`EmailAddress.User`, `PersonName.User`, `TokenSettings.Secret`). | 5 |
+| CS8604 | *Possible null reference argument* | Posible argumento nulo al construir *resources* (`CreatedDate`, `UpdatedDate`, `Email`, `Currency`). | 5 |
+| CS8602 | *Dereference of a possibly null reference* | Desreferencia de posible referencia nula en `TokenService` y `RequestAuthorizationMiddleware`. | 2 |
+| | | **Total** | **22** |
+
+Estos hallazgos corresponden a *code smells* de confiabilidad y mantenibilidad: no impiden la compilación, pero representan riesgo de `NullReferenceException` en tiempo de ejecución. La acción correctiva consiste en añadir el modificador `required`, marcar las propiedades como anulables (`?`) o validar nulos antes de su uso en los assemblers.
+
+A continuación se muestra la salida de la compilación del backend, donde se observan las 22 advertencias reportadas por los analizadores del SDK de .NET.
+
+<p align="center">
+  <img src="../assets/chapter-06/Dotnet-build.png" alt="Advertencias del analizador de .NET en la compilacion del backend" width="600"/>
+</p>
+
+Para una medición integral (confiabilidad, seguridad, mantenibilidad, duplicación y quality gate), se utilizó SonarQube / SonarCloud sobre los repositorios del Backend, Frontend y Landing Page. La aplicación móvil (Flutter/Dart) no fue analizada con esta herramienta debido a que SonarCloud no provee un analizador para el lenguaje Dart; en su lugar se utiliza `flutter analyze`. Los resultados obtenidos en el análisis fueron los siguientes (la letra indica la calificación A–E y el número la cantidad de incidencias):
+
+| Métrica (SonarCloud) | Backend (API) | Frontend (Web) | Landing Page | Meta (Quality Gate) |
+|----------------------|:-------------:|:--------------:|:------------:|:-------------------:|
+| Líneas de código | 5.3k | 9.9k | 1.1k | — |
+| Reliability (Bugs) | C — 23 | D — 51 | B — 22 | A (0) |
+| Security (Vulnerabilities) | E — 13 | C — 1 | B — 3 | A (0) |
+| Maintainability (Code Smells) | A — 75 | A — 143 | A — 35 | A |
+| Duplicaciones | 0.0 % | 3.3 % | 0.0 % | < 3 % |
+| Cobertura | No computada | No computada | No computada | — |
+
+El análisis revela que la mantenibilidad de los tres productos es buena (calificación A), con duplicación de código baja (por debajo del umbral del 3 % salvo el Frontend, que se ubica en el límite). Las principales oportunidades de mejora se concentran en la confiabilidad del Frontend (51 *bugs*, calificación D) y, sobre todo, en la seguridad del Backend (calificación E), cuyas vulnerabilidades se detallan en la siguiente sección. La cobertura aparece como "No computada" porque las suites de pruebas se ejecutan de forma independiente y aún no se ha integrado el reporte de cobertura al análisis de SonarCloud.
+
+Evidencia:
+
+A continuación se muestra el panel de SonarCloud con los proyectos analizados de la plataforma y sus calificaciones de Reliability, Security y Maintainability.
+
+<p align="center">
+  <img src="../assets/chapter-06/SonarQube-Quality-Gate.png" alt="Panel de SonarCloud con las metricas de los proyectos" width="600"/>
+</p>
+
+#### B. Code Security
+
+El análisis de seguridad combinó las reglas de seguridad de SonarQube con una revisión manual orientada a vulnerabilidades comunes (OWASP). El análisis automatizado de SonarCloud asignó al Backend una calificación de **Security E con 13 vulnerabilidades**, lo que confirma la criticidad de los hallazgos identificados en la revisión manual. Los principales hallazgos de la solución son los siguientes:
+
+| # | Hallazgo | Ubicación | Severidad | Referencia (CWE) |
+|:-:|----------|-----------|:---------:|------------------|
+| 1 | Credenciales de base de datos (usuario y contraseña) y *connection string* expuestas en texto plano dentro del archivo de despliegue. | `Budgetly-BackEnd/render.yaml`, `appsettings.json` | Alta | CWE-798: *Use of Hard-coded Credentials* |
+| 2 | Clave secreta de firma de JWT (`TokenSettings:Secret`) versionada en texto plano en el repositorio. | `Budgetly-BackEnd/render.yaml` | Alta | CWE-321: *Use of Hard-coded Cryptographic Key* |
+| 3 | Política CORS permisiva: `AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader()`. | `Program.cs` (política `AllowAllPolicy`) | Media | CWE-942: *Permissive Cross-domain Policy* |
+| 4 | Validación de entrada insuficiente al crear un hogar (se permiten valores fuera de rango, p. ej. 500 miembros). | `HouseHoldCommandService` | Media | CWE-20: *Improper Input Validation* |
+
+**Recomendaciones de mitigación:**
+
+- **Hallazgos 1 y 2:** retirar las credenciales y secretos del control de versiones, rotarlos de inmediato, y gestionarlos exclusivamente mediante variables de entorno o un *secrets manager* del proveedor *cloud* (Render / Azure). El archivo `appsettings` debe contener solo valores no sensibles.
+- **Hallazgo 3:** restringir la política CORS a los orígenes conocidos (dominios del Landing Page y del Frontend desplegado) en lugar de permitir cualquier origen.
+- **Hallazgo 4:** incorporar validaciones de formato y rangos razonables tanto en el *frontend* como en los *command services* del *backend* (este hallazgo es consistente con el identificado en la auditoría de UX recibida, sección 6.4.2.3).
+
+Evidencia:
+
+A continuación se muestra el reporte de seguridad de SonarCloud para el Backend, donde se listan las vulnerabilidades detectadas que sustentan la calificación de seguridad obtenida.
+
+<p align="center">
+  <img src="../assets/chapter-06/SonarQube-Security.png" alt="Reporte de seguridad de SonarCloud para el backend" width="600"/>
+</p>
+
+## 6.2.2 Reviews
+
+Las reviews constituyen la verificación manual del código realizada por los integrantes del equipo como parte del flujo de trabajo. El equipo gestiona la revisión e integración de los cambios mediante Pull Requests en GitHub, integrados al flujo de trabajo GitFlow: cada nueva funcionalidad se desarrolla en una rama de tipo feature y se integra a la rama develop, y posteriormente a main, a través de un Pull Request. De esta manera, ningún cambio llega directamente a las ramas principales, sino que pasa primero por un Pull Request donde puede ser inspeccionado.
+
+El Pull Request centraliza en un solo lugar el conjunto de commits, los archivos modificados y las verificaciones automáticas del pipeline de Integración Continua, lo que permite al equipo examinar los cambios antes de incorporarlos. Al revisar un Pull Request, el equipo toma en cuenta los siguientes aspectos:
+
+| Aspecto revisado | Descripción |
+|------------------|-------------|
+| Convenciones de código | El código respeta las guías de estilo y la nomenclatura en inglés definidas en la sección 6.2.1.1. |
+| Funcionalidad | El cambio cumple con la User Story y sus Acceptance Criteria asociados. |
+| Calidad y seguridad | El cambio no introduce code smells ni vulnerabilidades evidentes en el código. |
+| Pruebas | El cambio no rompe las pruebas existentes descritas en la sección 6.1. |
+| Conventional Commits | Los mensajes de commit siguen la convención establecida. |
+| Verificaciones automáticas | El Pull Request supera los checks del pipeline antes de realizar el merge. |
+
+Evidencia:
+
+A continuación se muestra el historial de Pull Requests del repositorio del Backend, donde se evidencia la integración de los cambios hacia la rama develop bajo el flujo GitFlow.
+
+<p align="center">
+  <img src="../assets/chapter-06/BackEnd-Pull-requests.png" alt="Historial de Pull Requests del Backend en GitHub" width="600"/>
+</p>
+
+De forma similar, se presenta el historial de Pull Requests del repositorio del Frontend, donde participan distintos integrantes del equipo en la integración de funcionalidades.
+
+<p align="center">
+  <img src="../assets/chapter-06/FrontEnd-Pull-requests.png" alt="Historial de Pull Requests del Frontend en GitHub" width="600"/>
+</p>
+
+Finalmente, se muestra el detalle de un Pull Request, en el que se observan los commits con Conventional Commits, los archivos modificados y el estado de las verificaciones automáticas previo al merge.
+
+<p align="center">
+  <img src="../assets/chapter-06/Pull-request-reviews.png" alt="Detalle de un Pull Request del proyecto en GitHub" width="600"/>
+</p>
 
 ## 6.3. Validation Interviews
 
