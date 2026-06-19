@@ -983,4 +983,13 @@ Especificar la causa del error (ej. "No se puede eliminar: el hogar tiene miembr
 
 ### 6.4.2.4. Resumen de modificaciones para subsanar hallazgo
 
-
+| # | Problema identificado | Severidad | Acción a tomar | Prioridad |
+|:---:|---|:---:|---|:---:|
+| 1 | Inconsistencia de idioma entre pantallas de la plataforma | 2 | Definir un idioma por defecto consistente en toda la aplicación | Baja |
+| 2 | Inconsistencia de marca (logo "Budgetly" vs "MyApp") | 2 | Colocar el logo adecuado | Baja |
+| 3 | Bajo contraste en el texto "Forgot Password?" | 1 | Aumentar el contraste del texto utilizando un tono más oscuro o agregando subrayado | Baja |
+| 4 | Botón de notificaciones no funcional en la sección Members | 2 |  Corregir el binding del componente de notificaciones y agregar feedback visual | Media |
+| 5 | Claves de traducción sin resolver visibles en la interfaz | 3 | Revisar los archivos de traducción (i18n) | Media |
+| 6 | Miembros invitados se muestran sin nombre visible | 2 | Agregar que se muestre el correo electrónico o nombre proporcionado en la invitación mientras el estado sea "Pending" | Alta |
+| 7 | Falta de validación al crear un Household | 2 | Implementar validaciones de formato y rangos razonables | Alta |
+| 8 | Mensaje de error genérico al eliminar un household | 2 | Especificar la causa del error | Media |
