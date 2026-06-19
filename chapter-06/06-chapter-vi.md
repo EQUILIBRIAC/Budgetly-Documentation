@@ -222,9 +222,383 @@ namespace com.split.backend.Tests.SystemTests
 
 ### 6.3.1. Diseño de Entrevistas
 
+Durante el proceso de entrevistas con los usuarios finales, se identificaron diversos requerimientos relevantes para la experiencia en base a las siguientes preguntas:
+
+**Para el Segmento 1: Miembros del hogar**
+
+1. Primera impresión sobre la interfaz:
+
+- ¿Qué opinas del diseño de la página? ¿Te resulta fácil de entender?
+
+- ¿Hay algún elemento visual que te llame la atención o que encuentres confuso?
+
+2. Facilidad de uso:
+
+- ¿Fue fácil encontrar dónde se registran los gastos o contribuciones?
+
+- ¿Hubo algún momento en el que te sentiste perdido o no supieras qué hacer en la página?
+
+3. Navegación y funcionalidades:
+
+- ¿La navegación entre secciones (como ver tus aportes, revisar los gastos) fue clara?
+
+- ¿Te resultó sencillo agregar un gasto o una contribución? ¿Qué mejoras sugerirías?
+
+4. Transparencia y confianza:
+
+- ¿Qué piensas sobre la transparencia de la herramienta? ¿Te resultó útil ver las contribuciones de los demás miembros del hogar?
+
+- ¿Sientes que el sistema te ayuda a comprender mejor la distribución de los gastos en el hogar?
+
+5. Gráficos y reportes:
+
+- ¿Qué opinas de los gráficos o reportes que muestra la página? ¿Son claros y fáciles de entender?
+
+- ¿Te gustaría tener más detalles en los reportes, o consideras que la información mostrada es suficiente?
+
+6. Experiencia general:
+
+- ¿Te parece que esta herramienta puede ayudarte a gestionar los gastos del hogar de manera más equitativa?
+
+- ¿Usarías esta página de manera regular? ¿Qué haría que la usaras más seguido?
+
+
+**Para el Segmento 2: Representantes del hogar**
+
+1. Gestión de finanzas en el panel:
+
+- ¿Qué opinas del panel de control donde puedes gestionar los gastos y contribuciones? ¿Lo encuentras útil?
+
+- ¿Fue fácil aprobar o modificar los gastos? ¿Hubo algo que te resultó confuso en el proceso?
+
+2. Visibilidad y control:
+
+- ¿Te pareció que tienes suficiente visibilidad sobre las contribuciones de los miembros del hogar?
+
+- ¿Qué tan útil encuentras la capacidad de ver los reportes mensuales y las contribuciones de todos los miembros del hogar?
+
+3. Personalización y ajustes:
+
+- ¿Te gustaría poder personalizar más aspectos de la herramienta, como las categorías de gastos o las reglas de división?
+
+- ¿Fue fácil ajustar los porcentajes de contribución o cambiar cualquier configuración?
+
+4. Usabilidad y eficiencia:
+
+- ¿Te resultó fácil realizar tareas como agregar miembros al hogar o asignar contribuciones?
+
+- ¿Hubo algún momento en que pensaste que la plataforma podía hacer algo más para facilitar la gestión de los gastos?
+
+5. Confianza en el sistema:
+
+- ¿Confías en que el sistema divide los gastos de manera justa? ¿Te gustaría que el sistema explique de manera más clara cómo se calculan los porcentajes?
+
+- ¿Hay alguna parte del proceso donde te gustaría tener más detalles o explicaciones sobre cómo funcionan los cálculos?
+
+6. Satisfacción general y recomendaciones:
+
+- ¿Crees que esta plataforma facilitaría la convivencia en términos de finanzas? ¿Por qué?
+
+- ¿Qué cambios harías para mejorar la experiencia como representante del hogar?
+
+
 ### 6.3.2. Registro de Entrevistas.
 
+En esta sección se presentan los registros de las entrevistas realizadas para validar los productos de software enfocados a los representantes y miembros del hogar. Cada entrevista incluye información sobre el entrevistado, el entrevistador, el tiempo de la entrevista, un resumen de la misma
+
+**Entrevista 1**
+
+| Entrevista                                                         | Registro                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
+|--------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| <p align="center"><img src="../images/entrevista-01.png"/></p> | **Distrito:** Italia <br>**Entrevistado:** Harris Herrada                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+| [Link](bit.ly/444Hopn)                                | **Entrevistador:** Camilla Espinoza                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| Timing: 3:34                                          | **Resumen:** El entrevistado comentó que al inicio se confundió un poco, pero tras explorar la interfaz entendió rápido cómo usar la aplicación web. Consideró que la navegación es clara una vez familiarizado, los gráficos son suficientes y que la herramienta sí ayuda a comprender y gestionar mejor los gastos del hogar. |
+
+**Entrevista 2**
+
+| Entrevista                                                         | Registro                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+|--------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| <p align="center"><img src="../images/entrevista-02.png"/></p> | **Distrito:** Italia <br>**Entrevistado:**  Antonio Herrada                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
+| [Link](bit.ly/4hYUwlD)                                | **Entrevistador:**    Camilla Espinoza                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+| Timing:  2:51                                        | **Resumen:** El entrevistado indicó que no tuvo ningún problema al usar el panel de control y que todas las funciones —gestión de gastos, visibilidad de contribuciones, reportes y ajustes— le parecieron claras y suficientes. Señaló que todo estuvo en orden, que la herramienta funciona como espera un representante del hogar y que considera que puede facilitar la gestión financiera sin necesidad de cambios adicionales. |
+
+**Entrevista 3**
+
+| Entrevista                                                         | Registro                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+|--------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| <p align="center"><img src="../images/Entrevista 4.png"/></p> | **Distrito:** Chorrillos <br>**Entrevistado:** Eduardo Chareo                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+| [Link]()                                | **Entrevistador:** Sebastian Cordova                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+| Timing:   6:50                                | **Resumen:**  Eduardo, representante del hogar de 23 años, consideró la plataforma clara, intuitiva y útil para organizar gastos y aportes entre los miembros. Destacó que el dashboard es fácil de entender, la gestión de gastos es sencilla y los reportes mensuales serían muy valiosos. Sugirió únicamente añadir un calendario y una explicación más transparente de cómo se calculan los porcentajes de contribución. En general, afirmó que la herramienta facilitaría la convivencia financiera y no hizo más cambios adicionales. |
+
+
+**Entrevista 4**
+
+| Entrevista                                                         | Registro                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+|--------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| <p align="center"><img src="../images/Entrevista5.PNG"/></p> | **Distrito:** Miraflores <br>**Entrevistado:** Maria Fernanda Vallejos                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+| [Link]()                                | **Entrevistador:** Jose Martinez                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+| Timing:   6:40                                | **Resumen:**  Mafer, menciono que tuvo facilidad para entender la plataforma, funcionalidades y como usrala en el dia dia. Destaca que esto le ayudara mucho en su dia a dia, en los gastos hormiga |
+
+
+
+
+
+**Entrevista 5**
+
+| Entrevista                                                         | Registro                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+|--------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| <p align="center"><img src="https://imgur.com/hwh99wf.png"/></p> | **Distrito:** Chorrillos<br>**Entrevistada:** Jessica Castillo                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+| [Link]()                                | **Entrevistador:** Angel Martin Gonzales Castillo                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 | 
+| Timing:                                        | **Resumen:**  Jessica Castillo, de 47 años, consideró que la herramienta es interesante y útil porque le permitiría medir y organizar sus gastos mensuales, mantener sus pagos al día y controlar mejor el dinero disponible en su hogar, especialmente porque a veces se desfasa en sus compras y termina quedándose ajustada. Durante la demostración, comprendió y validó las funciones principales como la creación y edición del hogar, el registro de miembros, la carga de facturas, la visualización de contribuciones y el uso de ajustes, confirmando que estas características responden a sus necesidades de orden y seguimiento. Además, resaltó que la aplicación la ayudaría a ahorrar un poco al tener claro qué debe pagar y cuándo, y como única mejora sugirió incorporar la opción de realizar pagos directamente desde la plataforma, lo cual reforzaría aún más su utilidad como herramienta de gestión financiera.|
+
+
 ### 6.3.3. Evaluaciones según heurísticas.
+
+**UX Heuristics & Principles Evaluation**  
+**Usability – Inclusive Design – Information Architecture**
+
+---
+
+# 1. Datos Generales
+
+### **Carrera:**  
+Ingeniería de Software
+
+### **Curso:**  
+Diseño de Experimentos de Ingeniería de Software
+
+### **Sección:**  
+10253
+
+### **Profesores:**  
+Juan Carlos Tinoco Licas
+
+### **Auditor:**  
+Grupo: Testigos de Equilibria
+
+### **Cliente(s):**  
+- Gonzales Castillo, Angel Martin (u202319724)
+- Solano Armas, Angelo Hector (u20231B775) 
+- Huamani Cruz, Camila Victoria (u202315234)
+- Guimaraes Escalante, Carlos Eduardo (u202210364)
+- Uribe Livia, Renzo Sebastián (u202311745)
+
+### **Site / App evaluada:**  
+**Budgetly – Plataforma web para gestión equitativa de gastos del hogar**
+
+---
+
+# 2. Alcance de la Evaluación
+
+## 2.1. Tareas Evaluadas
+
+1. Registro de un usuario nuevo  
+2. Inicio de sesión seguro  
+3. Creación de un hogar (representante)  
+4. Unión a un hogar mediante código (miembro)  
+5. Declaración de ingresos personales  
+6. Registro de un gasto compartido  
+7. Visualización del monto proporcional a pagar  
+8. Registro de pago y adjuntar comprobante  
+9. Revisión del historial de gastos  
+
+## 2.2. Tareas Excluidas
+
+1. Integración con pasarelas de pago reales  
+2. Intercambio de gastos con usuarios externos  
+3. Programas de fidelización o acumulación de puntos  
+4. Alertas automáticas avanzadas de consumo futuro  
+5. Foro comunitario o soporte técnico en vivo  
+6. Gestión de recordatorios y alertas  
+---
+
+# 3. Marco de Evaluación UX
+
+La evaluación se realizó siguiendo:
+
+- **10 Heurísticas de Usabilidad de Nielsen**
+- **Principios de Diseño Inclusivo**
+- **Buenas prácticas de Arquitectura de Información**
+- **Escala de severidad (Nielsen 0–4):**
+
+| Severidad | Descripción |
+|----------|-------------|
+| **0** | No es problema |
+| **1** | Problema cosmético |
+| **2** | Problema menor |
+| **3** | Problema mayor |
+| **4** | Catastrófico, atender de inmediato |
+
+---
+
+# 4. Matriz de Evaluación Heurística (Nielsen)
+
+---
+
+## 4.1. Visibilidad del estado del sistema
+
+| Observación | Severidad |
+|------------|-----------|
+| Loaders poco visibles al registrar ingresos o gastos. | 2 |
+| Falta de confirmaciones animadas tras acciones importantes. | 1 |
+
+**Recomendación:**  
+Añadir indicadores visuales persistentes y notificaciones de éxito.
+
+---
+
+## 4.2. Relación entre el sistema y el mundo real
+
+| Observación | Severidad |
+|------------|-----------|
+| Términos como “aporte proporcional” pueden ser complejos para usuarios no técnicos. | 2 |
+| No se muestra duración o reglas sobre el código de unión al hogar. | 1 |
+
+**Recomendación:**  
+Usar lenguaje más natural y explicativo.
+
+---
+
+## 4.3. Control y libertad del usuario
+
+| Observación | Severidad |
+|------------|-----------|
+| Falta botón de “volver” en pantallas internas. | 3 |
+| Confirmaciones de eliminación con un solo botón. | 2 |
+
+---
+
+## 4.4. Consistencia y estándares
+
+| Observación | Severidad |
+|------------|-----------|
+| Formularios de ingresos y gastos con estilos distintos. | 2 |
+| Mezcla de Bootstrap Icons con íconos personalizados. | 1 |
+
+---
+
+## 4.5. Prevención de errores
+
+| Observación | Severidad |
+|------------|-----------|
+| Se permiten números negativos en ingresos/gastos. | 3 |
+| Validación débil en tipos de archivo de comprobante. | 2 |
+
+---
+
+## 4.6. Reconocer en lugar de recordar
+
+| Observación | Severidad |
+|------------|-----------|
+| El usuario debe memorizar el código de unión; no se copia automáticamente. | 2 |
+| Algunos botones solo tienen ícono sin texto. | 1 |
+
+---
+
+## 4.7. Flexibilidad y eficiencia
+
+| Observación | Severidad |
+|------------|-----------|
+| No hay atajos de usuario avanzado (filtros, plantillas, etc.) | 2 |
+| No existe autocompletado de categorías. | 2 |
+
+---
+
+## 4.8. Diseño estético y minimalista
+
+| Observación | Severidad |
+|------------|-----------|
+| Algunas pantallas tienen contenido muy agrupado. | 1 |
+
+---
+
+## 4.9. Ayuda al usuario a reconocer y recuperarse de errores
+
+| Observación | Severidad |
+|------------|-----------|
+| Mensajes de error genéricos (“Ocurrió un error”). | 3 |
+| No se explica cómo solucionar entradas duplicadas. | 2 |
+
+---
+
+## 4.10. Ayuda y documentación
+
+| Observación | Severidad |
+|------------|-----------|
+| No existe sección de ayuda o FAQs. | 3 |
+| Falta onboarding para nuevos usuarios. | 2 |
+
+---
+
+# 5. Evaluación de Diseño Inclusivo
+
+| Criterio | Estado | Observación |
+|---------|--------|-------------|
+| Accesibilidad visual | Parcial | Falta modo claro y mejor contraste en algunas áreas. |
+| Accesibilidad motora | Adecuado | Botones suficientemente grandes. |
+| Accesibilidad cognitiva | Parcial | Vocabulario financiero puede confundir. |
+| Lectura de pantalla (ARIA) | Insuficiente | Faltan etiquetas en varios componentes. |
+| Uso sin color | Adecuado | Estructura funcional se mantiene. |
+
+---
+
+# 6. Evaluación de Arquitectura de Información
+
+| Aspecto | Desempeño | Observación |
+|---------|-----------|-------------|
+| Estructura del menú | Buena | Navegación simple y entendible. |
+| Flujo de tareas | Correcto | Flujo claro para representantes y miembros. |
+| Etiquetado | Consistente | Verbos claros y orientados a acción. |
+| Navegación | Mejorable | Falta breadcrumb o navegación secundaria. |
+
+---
+
+# 7. Hallazgos Críticos Prioritarios
+
+### **Prioridad Alta (Severidad 3–4)**
+- Validaciones insuficientes en ingresos y gastos.  
+- Falta de mensajes correctivos y explicativos.  
+- Ausencia de navegación “volver” en flujos internos.
+
+### **Prioridad Media (Severidad 2)**
+- Lenguaje técnico para usuarios no financieros.  
+- Falta de autocompletado y accesos rápidos.  
+- Loaders poco visibles.
+
+### **Prioridad Baja (Severidad 1)**
+- Inconsistencias visuales menores.  
+- Íconos sin textos complementarios.
+
+---
+
+# 8. Recomendaciones Específicas
+
+## 8.1. Usabilidad
+- Agregar loaders animados y mensajes persistentes.  
+- Uniformizar estilos de formularios y pantallas.  
+
+## 8.2. Inclusividad
+- Añadir etiquetas ARIA y roles accesibles.  
+- Simplificar texto y agregar modo claro/oscuro.  
+
+## 8.3. Arquitectura de Información
+- Incorporar breadcrumbs.  
+- Añadir plantillas de categorías de gastos.  
+
+---
+
+# 9. Conclusiones Generales
+
+La aplicación **Harmonix** presenta una propuesta sólida y funcional, centrada en la equidad financiera en hogares. Su estilo visual es moderno y minimalista, aunque aún requiere mejoras en:
+
+- Comunicación de errores  
+- Accesibilidad  
+- Consistencia visual  
+- Prevención de errores  
+- Retroalimentación al usuario  
+
+Los problemas identificados son en su mayoría **moderados** y pueden resolverse sin rediseños completos.  
+Aplicar estas mejoras fortalecera la experiencia del usuario, aumentando claridad, accesibilidad y confianza en el sistema.
 
 ## 6.4. Auditoría de Experiencias de Usuario
 
