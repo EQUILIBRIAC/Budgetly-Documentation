@@ -333,12 +333,6 @@ Finalmente, este gráfico representa la cantidad de commits realizados por cada 
 - [**Bibliografía**](../bibliografia/07-bibliografia.md#bibliografia)
 - [**Anexos**](../anexos/08-anexos.md#anexos)
 
-## Part I: As-Is Software Project
-
-## Part II: Verification, Validation & Pipeline
-
-## Part III: Experiment-Driven Lifecycle
-
 ## Student Outcome
 
 | Criterio Específico                                                                                | Acciones realizadas                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 | Conclusiones                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
