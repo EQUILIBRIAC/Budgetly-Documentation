@@ -31,4 +31,4 @@ Anexo 10. Backend desplegado
 Disponible en: https://budgetly-api-dev-dxcfedfvdxeebad5.chilecentral-01.azurewebsites.net/swagger/index.html
 
 Anexo 11. Video de exposición TB1
-Disponible en: https://youtu.be/GEPkBBz2EPE
+Disponible en: https://youtu.be/PknSBg_S4HQ
