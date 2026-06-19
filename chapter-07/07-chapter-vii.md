@@ -169,3 +169,121 @@ Como resultado, la solución Budgetly quedó integrada con una estrategia de CI/
 
 Esta arquitectura de automatización mejora la calidad de entrega, simplifica el mantenimiento y fortalece la trazabilidad del proceso de desarrollo.
 
+## 7.4. Continuous Monitoring
+
+### 7.4.1. Tools and Practices
+
+Para implementar el monitoreo continuo se definió una estrategia basada en las herramientas ya utilizadas durante el ciclo DevOps del proyecto. Esto permitió evitar complejidad innecesaria y aprovechar los registros generados por los servicios de despliegue, automatización y hosting.
+
+Las herramientas y prácticas consideradas fueron las siguientes:
+
+| Herramienta o práctica | Uso dentro del monitoreo |
+| --- | --- |
+| **GitHub Actions** | Permite revisar el historial de ejecuciones de CI/CD, identificar workflows fallidos, consultar logs por etapa y validar qué commit originó cada ejecución. |
+| **Firebase Hosting** | Permite verificar el estado de publicación del Frontend, la versión desplegada y la disponibilidad del sitio web para los usuarios finales. |
+| **Azure Web App** | Permite observar el estado operativo del Back-End, revisar logs de aplicación, reinicios del servicio, errores de ejecución y disponibilidad del API. |
+| **GitHub Container Registry** | Permite mantener trazabilidad de las imágenes Docker publicadas, sus etiquetas y la versión del Back-End asociada a cada despliegue. |
+| **Secrets y variables de entorno** | Permiten mantener credenciales y configuraciones sensibles fuera del código fuente, reduciendo riesgos durante la operación. |
+| **Revisión de logs** | Permite analizar errores técnicos, fallos de compilación, problemas de despliegue y respuestas inesperadas del sistema. |
+
+Además de estas herramientas, se establecieron buenas prácticas operativas para que el monitoreo no dependa únicamente de una revisión manual aislada:
+
+* Revisar el estado de los workflows después de cada merge hacia `main`.
+* Confirmar que el Frontend publicado en Firebase Hosting corresponda a la última versión validada.
+* Verificar que el Back-End responda correctamente después de cada despliegue.
+* Mantener etiquetas de imagen Docker asociadas al commit de origen.
+* Consultar logs cuando se detecte una falla en producción o en los pipelines.
+* Documentar incidencias relevantes para relacionarlas con cambios recientes.
+
+Con estas prácticas, el equipo mantiene una visión básica pero efectiva del comportamiento de Budgetly durante su operación.
+
+### 7.4.2. Monitoring Pipeline Components
+
+El pipeline de monitoreo se estructura como una secuencia de observación posterior al despliegue. Su propósito no es reemplazar los pipelines de CI/CD, sino complementarlos mediante la revisión constante de señales operativas.
+
+Los principales componentes del pipeline de monitoreo son:
+
+* **Event source**: corresponde al evento que inicia la observación, como un `push` a `main`, un despliegue en Firebase Hosting, la publicación de una imagen Docker en GHCR o una actualización del Back-End en Azure Web App.
+* **Execution logs**: registros generados por GitHub Actions durante las etapas de instalación, compilación, pruebas, empaquetado, publicación y despliegue.
+* **Deployment status**: resultado final de la publicación del Frontend y del Back-End, indicando si el despliegue fue exitoso o si requiere intervención.
+* **Application logs**: registros generados por el Back-End durante la ejecución del servicio, incluyendo errores, excepciones o respuestas inesperadas.
+* **Availability checks**: validaciones manuales o automatizables para confirmar que la aplicación web y los endpoints principales se encuentren disponibles.
+* **Traceability records**: relación entre commit, workflow, artefacto generado, imagen Docker y versión desplegada.
+* **Incident review**: análisis posterior de fallas para determinar causa, impacto y acción correctiva.
+
+El flujo propuesto para el monitoreo continuo es el siguiente:
+
+1. Se realiza un cambio en el repositorio y se integra a la rama `main`.
+2. GitHub Actions ejecuta el pipeline correspondiente de publicación.
+3. El Frontend se despliega en Firebase Hosting y el Back-End se publica mediante la imagen Docker y el servicio en la nube.
+4. El equipo revisa el resultado del workflow y los logs generados.
+5. Se valida la disponibilidad de la aplicación y de los endpoints principales del API.
+6. Si se detecta una falla, se revisan los logs asociados y se identifica el commit o despliegue responsable.
+7. Se registra la incidencia y se genera una corrección mediante un nuevo ciclo de desarrollo.
+
+Esta estructura permite que el monitoreo esté conectado directamente con el ciclo DevOps, manteniendo trazabilidad desde el cambio de código hasta el comportamiento observado en producción.
+
+### 7.4.3. Alerting Pipeline Components
+
+El pipeline de alertas tiene como objetivo identificar condiciones anómalas que requieren atención del equipo. Una alerta debe generarse cuando el sistema presenta un fallo técnico, un despliegue incompleto o un comportamiento que pueda afectar la experiencia del usuario.
+
+Para Budgetly, las alertas se organizaron en tres niveles de severidad:
+
+| Nivel | Criterio | Acción esperada |
+| --- | --- | --- |
+| **Bajo** | Evento que no interrumpe el servicio, pero requiere revisión posterior. Por ejemplo, advertencias en logs o demoras leves en una ejecución. | Registrar la observación y revisarla durante el mantenimiento del proyecto. |
+| **Medio** | Falla parcial que puede afectar una funcionalidad específica, como error en un endpoint no crítico o fallo en una etapa secundaria del pipeline. | Revisar logs, asignar responsable y preparar corrección en la siguiente iteración. |
+| **Alto** | Falla que impide el despliegue, deja inaccesible el Frontend o afecta endpoints principales del Back-End. | Atender de forma prioritaria, detener promociones adicionales y aplicar corrección inmediata. |
+
+Los componentes del pipeline de alertas son:
+
+* **Alert trigger**: condición que inicia la alerta, como un workflow fallido, error de despliegue, caída del servicio o respuesta incorrecta del API.
+* **Alert evaluator**: revisión de la severidad del evento para determinar si se trata de una advertencia, una falla parcial o una incidencia crítica.
+* **Context collector**: recopilación de información necesaria para diagnosticar el problema, incluyendo commit, rama, workflow, hora de ejecución, logs y servicio afectado.
+* **Responsible assignment**: asignación del incidente al integrante responsable según el componente impactado, ya sea Frontend, Back-End o configuración DevOps.
+* **Corrective action**: corrección del problema mediante ajuste de código, configuración, secreto, workflow o infraestructura.
+* **Resolution tracking**: verificación de que el nuevo despliegue corrige la falla y no introduce nuevos errores.
+
+Algunos escenarios concretos de alerta para Budgetly son:
+
+* El workflow de Frontend falla durante `npm ci` o `npm run build`.
+* El workflow de Back-End falla durante `dotnet restore`, `dotnet build`, `dotnet test` o `dotnet publish`.
+* La imagen Docker del Back-End no se publica correctamente en GHCR.
+* El despliegue del Back-End en Azure Web App finaliza con error.
+* El Frontend desplegado en Firebase Hosting no carga correctamente.
+* Un endpoint principal del API responde con error después del despliegue.
+* Se detectan errores repetidos en los logs del Back-End.
+
+Este pipeline ayuda a que los errores no queden ocultos en los registros técnicos y puedan convertirse en acciones concretas de mantenimiento.
+
+### 7.4.4. Notification Pipeline Components.
+
+El pipeline de notificaciones define cómo se comunica una alerta al equipo y qué información mínima debe incluirse para facilitar la respuesta. Su propósito es evitar que cada integrante tenga que revisar manualmente todos los servicios y, en su lugar, recibir información clara cuando ocurra un evento relevante.
+
+Los componentes principales del pipeline de notificaciones son:
+
+* **Notification source**: servicio que genera el aviso, como GitHub Actions, Firebase Hosting, Azure Web App o el repositorio de imágenes en GHCR.
+* **Notification channel**: medio por el cual el equipo recibe la información. Puede ser GitHub, correo electrónico asociado al repositorio, comentarios en Pull Requests, issues o canales internos de coordinación del equipo.
+* **Notification payload**: contenido del mensaje enviado al equipo. Debe incluir el servicio afectado, el estado del evento, la fecha y hora, el enlace al workflow o log, el commit relacionado y una breve descripción del problema.
+* **Recipient group**: integrantes que deben recibir la notificación según el tipo de incidencia. Por ejemplo, fallos de interfaz pueden asignarse al equipo Frontend y errores de API al equipo Back-End.
+* **Acknowledgement**: confirmación de que un integrante revisó la alerta y asumió la responsabilidad de analizarla.
+* **Follow-up**: seguimiento de la corrección mediante issue, commit, Pull Request o nuevo despliegue.
+
+La información mínima recomendada para una notificación de incidencia es la siguiente:
+
+| Campo | Descripción |
+| --- | --- |
+| **Servicio afectado** | Frontend, Back-End, pipeline de CI/CD, Firebase Hosting, Azure Web App o GHCR. |
+| **Tipo de evento** | Error de build, error de test, despliegue fallido, caída del servicio, error de API o advertencia operativa. |
+| **Severidad** | Bajo, medio o alto, según el impacto en la operación. |
+| **Commit relacionado** | Hash o referencia del commit que originó el pipeline o despliegue. |
+| **Responsable inicial** | Integrante encargado de revisar el incidente. |
+| **Enlace de evidencia** | URL del workflow, log, despliegue o recurso donde se observa el problema. |
+| **Acción requerida** | Revisión, corrección, rollback, nuevo despliegue o documentación de incidencia. |
+
+Un ejemplo de notificación para el equipo sería:
+
+> Se detectó una falla de severidad alta en el despliegue del Back-End. El workflow asociado al commit más reciente en `main` no completó la publicación hacia Azure Web App. Se requiere revisar los logs de GitHub Actions, validar la imagen Docker generada y confirmar la configuración de los secretos de despliegue.
+
+Con este proceso, el equipo puede responder de manera ordenada a los problemas operativos, mantener comunicación clara y cerrar el ciclo de monitoreo mediante acciones correctivas verificables.
+
